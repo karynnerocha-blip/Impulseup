@@ -524,15 +524,15 @@
     <section class="tab-panel" id="tab-3">
       <h1 class="section-title">Demonstração</h1>
       <p class="section-sub">Vídeos da plataforma, orientados aos desafios da Construtora Canopus</p>
-      <div class="empty-state" id="tab3EmptyState">
+      <div class="empty-state" id="tab3EmptyState" style="display:none;">
         <i class="fa-regular fa-circle-play"></i>
         <h3>Aba liberada após a reunião de Demo</h3>
         <p>O closer vai incluir aqui vídeos curtos mostrando a solução aplicada aos desafios mapeados no Diagnóstico.</p>
       </div>
-      <div id="tab3Content" style="display:none;">
+      <div id="tab3Content">
+        <p style="color:#999;font-size:13px;margin-bottom:24px;"><i class="fa-regular fa-circle-info"></i> Nenhum dado de turnover, engajamento ou produtividade foi quantificado na reunião de Conexão. Os números de impacto ficam "a confirmar" até a Canopus compartilhar algo mensurável.</p>
         <div class="stat-grid" id="tab3ImpactoGrid">
-          <!-- Preenchido pela skill a partir de "impacto" (estrutura-abas.md, Aba 3). Ex:
-               <div class="stat-card"><div class="num">32%</div><div class="label">redução no tempo de ciclo de avaliação</div></div> -->
+          <div class="stat-card"><div class="num">A confirmar</div><div class="label">turnover, engajamento e produtividade ainda sem número compartilhado pela Canopus</div></div>
         </div>
         <div style="overflow-x:auto;margin-bottom:40px;">
           <table class="rfp-table" id="tab3ComparativoTable">
@@ -540,46 +540,15 @@
               <tr><th>Situação atual</th><th>Módulo impulseup</th><th>Como fica</th></tr>
             </thead>
             <tbody>
-              <!-- Preenchido pela skill a partir de "comparativo" (máx. 4 linhas). Ex:
-                   <tr><td>Avaliação só em planilha</td><td class="feat-name">Ciclos de avaliação</td><td>Fluxo 100% digital com lembretes automáticos</td></tr> -->
+              <tr><td>Avaliação só por competências; o resultado alimenta a Nine Box e o restante é feito manualmente</td><td class="feat-name">Avaliação de Desempenho + N-Box</td><td>Cruza competências com metas e resultados, sem trabalho manual do RH depois de cada ciclo</td></tr>
+              <tr><td>PDI registrado em planilha e esquecido depois do feedback</td><td class="feat-name">Desenvolvimento (PDI)</td><td>Lembretes automáticos mantêm o plano de desenvolvimento vivo entre os ciclos</td></tr>
+              <tr><td>Avaliação restrita à visão do gestor, sem retorno de pares ou liderados</td><td class="feat-name">Avaliação 180/360</td><td>Amplia a avaliação para pares e liderados dentro da mesma plataforma</td></tr>
+              <tr><td>Sucessão mapeada de forma reativa, sem relatório especializado para decisão de liderança</td><td class="feat-name">Mapa de Sucessão (N-Box flexível)</td><td>Relatórios prontos para antecipar decisões de sucessão e desenvolvimento de líderes</td></tr>
             </tbody>
           </table>
         </div>
         <div class="video-grid" id="tab3VideoGrid">
-          <!-- Preenchido pela skill a partir de "videos" (estrutura-abas.md, Aba 3), um .video-card por vídeo.
-               Ver scripts/gerar_video_embed.py::gerar_bloco_video() para a lógica de geração.
-
-               Caso 1 — url_video já veio do closer (link de Drive ou YouTube) e foi reconhecida:
-               <div class="video-card">
-                 <h4>{{titulo}}</h4><p>{{descricao}}</p>
-                 <div class="video-embed-wrap">
-                   <iframe src="{{embed_url}}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-                 </div>
-               </div>
-
-               Caso 2 — url_video veio mas não foi possível gerar embed (ex: link de pasta do Drive,
-               sem permissão de embed): mostrar card de link em vez de iframe.
-               <div class="video-card">
-                 <h4>{{titulo}}</h4><p>{{descricao}}</p>
-                 <div class="video-link-card">
-                   <i class="fa-brands fa-google-drive"></i>
-                   <p>Vídeo disponível para acesso externo</p>
-                   <a href="{{url_video}}" target="_blank" rel="noopener" class="video-link-btn">Assistir vídeo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                 </div>
-               </div>
-
-               Caso 3 — vídeo ainda sem url_video: slot de colagem manual, para o closer colar o link
-               direto no site (fica salvo no localStorage do navegador via saveImage/loadStore).
-               <div class="video-card">
-                 <h4>{{titulo}}</h4><p>{{descricao}}</p>
-                 <div class="video-embed-wrap video-embed-empty" data-video-idx="{{indice}}">
-                   <label class="video-paste-label">
-                     <i class="fa-regular fa-circle-play"></i>
-                     <span>Cole aqui o link do vídeo (YouTube ou Drive)</span>
-                   </label>
-                   <input type="text" class="video-url-input" data-video-idx="{{indice}}" placeholder="https://...">
-                 </div>
-               </div> -->
+          <!-- Vídeos serão colados aqui pelo closer após a gravação da Demo real. -->
         </div>
       </div>
     </section>
@@ -692,7 +661,7 @@
       <p class="section-sub">Jornada de compra da Construtora Canopus</p>
       <div class="timeline">
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Reunião de Diagnóstico</span><div class="tl-meta">Entender contexto e desafios · Janaína</div></div></div>
-        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Demonstração personalizada</span><div class="tl-meta">Mostrar solução aplicada aos desafios mapeados</div></div></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">04/08, 10h</span><div><span class="tl-desc">Demonstração personalizada</span><div class="tl-meta">Mostrar solução aplicada aos desafios mapeados, com foco em sucessão e mapa de talentos</div></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Construção de projeto e proposta</span><div class="tl-meta">Definir escopo e cenários de investimento</div></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Apresentação para diretoria</span><div class="tl-meta">Janaína apresenta o projeto internamente</div></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Aprovação da proposta</span></div></div>
