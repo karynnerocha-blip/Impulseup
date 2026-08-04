@@ -557,16 +557,15 @@
     <section class="tab-panel" id="tab-4">
       <h1 class="section-title">Diferenciais impulseup</h1>
       <p class="section-sub">Comparativo com base nos critérios mais importantes para este projeto</p>
-      <div class="empty-state" id="tab4EmptyState">
+      <div class="empty-state" id="tab4EmptyState" style="display:none;">
         <i class="fa-regular fa-list-check"></i>
         <h3>Aba liberada após a reunião de Diagnóstico</h3>
         <p>Assim que o closer finalizar o diagnóstico, esta aba mostra o comparativo entre a impulseup e os concorrentes identificados na conversa. Se nenhum concorrente específico for mencionado, o comparativo é feito contra "Outras soluções", com resultado mediano.</p>
       </div>
-      <div id="tab4TableWrap" style="margin-top:24px;overflow-x:auto;display:none;">
+      <p style="color:#999;font-size:13px;margin-top:16px;"><i class="fa-regular fa-circle-info"></i> Mereo e Cornerstone Talent foram citadas na disputa, mas nenhuma tem comparativo critério a critério validado internamente. Por isso a comparação abaixo usa a coluna genérica "Outras soluções", com resultado mediano.</p>
+      <div id="tab4TableWrap" style="margin-top:16px;overflow-x:auto;">
         <table class="rfp-table" id="tab4Table">
-          <!-- Preenchido pela skill site-cliente-impulseup a partir da transcrição da reunião de Diagnóstico e de references/rfp-criterios.json.
-               Cada critério exibe sua tag (campo "tags" do JSON) junto ao nome, ex:
-               <tr><td><div class="feat-name">Formatos de avaliação diferentes (90/180/360)</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td>...</tr> -->
+          <thead><tr><th>Critério</th><th class="iup-col">impulseup</th><th>Outras soluções</th></tr></thead><tbody><tr><td><div class="feat-name">Formatos de avaliação diferentes (90/180/360)</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr><tr><td><div class="feat-name">Competências específicas e exclusivas (líder, não líder, cargo, área ou outros)</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr><tr><td><div class="feat-name">Conexão automática entre Metas, OKRs e Avaliação</div><span class="feat-tag">Inteligente</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr><tr><td><div class="feat-name">Avaliação de experiência com envios automáticos</div><span class="feat-tag">Fácil</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr><tr><td><div class="feat-name">Indicação de pares pelo usuário, gestor, administrador ou aleatório</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr><tr><td><div class="feat-name">Planejamento de carreira e sucessão</div><span class="feat-tag">Liderança</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr><tr><td><div class="feat-name">Permite construir qualquer formato de matriz (2x2, 3x3, 4x1 etc.)</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr><tr><td><div class="feat-name">Cruzamento automático de Avaliação e Metas</div><span class="feat-tag">Inteligente</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr><tr><td><div class="feat-name">Calibração de resultados (por quadrante, seção ou competência)</div><span class="feat-tag">Confiável</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr><tr><td><div class="feat-name">Inserção de comentários, com controle de visibilidade</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr><tr><td><div class="feat-name">Comparação de resultados por cargo, área, diretoria, etc.</div><span class="feat-tag">Inteligente</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr><tr><td><div class="feat-name">Inteligência Artificial para insights automáticos</div><span class="feat-tag">Inteligente</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr><tr><td><div class="feat-name">Comparação de performance e desenvolvimento ao longo do tempo</div><span class="feat-tag">Confiável</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr><tr><td><div class="feat-name">Diversos formatos de pesquisa (pulso, clima, NPS, etc.)</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr><tr><td><div class="feat-name">IA para análise de comentários e questões abertas</div><span class="feat-tag">Inteligente</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr><tr><td><div class="feat-name">Conexão de gaps da avaliação com PDI e cursos de desenvolvimento</div><span class="feat-tag">Inteligente</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr><tr><td><div class="feat-name">Envio de relatório periódico para gestores sobre execução dos PDIs</div><span class="feat-tag">Liderança</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr><tr><td><div class="feat-name">Ajuda de IA para escrever feedbacks</div><span class="feat-tag">Inteligente</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr><tr><td><div class="feat-name">Contratação modular, conforme necessidade</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr><tr><td><div class="feat-name">Treinamento para gestores</div><span class="feat-tag">Atendimento consultivo</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr><tr><td><div class="feat-name">Material consolidado de resultados para diretoria</div><span class="feat-tag">Atendimento consultivo</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr></tbody>
         </table>
       </div>
     </section>
@@ -575,13 +574,327 @@
     <section class="tab-panel" id="tab-5">
       <h1 class="section-title">Aprovação e plano de ação</h1>
       <p class="section-sub">Objetivos de negócio da Construtora Canopus, o caminho para chegar lá e o estado futuro com a impulseup</p>
-      <div class="empty-state" id="tab5EmptyState">
+      <div class="empty-state" id="tab5EmptyState" style="display:none;">
         <i class="fa-regular fa-clipboard"></i>
         <h3>Aba liberada após a reunião de Diagnóstico</h3>
-        <p>Assim que os desafios forem mapeados, esta aba mostra os objetivos de negócio e RH por trás do projeto, o plano de ação com cronograma para chegar lá, e o estado futuro do negócio com a impulseup — pronta para embasar a apresentação à diretoria.</p>
+        <p>Assim que os desafios forem mapeados, esta aba mostra os objetivos de negócio e RH por trás do projeto, o plano de ação com cronograma para chegar lá, e o estado futuro do negócio com a impulseup, pronta para embasar a apresentação à diretoria.</p>
       </div>
-      <div id="tab5PlanoWrap" style="display:none;">
-        <!--OBJETIVOS-->
+      <div id="tab5PlanoWrap">
+      <p style="color:#999;font-size:13px;margin-bottom:20px;"><i class="fa-regular fa-circle-info"></i> Os prazos abaixo (Mês 1, Mês 2...) são estimativas padrão de onboarding, não há cronograma comercial/CS confirmado ainda para este projeto. Ajustar assim que houver data real de fechamento.</p>
+            <div class="objetivo-card">
+        <div class="objetivo-header">
+          <div class="objetivo-num">01</div>
+          <div>
+            <h3>Antecipar decisões de sucessão e continuidade de liderança</h3>
+            <p>Sair de uma gestão reativa de talentos-chave para um mapa vivo de sucessão.</p>
+          </div>
+        </div>
+        <div class="objetivo-body">
+          <div class="objetivo-compare-col">
+            <div class="objetivo-compare-box atual">
+              <span class="objetivo-compare-label">Situação atual</span>
+              <p>Sucessão é mapeada de forma reativa: a Canopus age depois que o problema aparece, seja substituir uma liderança sem sucessor pronto, seja decidir quem toca uma nova linha de negócio.</p>
+            </div>
+            <div class="objetivo-compare-box meta">
+              <span class="objetivo-compare-label">Meta</span>
+              <p>Ter um mapa de sucessão vivo, cruzando competências e resultados, para antecipar decisões de liderança e de novas frentes de negócio.</p>
+            </div>
+            <div class="objetivo-indicador">
+              <i class="fa-solid fa-chart-line"></i>
+              <div>
+                <span class="objetivo-indicador-label">Indicador de sucesso</span>
+                <p>Tempo entre a abertura de uma posição-chave e a indicação de um sucessor já mapeado internamente.</p>
+              </div>
+            </div>
+          </div>
+          <div class="objetivo-plan-col">
+            <div class="objetivo-etapas-title">Plano de ação</div>
+            <div class="objetivo-etapas">
+            <div class="objetivo-etapa">
+              <div class="objetivo-etapa-dot"><i class="fa-solid fa-check" style="font-size:7px;"></i></div>
+              <div class="objetivo-etapa-line"></div>
+              <div class="objetivo-etapa-content">
+                <span class="objetivo-etapa-period">Mês 1</span>
+                <h4>Parametrização do N-Box</h4>
+                <p>Eixos de competências e metas configurados no formato que a Canopus já usa hoje</p>
+                <span class="objetivo-etapa-resp">consultor</span>
+              </div>
+            </div>
+            <div class="objetivo-etapa">
+              <div class="objetivo-etapa-dot"><i class="fa-solid fa-check" style="font-size:7px;"></i></div>
+              <div class="objetivo-etapa-line"></div>
+              <div class="objetivo-etapa-content">
+                <span class="objetivo-etapa-period">Mês 1</span>
+                <h4>Piloto com o comitê de calibração</h4>
+                <p>Rodagem junto ao comitê de calibração já existente na Canopus</p>
+                <span class="objetivo-etapa-resp">consultor</span>
+              </div>
+            </div>
+            <div class="objetivo-etapa">
+              <div class="objetivo-etapa-dot"><i class="fa-solid fa-check" style="font-size:7px;"></i></div>
+              <div class="objetivo-etapa-line"></div>
+              <div class="objetivo-etapa-content">
+                <span class="objetivo-etapa-period">Mês 2</span>
+                <h4>Rollout para os 300 colaboradores do escopo</h4>
+                <p>Extensão para todo o público do ciclo de novembro</p>
+                <span class="objetivo-etapa-resp">gerente</span>
+              </div>
+            </div>
+            <div class="objetivo-etapa">
+              <div class="objetivo-etapa-dot"><i class="fa-solid fa-check" style="font-size:7px;"></i></div>
+              <div class="objetivo-etapa-line"></div>
+              <div class="objetivo-etapa-content">
+                <span class="objetivo-etapa-period">Contínuo</span>
+                <h4>Acompanhamento dos quadrantes</h4>
+                <p>Revisão periódica junto ao RH</p>
+                <span class="objetivo-etapa-resp">gerente</span>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="approval-outcome">
+          <div class="approval-outcome-title"><i class="fa-solid fa-flag-checkered"></i>Estado futuro</div>
+          <div class="approval-outcome-grid">
+            <div class="approval-stage futuro">
+              <span class="approval-stage-label">RH / DHO</span>
+              <p>RH enxerga com antecedência quem está pronto para assumir, sem depender de memória ou de decisões de última hora.</p>
+            </div>
+            <div class="approval-stage negocio">
+              <span class="approval-stage-label">Negócio</span>
+              <p>Menos risco de continuidade em momentos de expansão da empresa para novas praças e linhas de negócio.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="objetivo-card">
+        <div class="objetivo-header">
+          <div class="objetivo-num">02</div>
+          <div>
+            <h3>Sair da análise manual para decisões baseadas em dados</h3>
+            <p>Reduzir o tempo que o RH gasta preparando análises antes de levar qualquer leitura aos gestores.</p>
+          </div>
+        </div>
+        <div class="objetivo-body">
+          <div class="objetivo-compare-col">
+            <div class="objetivo-compare-box atual">
+              <span class="objetivo-compare-label">Situação atual</span>
+              <p>Toda leitura de dados hoje é feita manualmente por Janaína antes de levar qualquer informação aos gestores, sem relatório especializado de apoio.</p>
+            </div>
+            <div class="objetivo-compare-box meta">
+              <span class="objetivo-compare-label">Meta</span>
+              <p>Gestores acessando painéis prontos e intuitivos, sem depender do RH para interpretar cada resultado.</p>
+            </div>
+            <div class="objetivo-indicador">
+              <i class="fa-solid fa-chart-line"></i>
+              <div>
+                <span class="objetivo-indicador-label">Indicador de sucesso</span>
+                <p>Redução do tempo que o RH gasta preparando análises manuais para cada comitê.</p>
+              </div>
+            </div>
+          </div>
+          <div class="objetivo-plan-col">
+            <div class="objetivo-etapas-title">Plano de ação</div>
+            <div class="objetivo-etapas">
+            <div class="objetivo-etapa">
+              <div class="objetivo-etapa-dot"><i class="fa-solid fa-check" style="font-size:7px;"></i></div>
+              <div class="objetivo-etapa-line"></div>
+              <div class="objetivo-etapa-content">
+                <span class="objetivo-etapa-period">Mês 1</span>
+                <h4>Configuração de relatórios e dashboards</h4>
+                <p>Comparativos por área, cargo e diretoria</p>
+                <span class="objetivo-etapa-resp">consultor</span>
+              </div>
+            </div>
+            <div class="objetivo-etapa">
+              <div class="objetivo-etapa-dot"><i class="fa-solid fa-check" style="font-size:7px;"></i></div>
+              <div class="objetivo-etapa-line"></div>
+              <div class="objetivo-etapa-content">
+                <span class="objetivo-etapa-period">Mês 2</span>
+                <h4>Treinamento dos gestores</h4>
+                <p>Capacitação para leitura autônoma dos painéis</p>
+                <span class="objetivo-etapa-resp">consultor</span>
+              </div>
+            </div>
+            <div class="objetivo-etapa">
+              <div class="objetivo-etapa-dot"><i class="fa-solid fa-check" style="font-size:7px;"></i></div>
+              <div class="objetivo-etapa-line"></div>
+              <div class="objetivo-etapa-content">
+                <span class="objetivo-etapa-period">Contínuo</span>
+                <h4>Acompanhamento de uso</h4>
+                <p>Revisão do engajamento dos gestores com os dados</p>
+                <span class="objetivo-etapa-resp">gerente</span>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="approval-outcome">
+          <div class="approval-outcome-title"><i class="fa-solid fa-flag-checkered"></i>Estado futuro</div>
+          <div class="approval-outcome-grid">
+            <div class="approval-stage futuro">
+              <span class="approval-stage-label">RH / DHO</span>
+              <p>Você entrega a leitura pronta, e o gestor age em cima dela, sem precisar sentar individualmente para explicar cada número.</p>
+            </div>
+            <div class="approval-stage negocio">
+              <span class="approval-stage-label">Negócio</span>
+              <p>Decisões de pessoas mais rápidas e menos dependentes de uma única pessoa do RH.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="objetivo-card">
+        <div class="objetivo-header">
+          <div class="objetivo-num">03</div>
+          <div>
+            <h3>Ampliar a visão da avaliação além do gestor</h3>
+            <p>Trazer a percepção de pares e liderados para dentro da decisão de carreira.</p>
+          </div>
+        </div>
+        <div class="objetivo-body">
+          <div class="objetivo-compare-col">
+            <div class="objetivo-compare-box atual">
+              <span class="objetivo-compare-label">Situação atual</span>
+              <p>Avaliação de desempenho depende só da visão do gestor direto, sem retorno de pares ou liderados.</p>
+            </div>
+            <div class="objetivo-compare-box meta">
+              <span class="objetivo-compare-label">Meta</span>
+              <p>Avaliação 180/360 rodando para o público de 300 colaboradores já no ciclo de novembro.</p>
+            </div>
+            <div class="objetivo-indicador">
+              <i class="fa-solid fa-chart-line"></i>
+              <div>
+                <span class="objetivo-indicador-label">Indicador de sucesso</span>
+                <p>Percentual de avaliações com mais de uma fonte de avaliador, não só o gestor.</p>
+              </div>
+            </div>
+          </div>
+          <div class="objetivo-plan-col">
+            <div class="objetivo-etapas-title">Plano de ação</div>
+            <div class="objetivo-etapas">
+            <div class="objetivo-etapa">
+              <div class="objetivo-etapa-dot"><i class="fa-solid fa-check" style="font-size:7px;"></i></div>
+              <div class="objetivo-etapa-line"></div>
+              <div class="objetivo-etapa-content">
+                <span class="objetivo-etapa-period">Mês 1</span>
+                <h4>Configuração dos formatos de avaliação</h4>
+                <p>Competências por nível de cargo mantidas, com novos formatos habilitados</p>
+                <span class="objetivo-etapa-resp">consultor</span>
+              </div>
+            </div>
+            <div class="objetivo-etapa">
+              <div class="objetivo-etapa-dot"><i class="fa-solid fa-check" style="font-size:7px;"></i></div>
+              <div class="objetivo-etapa-line"></div>
+              <div class="objetivo-etapa-content">
+                <span class="objetivo-etapa-period">Mês 1</span>
+                <h4>Definição de pares</h4>
+                <p>Critérios de indicação de pares por área</p>
+                <span class="objetivo-etapa-resp">gerente</span>
+              </div>
+            </div>
+            <div class="objetivo-etapa">
+              <div class="objetivo-etapa-dot"><i class="fa-solid fa-check" style="font-size:7px;"></i></div>
+              <div class="objetivo-etapa-line"></div>
+              <div class="objetivo-etapa-content">
+                <span class="objetivo-etapa-period">Mês 2</span>
+                <h4>Rollout no ciclo de novembro</h4>
+                <p>Extensão para todo o público avaliado</p>
+                <span class="objetivo-etapa-resp">gerente</span>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="approval-outcome">
+          <div class="approval-outcome-title"><i class="fa-solid fa-flag-checkered"></i>Estado futuro</div>
+          <div class="approval-outcome-grid">
+            <div class="approval-stage futuro">
+              <span class="approval-stage-label">RH / DHO</span>
+              <p>O gestor toma decisão de carreira com mais de um ângulo sobre o profissional, não só a própria percepção.</p>
+            </div>
+            <div class="approval-stage negocio">
+              <span class="approval-stage-label">Negócio</span>
+              <p>Menos viés em promoções e movimentações, reduzindo o desgaste que hoje aparece como dúvida recorrente sobre critérios de promoção.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="objetivo-card">
+        <div class="objetivo-header">
+          <div class="objetivo-num">04</div>
+          <div>
+            <h3>Manter o PDI vivo entre os ciclos</h3>
+            <p>Tirar o plano de desenvolvimento da planilha esquecida e trazer para a rotina.</p>
+          </div>
+        </div>
+        <div class="objetivo-body">
+          <div class="objetivo-compare-col">
+            <div class="objetivo-compare-box atual">
+              <span class="objetivo-compare-label">Situação atual</span>
+              <p>PDI é registrado em planilha logo após o feedback e cai no esquecimento, sem acompanhamento estruturado ao longo do ano.</p>
+            </div>
+            <div class="objetivo-compare-box meta">
+              <span class="objetivo-compare-label">Meta</span>
+              <p>PDI com lembretes automáticos rodando ao longo do ano, não só no momento do feedback.</p>
+            </div>
+            <div class="objetivo-indicador">
+              <i class="fa-solid fa-chart-line"></i>
+              <div>
+                <span class="objetivo-indicador-label">Indicador de sucesso</span>
+                <p>Percentual de PDIs com pelo menos uma atualização registrada fora do período de feedback.</p>
+              </div>
+            </div>
+          </div>
+          <div class="objetivo-plan-col">
+            <div class="objetivo-etapas-title">Plano de ação</div>
+            <div class="objetivo-etapas">
+            <div class="objetivo-etapa">
+              <div class="objetivo-etapa-dot"><i class="fa-solid fa-check" style="font-size:7px;"></i></div>
+              <div class="objetivo-etapa-line"></div>
+              <div class="objetivo-etapa-content">
+                <span class="objetivo-etapa-period">Mês 1</span>
+                <h4>Migração dos PDIs atuais</h4>
+                <p>Estrutura atual da Canopus trazida para a plataforma</p>
+                <span class="objetivo-etapa-resp">consultor</span>
+              </div>
+            </div>
+            <div class="objetivo-etapa">
+              <div class="objetivo-etapa-dot"><i class="fa-solid fa-check" style="font-size:7px;"></i></div>
+              <div class="objetivo-etapa-line"></div>
+              <div class="objetivo-etapa-content">
+                <span class="objetivo-etapa-period">Mês 1</span>
+                <h4>Configuração de lembretes automáticos</h4>
+                <p>Cadência de acompanhamento definida com o RH</p>
+                <span class="objetivo-etapa-resp">consultor</span>
+              </div>
+            </div>
+            <div class="objetivo-etapa">
+              <div class="objetivo-etapa-dot"><i class="fa-solid fa-check" style="font-size:7px;"></i></div>
+              <div class="objetivo-etapa-line"></div>
+              <div class="objetivo-etapa-content">
+                <span class="objetivo-etapa-period">Contínuo</span>
+                <h4>Acompanhamento trimestral</h4>
+                <p>Revisão de execução junto aos gestores</p>
+                <span class="objetivo-etapa-resp">gerente</span>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="approval-outcome">
+          <div class="approval-outcome-title"><i class="fa-solid fa-flag-checkered"></i>Estado futuro</div>
+          <div class="approval-outcome-grid">
+            <div class="approval-stage futuro">
+              <span class="approval-stage-label">RH / DHO</span>
+              <p>O RH deixa de ser quem corre atrás do PDI esquecido, o sistema já retoma isso sozinho.</p>
+            </div>
+            <div class="approval-stage negocio">
+              <span class="approval-stage-label">Negócio</span>
+              <p>Desenvolvimento de pessoas acontece ao longo do ano, sustentando o programa de retenção de talentos já ligado ao Nine Box.</p>
+            </div>
+          </div>
+        </div>
+      </div>
       </div>
     </section>
 
