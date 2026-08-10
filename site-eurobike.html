@@ -531,15 +531,14 @@
     <section class="tab-panel" id="tab-3">
       <h1 class="section-title">Demonstração</h1>
       <p class="section-sub">Vídeos da plataforma, orientados aos desafios da Eurobike</p>
-      <div class="empty-state" id="tab3EmptyState">
+      <div class="empty-state" id="tab3EmptyState" style="display:none;">
         <i class="fa-regular fa-circle-play"></i>
         <h3>Aba liberada após a reunião de Demo</h3>
         <p>O closer vai incluir aqui vídeos curtos mostrando a solução aplicada aos desafios mapeados no Diagnóstico.</p>
       </div>
-      <div id="tab3Content" style="display:none;">
+      <div id="tab3Content" style="display:block;">
         <div class="stat-grid" id="tab3ImpactoGrid">
-          <!-- Preenchido pela skill a partir de "impacto" (estrutura-abas.md, Aba 3). Ex:
-               <div class="stat-card"><div class="num">32%</div><div class="label">redução no tempo de ciclo de avaliação</div></div> -->
+          <div class="stat-card"><div class="num">A confirmar</div><div class="label">turnover e engajamento ainda não foram quantificados pela Eurobike</div></div>
         </div>
         <div style="overflow-x:auto;margin-bottom:40px;">
           <table class="rfp-table" id="tab3ComparativoTable">
@@ -547,8 +546,10 @@
               <tr><th>Situação atual</th><th>Módulo impulseup</th><th>Como fica</th></tr>
             </thead>
             <tbody>
-              <!-- Preenchido pela skill a partir de "comparativo" (máx. 4 linhas). Ex:
-                   <tr><td>Avaliação só em planilha</td><td class="feat-name">Ciclos de avaliação</td><td>Fluxo 100% digital com lembretes automáticos</td></tr> -->
+              <tr><td>Feedback acontece entre gestor e colaborador, mas sem registro nem controle no sistema</td><td class="feat-name">Feedback contínuo</td><td>Registro centralizado, com histórico completo e notificações automáticas</td></tr>
+<tr><td>Promoções decididas direto com o gestor, sem dados históricos de apoio</td><td class="feat-name">Avaliação de Desempenho + Nine Box</td><td>Cruzamento entre resultado de avaliação e metas, com justificativa objetiva registrada no sistema</td></tr>
+<tr><td>Receio de repetir experiência anterior: plataforma difícil, sem adesão dos gestores</td><td class="feat-name">Acesso mobile e por WhatsApp</td><td>Colaborador acessa pelo próprio celular, sem necessidade de treinamento prévio</td></tr>
+<tr><td>Lideranças com pouca prática técnica em feedback e PDI</td><td class="feat-name">IA de apoio ao gestor</td><td>IA sugere redação de feedback e opções de PDI, reduzindo a barreira técnica do gestor</td></tr>
             </tbody>
           </table>
         </div>
@@ -698,7 +699,7 @@
       <p class="section-sub">Jornada de compra da Eurobike</p>
       <div class="timeline">
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">05 ago</span><div><span class="tl-desc">Reunião de Diagnóstico</span><div class="tl-meta">Entender contexto, dores e momento de implantação · Paola e Angela</div></div></div>
-        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Demonstração personalizada</span><div class="tl-meta">Mostrar solução aplicada aos desafios mapeados</div></div></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">10 ago</span><div><span class="tl-desc">Demonstração personalizada</span><div class="tl-meta">Visão do RH, configurações do sistema e cenários de investimento · Paola</div></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Construção de projeto e proposta</span><div class="tl-meta">Definir escopo e cenários de investimento</div></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Apresentação para diretoria</span><div class="tl-meta">Paola e Angela apresentam o projeto internamente</div></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Aprovação da proposta</span></div></div>
@@ -738,7 +739,7 @@
   "investimento": null,
   "cronogramaMacro": [
     {"data": "05 ago", "titulo": "Reunião de Diagnóstico"},
-    {"data": "A definir", "titulo": "Demonstração personalizada"},
+    {"data": "10 ago", "titulo": "Demonstração personalizada"},
     {"data": "A definir", "titulo": "Aprovação da proposta"},
     {"data": "A definir", "titulo": "Assinatura e kickoff"}
   ]
