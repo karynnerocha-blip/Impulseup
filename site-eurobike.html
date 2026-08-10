@@ -499,14 +499,14 @@
           <label class="person-photo" data-initials="PS"><span>PS</span><input type="file" accept="image/*" class="personPhotoInput"></label>
           <div>
             <h4 contenteditable="true" class="person-name">Paola Schiave</h4>
-            <p contenteditable="true" class="person-role">RH — primeiro filtro (cargo a confirmar)</p>
+            <p contenteditable="true" class="person-role">Analista de RH</p>
           </div>
         </div>
         <div class="person-card">
           <label class="person-photo" data-initials="AN"><span>AN</span><input type="file" accept="image/*" class="personPhotoInput"></label>
           <div>
             <h4 contenteditable="true" class="person-name">Angela Nunes</h4>
-            <p contenteditable="true" class="person-role">Decisora seguinte (cargo a confirmar)</p>
+            <p contenteditable="true" class="person-role">Gerente de RH</p>
           </div>
         </div>
         <div class="person-card">
@@ -538,7 +538,7 @@
       </div>
       <div id="tab3Content" style="display:block;">
         <div class="stat-grid" id="tab3ImpactoGrid">
-          <div class="stat-card"><div class="num">A confirmar</div><div class="label">turnover e engajamento ainda não foram quantificados pela Eurobike</div></div>
+          <div class="stat-card"><div class="num">A confirmar</div><div class="label">engajamento e adoção ainda serão quantificados ao longo do primeiro ciclo</div></div>
         </div>
         <div style="overflow-x:auto;margin-bottom:40px;">
           <table class="rfp-table" id="tab3ComparativoTable">
@@ -595,17 +595,25 @@
     <!-- ABA 4 — DIFERENCIAIS IMPULSEUP -->
     <section class="tab-panel" id="tab-4">
       <h1 class="section-title">Diferenciais impulseup</h1>
-      <p class="section-sub">Comparativo com base nos critérios mais importantes para este projeto</p>
-      <div class="empty-state" id="tab4EmptyState">
+      <p class="section-sub">Comparativo com base nos critérios mais importantes para este projeto. Nenhum concorrente específico foi confirmado nesta negociação até o momento, por isso a coluna representa o padrão de soluções generalistas de DHO.</p>
+      <div class="empty-state" id="tab4EmptyState" style="display:none;">
         <i class="fa-regular fa-list-check"></i>
         <h3>Aba liberada após a reunião de Diagnóstico</h3>
         <p>Assim que o closer finalizar o diagnóstico, esta aba mostra o comparativo entre a impulseup e os concorrentes identificados na conversa. Se nenhum concorrente específico for mencionado, o comparativo é feito contra "Outras soluções", com resultado mediano.</p>
       </div>
-      <div id="tab4TableWrap" style="margin-top:24px;overflow-x:auto;display:none;">
+      <div id="tab4TableWrap" style="margin-top:24px;overflow-x:auto;display:block;">
         <table class="rfp-table" id="tab4Table">
-          <!-- Preenchido pela skill site-cliente-impulseup a partir da transcrição da reunião de Diagnóstico e de references/rfp-criterios.json.
-               Cada critério exibe sua tag (campo "tags" do JSON) junto ao nome, ex:
-               <tr><td><div class="feat-name">Formatos de avaliação diferentes (90/180/360)</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td>...</tr> -->
+          <thead><tr><th>Critério</th><th class="iup-col">impulseup</th><th>Outras soluções</th></tr></thead>
+          <tbody>
+          <tr><td><div class="feat-name">Envio de avaliações e pesquisas por WhatsApp</div><span class="feat-tag">Fácil</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
+<tr><td><div class="feat-name">Inteligência artificial para insights automáticos</div><span class="feat-tag">Inteligente</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
+<tr><td><div class="feat-name">Ajuda de IA para escrever feedbacks</div><span class="feat-tag">Inteligente</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
+<tr><td><div class="feat-name">Construção de PDI com biblioteca e IA</div><span class="feat-tag">Inteligente</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
+<tr><td><div class="feat-name">Cruzamento automático entre avaliação e metas</div><span class="feat-tag">Inteligente</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+<tr><td><div class="feat-name">Matriz nine box disponível para os gestores</div><span class="feat-tag">Liderança</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+<tr><td><div class="feat-name">Treinamento para gestores na implantação do ciclo</div><span class="feat-tag">Atendimento consultivo</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+<tr><td><div class="feat-name">Biblioteca de ações de desenvolvimento personalizada</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+          </tbody>
         </table>
       </div>
     </section>
@@ -735,7 +743,19 @@
     {"titulo": "Lideranças preparadas antes do primeiro ciclo", "tag": "Atendimento consultivo"},
     {"titulo": "Diretoria enxerga a gestão acontecendo de verdade", "tag": "Inteligente"}
   ],
-  "comparativo": null,
+  "comparativo": {
+    "concorrentes": ["Outras soluções"],
+    "criterios": [
+      {"nome": "Envio de avaliações e pesquisas por WhatsApp", "tag": "Fácil", "impulseup": true, "porConcorrente": [false]},
+      {"nome": "Inteligência artificial para insights automáticos", "tag": "Inteligente", "impulseup": true, "porConcorrente": [false]},
+      {"nome": "Ajuda de IA para escrever feedbacks", "tag": "Inteligente", "impulseup": true, "porConcorrente": [false]},
+      {"nome": "Construção de PDI com biblioteca e IA", "tag": "Inteligente", "impulseup": true, "porConcorrente": [false]},
+      {"nome": "Cruzamento automático entre avaliação e metas", "tag": "Inteligente", "impulseup": true, "porConcorrente": [true]},
+      {"nome": "Matriz nine box disponível para os gestores", "tag": "Liderança", "impulseup": true, "porConcorrente": [true]},
+      {"nome": "Treinamento para gestores na implantação do ciclo", "tag": "Atendimento consultivo", "impulseup": true, "porConcorrente": [true]},
+      {"nome": "Biblioteca de ações de desenvolvimento personalizada", "tag": "Flexível", "impulseup": true, "porConcorrente": [true]}
+    ]
+  },
   "investimento": null,
   "cronogramaMacro": [
     {"data": "05 ago", "titulo": "Reunião de Diagnóstico"},
