@@ -186,6 +186,18 @@
   .module-row-main p{font-size:12.5px;color:var(--color-fg-muted);}
   .module-row-users{font-size:12px;color:var(--color-fg-muted);white-space:nowrap;}
 
+  .finance-callout{background:var(--color-fg);color:#fff;border-radius:12px;padding:24px 26px;margin-bottom:36px;}
+  .finance-callout-header{display:flex;align-items:center;gap:10px;margin-bottom:18px;}
+  .finance-callout-header i{color:var(--color-primary);font-size:16px;}
+  .finance-callout-header h3{font-size:15px;margin:0;color:#fff;}
+  .finance-callout-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+  @media (max-width:900px){.finance-callout-grid{grid-template-columns:1fr;}}
+  .finance-stat{display:flex;flex-direction:column;gap:6px;background:rgba(255,255,255,0.06);border-radius:8px;padding:14px 16px;}
+  .finance-stat.pending{border:1px dashed rgba(255,255,255,0.35);background:transparent;}
+  .finance-stat-num{font-size:22px;font-weight:800;color:var(--color-primary);}
+  .finance-stat.pending .finance-stat-num{color:#fff;font-size:14px;}
+  .finance-stat-label{font-size:11.5px;color:rgba(255,255,255,0.75);line-height:1.4;}
+  .finance-callout-note{margin-top:16px;font-size:12px;color:rgba(255,255,255,0.65);line-height:1.5;}
   .approval-row{display:grid;grid-template-columns:28px 1fr;gap:0;margin-bottom:32px;}
   .approval-row:last-child{margin-bottom:0;}
   .approval-num-col{display:flex;flex-direction:column;align-items:center;}
@@ -253,7 +265,26 @@
   .proposal-upload-slot input{position:absolute;inset:0;opacity:0;cursor:pointer;}
   .proposal-upload-slot img{max-width:100%;border-radius:8px;display:block;}
   footer p{font-size:11px;color:var(--color-fg-muted);}
-</style>
+
+    .cenarios-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:24px;}
+    @media (max-width:900px){.cenarios-grid{grid-template-columns:1fr;}}
+    .cenario-card{position:relative;background:var(--color-surface);border:1px solid var(--color-border);border-radius:10px;padding:26px;display:flex;flex-direction:column;gap:16px;}
+    .cenario-card.recomendado{border:2px solid var(--color-primary);background:#fff;}
+    .cenario-badge{position:absolute;top:-12px;right:20px;background:var(--color-primary);color:#fff;font-size:10.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:5px 12px;border-radius:20px;}
+    .cenario-header h3{font-size:19px;margin:0;}
+    .cenario-sub{font-size:12.5px;color:var(--color-fg-muted);}
+    .cenario-price{display:flex;flex-direction:column;border-top:1px solid var(--color-border);border-bottom:1px solid var(--color-border);padding:14px 0;}
+    .cenario-parcela{font-size:28px;font-weight:800;color:var(--color-primary);line-height:1.1;}
+    .cenario-parcelamento{font-size:12px;color:var(--color-fg-muted);margin-top:2px;}
+    .cenario-itens{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px;}
+    .cenario-itens li{display:flex;align-items:flex-start;gap:8px;font-size:13px;}
+    .cenario-itens li i{color:#1D9E75;font-size:12px;margin-top:3px;}
+    .cenario-nota{font-size:12px;color:var(--color-fg-muted);margin:0;line-height:1.5;}
+    .proposal-footer-note{display:flex;gap:12px;align-items:flex-start;background:var(--color-surface);border-radius:10px;padding:16px 18px;margin-top:24px;}
+    .proposal-footer-note i{color:var(--color-primary);margin-top:2px;}
+    .proposal-footer-note p{margin:0;font-size:12.5px;color:var(--color-fg-muted);line-height:1.5;}
+    
+  </style>
 </head>
 <body>
 
@@ -465,6 +496,16 @@
         <h3>Aba liberada após a reunião de Diagnóstico</h3>
         <p>Assim que os desafios forem mapeados, esta aba mostra, para cada um deles, o motivador da contratação, como a impulseup resolve e qual o estado futuro do negócio — pronta para embasar a apresentação à diretoria.</p>
       </div>
+      <div class="finance-callout">
+        <div class="finance-callout-header"><i class="fa-solid fa-coins"></i><h3>Para a conversa com o financeiro</h3></div>
+        <div class="finance-callout-grid">
+          <div class="finance-stat"><span class="finance-stat-num">10–11%</span><span class="finance-stat-label">de rotatividade ao mês, quase 100% ao ano, concentrada na logística</span></div>
+          <div class="finance-stat"><span class="finance-stat-num">R$ 1.926</span><span class="finance-stat-label">salário médio informado, base para o cálculo de custo de turnover</span></div>
+          <div class="finance-stat pending"><span class="finance-stat-num">A confirmar</span><span class="finance-stat-label">número de desligamentos no último ano, para fechar o valor total de turnover (fórmula: 4 × salário médio × desligados/ano)</span></div>
+        </div>
+        <p class="finance-callout-note">Maior parte das saídas acontece nos 3 primeiros meses ou antes de completar 1 ano de casa. Hoje está praticamente 50/50 entre desligamento pela empresa e pedido de demissão do colaborador, e o motivo predominante é pessoal (rede de apoio, filhos, cuidado de idosos), não salário.</p>
+      </div>
+
       <div id="tab5ApprovalWrap" style="display:block;">
         <div class="approval-row">
           <div class="approval-num-col"><div class="approval-num">01</div><div class="approval-line"></div></div>
@@ -518,7 +559,7 @@
           <div class="approval-num-col"><div class="approval-num">04</div><div class="approval-line"></div></div>
           <div class="approval-stages">
             <div class="approval-inputs">
-              <div class="approval-stage motivador"><span class="approval-stage-label">Motivador</span><h4>Rotatividade alta na logística</h4><p>Rotatividade estimada em torno de 50%, concorrendo direto com informalidade e benefícios do governo na região.</p></div>
+              <div class="approval-stage motivador"><span class="approval-stage-label">Motivador</span><h4>Rotatividade alta na logística</h4><p>Entre 10% e 11% de rotatividade ao mês, quase 100% ao ano, concentrada nos 3 primeiros meses e no primeiro ano de casa. Salário médio de R$ 1.926.</p></div>
               <div class="approval-stage solucao"><span class="approval-stage-label">Solução impulseup</span><p>Matriz de talentos e módulo de sucessão mapeiam risco de saída e sucessores prontos por posição.</p></div>
             </div>
             <div class="approval-outcome">
@@ -762,47 +803,39 @@
       <h1 class="section-title">Proposta comercial</h1>
       <p class="section-sub">Investimento para a Gauchafarma</p>
 
-      <div class="empty-state" id="tab7EmptyState">
-        <i class="fa-regular fa-file-invoice-dollar"></i>
-        <h3>Aba liberada após o closer informar a proposta comercial</h3>
-        <p>Assim que o closer passar os valores definidos na ferramenta de precificação da impulseup, esta aba mostra o investimento, os módulos e serviços incluídos e o detalhamento de valores.</p>
-      </div>
-
-      <div id="tab7ProposalWrap" style="display:none;">
-        <div class="investment-hero">
-          <div class="label">Investimento mensal</div>
-          <div class="value">R$ 12.400/mês</div>
+      <div class="cenarios-grid">
+        <div class="cenario-card">
+          
+          <div class="cenario-header">
+            <h3>Cenário 100</h3>
+            <span class="cenario-sub">Liderança + ADM</span>
+          </div>
+          <div class="cenario-price">
+            <span class="cenario-parcela">R$ 1.000/mês</span>
+            <span class="cenario-parcelamento">em 12x · total R$ 12.000</span>
+          </div>
+          <ul class="cenario-itens"><li><i class="fa-solid fa-check"></i>100 créditos de avaliação (1x ao ano)</li><li><i class="fa-solid fa-check"></i>PDI ilimitado durante o ano</li><li><i class="fa-solid fa-check"></i>Feedback contínuo ilimitado</li><li><i class="fa-solid fa-check"></i>Matriz de talentos (Nine Box) personalizável</li><li><i class="fa-solid fa-check"></i>Implantação e treinamento com gestores inclusos</li></ul>
+          <p class="cenario-nota">Cobre liderança, supervisão, coordenação, gerência e ADM. Expansão para a operação pode ser feita em um segundo momento, com novo aporte de créditos.</p>
         </div>
-        <p class="investment-hero-meta">Investimento total do contrato: R$ 148.800 · Validade da proposta: 15 dias · Duração do contrato: 12 meses</p>
-
-        <div class="block-title"><i class="fa-regular fa-layer-group"></i>Módulos e serviços incluídos</div>
-        <div class="module-list">
-          <div class="module-row">
-            <div class="module-row-main"><h4>Avaliação de Desempenho</h4><p>Ciclos completos com nine-box e PDI integrado.</p></div>
-            <div class="module-row-users">500 usuários</div>
+        <div class="cenario-card recomendado">
+          <span class="cenario-badge">Recomendado</span>
+          <div class="cenario-header">
+            <h3>Cenário 200</h3>
+            <span class="cenario-sub">Empresa inteira</span>
           </div>
-          <div class="module-row">
-            <div class="module-row-main"><h4>Plano de Serviço III</h4><p>Implementação assistida por especialista em DHO.</p></div>
-            <div class="module-row-users"></div>
+          <div class="cenario-price">
+            <span class="cenario-parcela">R$ 1.800/mês</span>
+            <span class="cenario-parcelamento">em 12x · total R$ 21.600</span>
           </div>
-        </div>
+          <ul class="cenario-itens"><li><i class="fa-solid fa-check"></i>200 créditos de avaliação (1x ao ano)</li><li><i class="fa-solid fa-check"></i>PDI ilimitado durante o ano</li><li><i class="fa-solid fa-check"></i>Feedback contínuo ilimitado</li><li><i class="fa-solid fa-check"></i>Matriz de talentos (Nine Box) personalizável</li><li><i class="fa-solid fa-check"></i>Implantação e treinamento com gestores inclusos</li></ul>
+          <p class="cenario-nota">Já cobre toda a Gauchafarma desde o primeiro ciclo. Início continua sendo pela liderança e ADM, mas sem precisar de uma segunda aprovação da diretoria para expandir depois.</p>
+        </div></div>
 
-        <div class="block-title"><i class="fa-regular fa-table"></i>Detalhamento de valores</div>
-        <table class="rfp-table" id="proposalValuesTable">
-          <tr><th>Item</th><th>Usuários</th><th>Valor unitário</th><th>Valor mensal</th><th>Observação</th></tr>
-          <tr><td><div class="feat-name">Avaliação de Desempenho</div></td><td class="check-cell">500</td><td class="check-cell">R$ 22,00</td><td class="check-cell">R$ 11.000,00</td><td class="check-cell">—</td></tr>
-          <tr><td><div class="feat-name">Plano de Serviço III</div></td><td class="check-cell">—</td><td class="check-cell">R$ 16.800,00</td><td class="check-cell">—</td><td class="check-cell">Cobrança única</td></tr>
-          <tr><td colspan="4" style="text-align:right;font-weight:600;">Total do contrato (12 meses)</td><td class="check-cell" style="font-weight:700;color:var(--color-primary);">R$ 148.800</td></tr>
-        </table>
-
-        <label class="proposal-upload-slot" id="proposalSlot" style="margin-top:24px;">
-          <div id="proposalPlaceholder">
-            <i class="fa-regular fa-image" style="font-size:22px;color:var(--color-border);display:block;margin-bottom:10px;"></i>
-            <span style="font-size:13px;color:var(--color-fg-muted);">Clique para anexar</span>
-          </div>
-          <input type="file" accept="image/*" id="proposalInput">
-        </label>
+      <div class="proposal-footer-note">
+        <i class="fa-regular fa-clock"></i>
+        <p>Ambos os cenários usam o modelo de créditos (avaliação uma vez ao ano, com PDI e feedback à vontade durante todo o período), o mesmo formato já aplicado no ciclo de 2023, mantendo o orçamento próximo do que a Gauchafarma pagou na época.</p>
       </div>
+      <p style="font-size:11.5px;color:var(--color-fg-muted);margin-top:16px;">Valores sujeitos a confirmação final na ferramenta de precificação da impulseup antes da assinatura.</p>
     </section>
 
     <!-- ABA 8 — PRÓXIMOS PASSOS -->
@@ -813,7 +846,8 @@
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Reunião de Diagnóstico</span><div class="tl-meta">Entender contexto e desafios · Fabiane Oleinski</div></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Demonstração personalizada</span><div class="tl-meta">Revisão do ambiente de 2023 e apresentação dos módulos</div></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">06 ago</span><div><span class="tl-desc">Construção de projeto e proposta</span><div class="tl-meta">Alinhamento do cenário de investimento (100 ou 200 colaboradores) e do material de apoio para a diretoria</div></div></div>
-        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Apresentação para diretoria</span><div class="tl-meta">Fabiane apresenta o projeto internamente</div></div></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">11 ago</span><div><span class="tl-desc">Demonstração e proposta para o financeiro</span><div class="tl-meta">Reunião com Hélio (Gerente Financeiro), 15h, apresentando os 2 cenários e o retorno esperado</div></div></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Apresentação para diretoria</span><div class="tl-meta">Fabiane e Hélio apresentam o projeto internamente</div></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Aprovação da proposta</span></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Revisão jurídica</span></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Assinatura e kickoff</span></div></div>
