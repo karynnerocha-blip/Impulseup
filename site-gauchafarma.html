@@ -198,6 +198,8 @@
   .finance-stat.pending .finance-stat-num{color:#fff;font-size:14px;}
   .finance-stat-label{font-size:11.5px;color:rgba(255,255,255,0.75);line-height:1.4;}
   .finance-callout-note{margin-top:16px;font-size:12px;color:rgba(255,255,255,0.65);line-height:1.5;}
+  .finance-callout-warning{margin-top:12px;font-size:11.5px;color:#FFD9A0;line-height:1.5;background:rgba(255,255,255,0.06);border-radius:8px;padding:10px 14px;}
+  .finance-callout-warning i{margin-right:6px;}
   .approval-row{display:grid;grid-template-columns:28px 1fr;gap:0;margin-bottom:32px;}
   .approval-row:last-child{margin-bottom:0;}
   .approval-num-col{display:flex;flex-direction:column;align-items:center;}
@@ -501,9 +503,10 @@
         <div class="finance-callout-grid">
           <div class="finance-stat"><span class="finance-stat-num">10–11%</span><span class="finance-stat-label">de rotatividade ao mês, quase 100% ao ano, concentrada na logística</span></div>
           <div class="finance-stat"><span class="finance-stat-num">R$ 1.926</span><span class="finance-stat-label">salário médio informado, base para o cálculo de custo de turnover</span></div>
-          <div class="finance-stat pending"><span class="finance-stat-num">A confirmar</span><span class="finance-stat-label">número de desligamentos no último ano, para fechar o valor total de turnover (fórmula: 4 × salário médio × desligados/ano)</span></div>
+          <div class="finance-stat pending"><span class="finance-stat-num">≈ R$ 693 mil/ano</span><span class="finance-stat-label">custo estimado de turnover (estimativa preliminar, não confirmada com o RH)</span></div>
         </div>
         <p class="finance-callout-note">Maior parte das saídas acontece nos 3 primeiros meses ou antes de completar 1 ano de casa. Hoje está praticamente 50/50 entre desligamento pela empresa e pedido de demissão do colaborador, e o motivo predominante é pessoal (rede de apoio, filhos, cuidado de idosos), não salário.</p>
+        <p class="finance-callout-warning"><i class="fa-solid fa-triangle-exclamation"></i> Estimativa interna, não validada pela Fabiane: considera ~100 colaboradores na logística (metade do headcount total) e 90% de rotatividade ao ano. Fórmula: 4 × R$ 1.926 × 90 desligamentos/ano. Confirmar o número real antes de apresentar como dado fechado ao Hélio.</p>
       </div>
 
       <div id="tab5ApprovalWrap" style="display:block;">
