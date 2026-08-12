@@ -529,15 +529,16 @@
     <section class="tab-panel" id="tab-3">
       <h1 class="section-title">Demonstração</h1>
       <p class="section-sub">Vídeos da plataforma, orientados aos desafios da Grupo Mooven</p>
-      <div class="empty-state" id="tab3EmptyState">
+      <div class="empty-state" id="tab3EmptyState" style="display:none;">
         <i class="fa-regular fa-circle-play"></i>
         <h3>Aba liberada após a reunião de Demo</h3>
         <p>O closer vai incluir aqui vídeos curtos mostrando a solução aplicada aos desafios mapeados no Diagnóstico.</p>
       </div>
-      <div id="tab3Content" style="display:none;">
+      <div id="tab3Content" style="display:block;">
         <div class="stat-grid" id="tab3ImpactoGrid">
-          <!-- Preenchido pela skill a partir de "impacto" (estrutura-abas.md, Aba 3). Ex:
-               <div class="stat-card"><div class="num">32%</div><div class="label">redução no tempo de ciclo de avaliação</div></div> -->
+          <div class="stat-card"><div class="num">190</div><div class="label">colaboradores sem processo formal de avaliação</div></div>
+          <div class="stat-card"><div class="num">2x/mês</div><div class="label">frequência de feedback já praticada informalmente, sem histórico estruturado</div></div>
+          <div class="stat-card"><div class="num">0</div><div class="label">ciclos de avaliação formalizados até hoje</div></div>
         </div>
         <div style="overflow-x:auto;margin-bottom:40px;">
           <table class="rfp-table" id="tab3ComparativoTable">
@@ -545,46 +546,15 @@
               <tr><th>Situação atual</th><th>Módulo impulseup</th><th>Como fica</th></tr>
             </thead>
             <tbody>
-              <!-- Preenchido pela skill a partir de "comparativo" (máx. 4 linhas). Ex:
-                   <tr><td>Avaliação só em planilha</td><td class="feat-name">Ciclos de avaliação</td><td>Fluxo 100% digital com lembretes automáticos</td></tr> -->
+              <tr><td>Feedback frequente, mas informal, sem registro categorizado</td><td class="feat-name">Feedback</td><td>Feedback positivo, de reconhecimento e de melhoria, registrado com histórico e apoio de IA na escrita</td></tr>
+              <tr><td>Sem dados consolidados para decisão</td><td class="feat-name">Analytics</td><td>Comparação de resultados por área, cargo e competência, com IA gerando insights automáticos</td></tr>
+              <tr><td>Nenhum processo formal de avaliação</td><td class="feat-name">Avaliação de Desempenho</td><td>Ciclo configurável (autoavaliação + gestor), com competências gerais, técnicas e de liderança</td></tr>
+              <tr><td>Sem visão de talentos ou sucessão</td><td class="feat-name">Nine Box</td><td>Matriz personalizável para identificar talentos e apoiar decisões de sucessão</td></tr>
             </tbody>
           </table>
         </div>
         <div class="video-grid" id="tab3VideoGrid">
-          <!-- Preenchido pela skill a partir de "videos" (estrutura-abas.md, Aba 3), um .video-card por vídeo.
-               Ver scripts/gerar_video_embed.py::gerar_bloco_video() para a lógica de geração.
-
-               Caso 1 — url_video já veio do closer (link de Drive ou YouTube) e foi reconhecida:
-               <div class="video-card">
-                 <h4>{{titulo}}</h4><p>{{descricao}}</p>
-                 <div class="video-embed-wrap">
-                   <iframe src="{{embed_url}}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-                 </div>
-               </div>
-
-               Caso 2 — url_video veio mas não foi possível gerar embed (ex: link de pasta do Drive,
-               sem permissão de embed): mostrar card de link em vez de iframe.
-               <div class="video-card">
-                 <h4>{{titulo}}</h4><p>{{descricao}}</p>
-                 <div class="video-link-card">
-                   <i class="fa-brands fa-google-drive"></i>
-                   <p>Vídeo disponível para acesso externo</p>
-                   <a href="{{url_video}}" target="_blank" rel="noopener" class="video-link-btn">Assistir vídeo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                 </div>
-               </div>
-
-               Caso 3 — vídeo ainda sem url_video: slot de colagem manual, para o closer colar o link
-               direto no site (fica salvo no localStorage do navegador via saveImage/loadStore).
-               <div class="video-card">
-                 <h4>{{titulo}}</h4><p>{{descricao}}</p>
-                 <div class="video-embed-wrap video-embed-empty" data-video-idx="{{indice}}">
-                   <label class="video-paste-label">
-                     <i class="fa-regular fa-circle-play"></i>
-                     <span>Cole aqui o link do vídeo (YouTube ou Drive)</span>
-                   </label>
-                   <input type="text" class="video-url-input" data-video-idx="{{indice}}" placeholder="https://...">
-                 </div>
-               </div> -->
+          <!-- Nenhum link de vídeo informado ainda pelas duas demos já realizadas — slots de colagem manual ficam disponíveis quando o closer tiver o link. -->
         </div>
       </div>
     </section>
@@ -611,13 +581,144 @@
     <section class="tab-panel" id="tab-5">
       <h1 class="section-title">Aprovação e plano de ação</h1>
       <p class="section-sub">Objetivos de negócio da Grupo Mooven, o caminho para chegar lá e o estado futuro com a impulseup</p>
-      <div class="empty-state" id="tab5EmptyState">
+      <div class="empty-state" id="tab5EmptyState" style="display:none;">
         <i class="fa-regular fa-clipboard"></i>
         <h3>Aba liberada após a reunião de Diagnóstico</h3>
         <p>Assim que os desafios forem mapeados, esta aba mostra os objetivos de negócio e RH por trás do projeto, o plano de ação com cronograma para chegar lá, e o estado futuro do negócio com a impulseup — pronta para embasar a apresentação à diretoria.</p>
       </div>
-      <div id="tab5PlanoWrap" style="display:none;">
-        <!--OBJETIVOS-->
+      <div id="tab5PlanoWrap" style="display:block;">
+        <div class="objetivo-card">
+          <span class="objetivo-num">01</span>
+          <h4>Implantar o primeiro ciclo de Avaliação de Desempenho</h4>
+          <p>Sair da ausência total de processo formal para um ciclo estruturado, com autoavaliação e avaliação do gestor.</p>
+          <div class="objetivo-body">
+            <div class="objetivo-compare-col">
+              <div class="objetivo-compare-box atual"><strong>Situação atual:</strong> Nenhum ciclo de avaliação formal realizado até hoje; ~190 colaboradores sem processo estruturado.</div>
+              <div class="objetivo-compare-box meta"><strong>Meta:</strong> Primeiro ciclo rodando, com competências gerais, técnicas e de liderança configuradas conforme a cultura da Mooven.</div>
+              <div class="objetivo-indicador"><strong>Indicador de sucesso:</strong> Primeiro ciclo concluído com participação de 100% dos ~190 colaboradores.</div>
+            </div>
+            <div class="objetivo-plan-col">
+              <div class="objetivo-etapas">
+                <div class="objetivo-etapa"><span class="periodo">Mês 1 (estimativa)</span><strong>Configuração e parametrização</strong><p>Mapeamento de competências, escalas e avaliadores. <em>Responsável: impulseup</em></p></div>
+                <div class="objetivo-etapa"><span class="periodo">Mês 1–2 (estimativa)</span><strong>Validação do ciclo</strong><p>Revisão das competências junto às lideranças. <em>Responsável: conjunta</em></p></div>
+                <div class="objetivo-etapa"><span class="periodo">Mês 2 (estimativa)</span><strong>Comunicação e treinamento</strong><p>Capacitação de gestores e colaboradores. <em>Responsável: impulseup</em></p></div>
+                <div class="objetivo-etapa"><span class="periodo">Mês 3 (estimativa)</span><strong>Execução do primeiro ciclo</strong><p><em>Responsável: Grupo Mooven</em></p></div>
+              </div>
+            </div>
+          </div>
+          <div class="approval-outcome">
+            <div class="approval-outcome-title">Estado futuro</div>
+            <div class="approval-outcome-grid">
+              <div class="approval-stage futuro"><strong>RH:</strong> Processo formal de avaliação, com histórico desde o primeiro ciclo.</div>
+              <div class="approval-stage negocio"><strong>Negócio:</strong> Liderança ganha visão objetiva de performance logo no início da integração pós-fusão, sem depender de percepção individual.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="objetivo-card">
+          <span class="objetivo-num">02</span>
+          <h4>Transformar feedback informal em rotina estruturada e mensurável</h4>
+          <p>Dar forma e histórico a uma prática que já existe na rotina da empresa, mas hoje não gera dado.</p>
+          <div class="objetivo-body">
+            <div class="objetivo-compare-col">
+              <div class="objetivo-compare-box atual"><strong>Situação atual:</strong> Feedback já acontece com frequência (parte do time recebe até 2x por mês), mas sem categorização, histórico ou ferramenta adequada — a Sólides, usada hoje, não atende plenamente.</div>
+              <div class="objetivo-compare-box meta"><strong>Meta:</strong> Feedback contínuo registrado, categorizado (positivo, reconhecimento, melhoria) e com histórico acessível por gestores e RH.</div>
+              <div class="objetivo-indicador"><strong>Indicador de sucesso:</strong> Volume de feedbacks registrados por mês, com histórico crescente ciclo a ciclo.</div>
+            </div>
+            <div class="objetivo-plan-col">
+              <div class="objetivo-etapas">
+                <div class="objetivo-etapa"><span class="periodo">Mês 1 (estimativa)</span><strong>Configuração das categorias de feedback</strong><p><em>Responsável: impulseup</em></p></div>
+                <div class="objetivo-etapa"><span class="periodo">Mês 1 (estimativa)</span><strong>Comunicação da nova rotina</strong><p><em>Responsável: Grupo Mooven</em></p></div>
+                <div class="objetivo-etapa"><span class="periodo">Mês 1 em diante (estimativa)</span><strong>Adoção e acompanhamento</strong><p><em>Responsável: conjunta</em></p></div>
+              </div>
+            </div>
+          </div>
+          <div class="approval-outcome">
+            <div class="approval-outcome-title">Estado futuro</div>
+            <div class="approval-outcome-grid">
+              <div class="approval-stage futuro"><strong>RH:</strong> Visibilidade sobre volume e qualidade do feedback praticado, por área e por gestor.</div>
+              <div class="approval-stage negocio"><strong>Negócio:</strong> Cultura de feedback já forte na empresa passa a gerar dado, apoiando decisões de desenvolvimento e retenção no momento sensível da fusão.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="objetivo-card">
+          <span class="objetivo-num">03</span>
+          <h4>Transformar avaliação em dados para tomada de decisão</h4>
+          <p>Sair da ausência de dado consolidado para uma visão comparável de performance e competências.</p>
+          <div class="objetivo-body">
+            <div class="objetivo-compare-col">
+              <div class="objetivo-compare-box atual"><strong>Situação atual:</strong> Não existe hoje dado consolidado sobre performance, competências ou gaps entre áreas.</div>
+              <div class="objetivo-compare-box meta"><strong>Meta:</strong> Dashboards de Analytics com comparação por colaborador, gestor, área e competência, com apoio de IA para insights.</div>
+              <div class="objetivo-indicador"><strong>Indicador de sucesso:</strong> Relatórios de Analytics gerados e utilizados a cada ciclo.</div>
+            </div>
+            <div class="objetivo-plan-col">
+              <div class="objetivo-etapas">
+                <div class="objetivo-etapa"><span class="periodo">Mês 2 (estimativa)</span><strong>Parametrização dos filtros de análise</strong><p><em>Responsável: impulseup</em></p></div>
+                <div class="objetivo-etapa"><span class="periodo">Mês 3 (estimativa)</span><strong>Primeira leitura de dados pós-ciclo</strong><p><em>Responsável: conjunta</em></p></div>
+              </div>
+            </div>
+          </div>
+          <div class="approval-outcome">
+            <div class="approval-outcome-title">Estado futuro</div>
+            <div class="approval-outcome-grid">
+              <div class="approval-stage futuro"><strong>RH:</strong> Consegue responder, com dado, onde estão os gaps e quais áreas precisam de atenção.</div>
+              <div class="approval-stage negocio"><strong>Negócio:</strong> Diretoria decide desenvolvimento e alocação de pessoas com base em evidência, não em percepção — especialmente relevante ao integrar os dois times pós-fusão.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="objetivo-card">
+          <span class="objetivo-num">04</span>
+          <h4>Estruturar PDI conectado à avaliação</h4>
+          <p>Conectar o resultado da avaliação a um plano de desenvolvimento real e acompanhável.</p>
+          <div class="objetivo-body">
+            <div class="objetivo-compare-col">
+              <div class="objetivo-compare-box atual"><strong>Situação atual:</strong> Não há PDI estruturado nem conexão entre resultado de avaliação e plano de desenvolvimento.</div>
+              <div class="objetivo-compare-box meta"><strong>Meta:</strong> PDIs gerados a partir dos gaps identificados na avaliação, com biblioteca de ações e apoio de IA.</div>
+              <div class="objetivo-indicador"><strong>Indicador de sucesso:</strong> Percentual de colaboradores com PDI ativo após o primeiro ciclo.</div>
+            </div>
+            <div class="objetivo-plan-col">
+              <div class="objetivo-etapas">
+                <div class="objetivo-etapa"><span class="periodo">Mês 3 (estimativa)</span><strong>Configuração da biblioteca de ações</strong><p><em>Responsável: impulseup</em></p></div>
+                <div class="objetivo-etapa"><span class="periodo">Mês 3–4 (estimativa)</span><strong>Construção dos primeiros PDIs</strong><p><em>Responsável: conjunta</em></p></div>
+              </div>
+            </div>
+          </div>
+          <div class="approval-outcome">
+            <div class="approval-outcome-title">Estado futuro</div>
+            <div class="approval-outcome-grid">
+              <div class="approval-stage futuro"><strong>RH:</strong> Cada gap identificado vira ação de desenvolvimento registrada e acompanhável.</div>
+              <div class="approval-stage negocio"><strong>Negócio:</strong> Investimento em desenvolvimento passa a ser direcionado pelos gaps reais, não genérico.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="objetivo-card">
+          <span class="objetivo-num">05</span>
+          <h4>Iniciar o mapeamento de talentos e sucessão</h4>
+          <p>Começar a enxergar talentos críticos justo no momento em que a empresa integra dois times.</p>
+          <div class="objetivo-body">
+            <div class="objetivo-compare-col">
+              <div class="objetivo-compare-box atual"><strong>Situação atual:</strong> Não há hoje matriz de talentos ou mapeamento de sucessão formalizado.</div>
+              <div class="objetivo-compare-box meta"><strong>Meta:</strong> Nine Box configurado para cruzar performance e potencial, apoiando decisões de sucessão.</div>
+              <div class="objetivo-indicador"><strong>Indicador de sucesso:</strong> Matriz Nine Box populada e revisada a cada ciclo.</div>
+            </div>
+            <div class="objetivo-plan-col">
+              <div class="objetivo-etapas">
+                <div class="objetivo-etapa"><span class="periodo">Mês 4 (estimativa)</span><strong>Configuração da matriz</strong><p><em>Responsável: impulseup</em></p></div>
+                <div class="objetivo-etapa"><span class="periodo">Mês 4 em diante (estimativa)</span><strong>Calibragem contínua</strong><p><em>Responsável: conjunta</em></p></div>
+              </div>
+            </div>
+          </div>
+          <div class="approval-outcome">
+            <div class="approval-outcome-title">Estado futuro</div>
+            <div class="approval-outcome-grid">
+              <div class="approval-stage futuro"><strong>RH:</strong> Visualiza talentos críticos e possíveis sucessores.</div>
+              <div class="approval-stage negocio"><strong>Negócio:</strong> Empresa reduz risco de perda de conhecimento crítico logo no início da integração pós-fusão.</div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
