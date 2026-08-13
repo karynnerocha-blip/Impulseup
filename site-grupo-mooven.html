@@ -1052,14 +1052,14 @@
       <h1 class="section-title">Processo de implementação</h1>
       <p class="section-sub">Como será a jornada de implementação da Grupo Mooven com a impulseup</p>
 
-      <div class="empty-state" id="tab6EmptyState">
+      <div class="empty-state" id="tab6EmptyState" style="display:none;">
         <i class="fa-regular fa-map"></i>
         <h3>Aba liberada após o closer confirmar cluster, módulos e Weeklies (se Enterprise)</h3>
         <p>Assim que o cluster de implementação (Low/Mid, High ou Enterprise) e os módulos da proposta forem confirmados, esta aba mostra a cadeia de implementação de cada módulo: etapas e responsáveis do nosso lado.</p>
       </div>
 
-      <div id="tab6ProcessWrap" style="display:none;">
-        <!--IMPL_PROCESSO-->
+      <div id="tab6ProcessWrap" style="display:block;">
+        <div class="impl-processo" data-cluster="mid"><div class="impl-suporte-note"><b>Suporte técnico</b> acompanha toda a jornada de implementação, do início ao fim — seu papel é garantir que tudo funcione conforme previsto, por isso não aparece preso a uma etapa específica.</div><div class="impl-rows"><div class="impl-row"><div class="impl-row-label"><span class="impl-dot"></span>Jornada Inicial</div><div class="impl-chain"><div class="impl-step-unit"><div class="impl-box">Planejamento Inicial</div><span class="role-tag role-consultor">Consultor de implementação</span></div><div class="impl-arrow">&rarr;</div><div class="impl-step-unit"><div class="impl-box">Workshop Sistema</div><span class="role-tag role-consultor">Consultor de implementação</span></div><div class="impl-arrow">&rarr;</div><div class="impl-step-unit"><div class="impl-box">Estratégia 1º Acesso</div><span class="role-tag role-consultor">Consultor de implementação</span></div><div class="impl-arrow">&rarr;</div><div class="impl-step-unit"><div class="impl-box">Treinamento com Gestores (1h)</div><span class="role-tag role-consultor">Consultor de implementação</span></div></div></div><div class="impl-row"><div class="impl-row-label"><span class="impl-dot"></span>Avaliação de Desempenho</div><div class="impl-chain"><div class="impl-step-unit"><div class="impl-box">Validação do Módulo</div><span class="role-tag role-consultor">Consultor de implementação</span></div><div class="impl-handoff-divider"></div><div class="impl-step-unit"><div class="impl-box">Analytics</div><span class="role-tag role-gerente">Gerente de contas</span></div></div></div><div class="impl-row"><div class="impl-row-label"><span class="impl-dot"></span>Avaliação de Experiência</div><div class="impl-chain"><div class="impl-step-unit"><div class="impl-box">Validação do Módulo</div><span class="role-tag role-consultor">Consultor de implementação</span></div></div></div><div class="impl-row"><div class="impl-row-label"><span class="impl-dot"></span>Pesquisa</div><div class="impl-chain"><div class="impl-step-unit"><div class="impl-box">Validação do Módulo</div><span class="role-tag role-consultor">Consultor de implementação</span></div><div class="impl-handoff-divider"></div><div class="impl-step-unit"><div class="impl-box">Analytics</div><span class="role-tag role-gerente">Gerente de contas</span></div></div></div></div></div>
         <div class="impl-legend">
           <div class="impl-legend-item"><span class="impl-legend-dot" style="background:#CC0088;"></span>Consultor de implementação</div>
           <div class="impl-legend-item"><span class="impl-legend-dot" style="background:#4B4B8A;"></span>CSI</div>
@@ -1071,40 +1071,18 @@
     <!-- ABA 7 — PROPOSTA COMERCIAL -->
     <section class="tab-panel" id="tab-7">
       <h1 class="section-title">Proposta comercial</h1>
-      <p class="section-sub">Investimento para a Grupo Mooven</p>
+      <p class="section-sub">Dois cenários de investimento para a Grupo Mooven escolher</p>
 
-      <div class="empty-state" id="tab7EmptyState">
+      <div class="empty-state" id="tab7EmptyState" style="display:none;">
         <i class="fa-regular fa-file-invoice-dollar"></i>
         <h3>Aba liberada após o closer informar a proposta comercial</h3>
         <p>Assim que o closer passar os valores definidos na ferramenta de precificação da impulseup, esta aba mostra o investimento, os módulos e serviços incluídos e o detalhamento de valores.</p>
       </div>
 
-      <div id="tab7ProposalWrap" style="display:none;">
-        <div class="investment-hero">
-          <div class="label">Investimento mensal</div>
-          <div class="value">R$ 12.400/mês</div>
-        </div>
-        <p class="investment-hero-meta">Investimento total do contrato: R$ 148.800 · Validade da proposta: 15 dias · Duração do contrato: 12 meses</p>
+      <div id="tab7ProposalWrap" style="display:block;">
+        <p class="investment-hero-meta" style="margin-bottom:24px;">Validade da proposta: 5 dias · Duração do contrato: 12 meses · Base: 180 usuários (Moving + Fornax)</p>
 
-        <div class="block-title"><i class="fa-regular fa-layer-group"></i>Módulos e serviços incluídos</div>
-        <div class="module-list">
-          <div class="module-row">
-            <div class="module-row-main"><h4>Avaliação de Desempenho</h4><p>Ciclos completos com nine-box e PDI integrado.</p></div>
-            <div class="module-row-users">500 usuários</div>
-          </div>
-          <div class="module-row">
-            <div class="module-row-main"><h4>Plano de Serviço III</h4><p>Implementação assistida por especialista em DHO.</p></div>
-            <div class="module-row-users"></div>
-          </div>
-        </div>
-
-        <div class="block-title"><i class="fa-regular fa-table"></i>Detalhamento de valores</div>
-        <table class="rfp-table" id="proposalValuesTable">
-          <tr><th>Item</th><th>Usuários</th><th>Valor unitário</th><th>Valor mensal</th><th>Observação</th></tr>
-          <tr><td><div class="feat-name">Avaliação de Desempenho</div></td><td class="check-cell">500</td><td class="check-cell">R$ 22,00</td><td class="check-cell">R$ 11.000,00</td><td class="check-cell">—</td></tr>
-          <tr><td><div class="feat-name">Plano de Serviço III</div></td><td class="check-cell">—</td><td class="check-cell">R$ 16.800,00</td><td class="check-cell">—</td><td class="check-cell">Cobrança única</td></tr>
-          <tr><td colspan="4" style="text-align:right;font-weight:600;">Total do contrato (12 meses)</td><td class="check-cell" style="font-weight:700;color:var(--color-primary);">R$ 148.800</td></tr>
-        </table>
+        <div class="cenarios-comparativo"><div class="cards"><div class="card"><div class="card-header"><div class="eyebrow-card">Cenário 1</div><div class="card-title">Avaliações Ilimitadas</div></div><div class="card-body"><div class="price-line"><span class="price-value">R$ 2.584,60</span><span class="price-unit">/ mês (12x)</span></div><div class="price-base">Investimento total do contrato: R$ 31.015,20</div><hr class="divider"><div class="inclui-label">Inclui</div><ul class="check-list"><li><span class="tick">&#10003;</span>Avaliações — ciclos 90/180/360°, Avaliação de Experiência e Feedback contínuo</li><li><span class="tick">&#10003;</span>Desenvolvimento — PDIs, Feedbacks, Reuniões 1:1, Ações e Iniciativas (incluso)</li></ul><details class="detalhamento"><summary>Ver detalhamento</summary><table class="detalhamento-table"><thead><tr><th>Item</th><th>Quantidade</th><th>Valor unitário</th><th>Valor total</th></tr></thead><tbody><tr><td>Avaliações</td><td>180 usuários</td><td>R$ 12,97/mês</td><td>R$ 2.334,60/mês</td></tr><tr><td>Desenvolvimento</td><td>180 usuários</td><td>Incluso</td><td>Incluso</td></tr><tr><td>Plano de Serviço I</td><td>—</td><td>Valor único</td><td>R$ 2.500,00</td></tr><tr><td>Treinamento (1h, gestores)</td><td>—</td><td>Valor único</td><td>R$ 500,00</td></tr></tbody></table></details></div></div><div class="card"><div class="card-header"><div class="eyebrow-card">Cenário 2</div><div class="card-title">Avaliações e Pesquisas Ilimitadas</div></div><div class="card-body"><div class="price-line"><span class="price-value">R$ 3.418,27</span><span class="price-unit">/ mês (12x)</span></div><div class="price-base">Investimento total do contrato: R$ 41.019,20</div><hr class="divider"><div class="inclui-label">Inclui tudo do Cenário 1, mais</div><p class="module-desc"><b>Pesquisas</b> &mdash; Mensure o engajamento e satisfação do seu time.</p><ul class="check-list"><li><span class="tick">&#10003;</span>Pesquisas — Clima, Pulso e Engajamento</li></ul><details class="detalhamento"><summary>Ver detalhamento</summary><table class="detalhamento-table"><thead><tr><th>Item</th><th>Quantidade</th><th>Valor unitário</th><th>Valor total</th></tr></thead><tbody><tr><td>Avaliações</td><td>180 usuários</td><td>R$ 12,97/mês</td><td>R$ 2.334,60/mês</td></tr><tr><td>Pesquisas</td><td>180 usuários</td><td>R$ 4,40/mês</td><td>R$ 792,00/mês</td></tr><tr><td>Desenvolvimento</td><td>180 usuários</td><td>Incluso</td><td>Incluso</td></tr><tr><td>Plano de Serviço I</td><td>—</td><td>Valor único</td><td>R$ 3.000,00</td></tr><tr><td>Treinamento (1h, gestores)</td><td>—</td><td>Valor único</td><td>R$ 500,00</td></tr></tbody></table></details></div></div></div><div class="additional-title">Serviços adicionais</div><div class="additional-list"><div class="additional-row"><div class="additional-left"><div class="additional-name">Plano de Serviço I</div><div class="additional-desc">Ativação e sucesso — inclui os módulos contratados em cada cenário</div></div><div class="additional-right"><div class="additional-value">Cenário 1</div><span class="additional-status">R$ 2.500,00</span></div></div><div class="additional-row"><div class="additional-left"><div class="additional-name">Plano de Serviço I</div><div class="additional-desc">Ativação e sucesso — inclui os módulos contratados em cada cenário</div></div><div class="additional-right"><div class="additional-value">Cenário 2</div><span class="additional-status">R$ 3.000,00</span></div></div><div class="additional-row"><div class="additional-left"><div class="additional-name">Treinamento</div><div class="additional-desc">1 hora de treinamento para os gestores</div></div><div class="additional-right"><div class="additional-value">Cenário 1</div><span class="additional-status">R$ 500,00</span></div></div><div class="additional-row"><div class="additional-left"><div class="additional-name">Treinamento</div><div class="additional-desc">1 hora de treinamento para os gestores</div></div><div class="additional-right"><div class="additional-value">Cenário 2</div><span class="additional-status">R$ 500,00</span></div></div></div></div>
 
         <label class="proposal-upload-slot" id="proposalSlot" style="margin-top:24px;">
           <div id="proposalPlaceholder">
@@ -1168,7 +1146,7 @@
       {"nome": "Construção de PDI com biblioteca e IA", "tag": "Inteligente", "impulseup": true, "porConcorrente": [false, true]}
     ]
   },
-  "investimento": null,
+  "investimento": {"parcelaValor": "R$ 2.584,60 a R$ 3.418,27 /mês (12x)", "duracaoContrato": "12 meses"},
   "cronogramaMacro": [
     {"data": "Abril", "titulo": "Reuniões de conexão e demo com Wynne e Ingrid"},
     {"data": "12 ago", "titulo": "Demonstração para Franciele Bueno, gerente de DHO — percepção muito positiva"},
