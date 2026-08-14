@@ -517,66 +517,28 @@
     <section class="tab-panel" id="tab-3">
       <h1 class="section-title">Demonstração</h1>
       <p class="section-sub">Vídeos da plataforma, orientados aos desafios da MCS Markup</p>
-      <div class="empty-state" id="tab3EmptyState" style="display:none;">
-        <i class="fa-regular fa-circle-play"></i>
-        <h3>Aba liberada após a reunião de Demo</h3>
-        <p>O closer vai incluir aqui vídeos curtos mostrando a solução aplicada aos desafios mapeados no Diagnóstico.</p>
+
+      <div class="stat-grid">
+        <div class="stat-card"><div class="num">160</div><div class="label">avaliações de gestores em aberto no dia em que deveriam estar concluídas</div></div>
+        <div class="stat-card"><div class="num">7 a 8</div><div class="label">e-mails automáticos por colaborador em um único mês (dezembro), na plataforma atual</div></div>
       </div>
-      <div id="tab3Content" style="display:block;">
-        <div class="stat-grid" id="tab3ImpactoGrid">
-          <div class="stat-card"><div class="num">160</div><div class="label">avaliações de gestores em aberto no dia em que deveriam estar concluídas</div></div>
-          <div class="stat-card"><div class="num">7 a 8</div><div class="label">e-mails automáticos duplicados disparados por avaliação</div></div>
-          <div class="stat-card"><div class="num">3 anos</div><div class="label">de maturidade em avaliação de desempenho, hoje freada pela instabilidade da ferramenta</div></div>
-        </div>
-        <div style="overflow-x:auto;margin-bottom:40px;">
-          <table class="rfp-table" id="tab3ComparativoTable">
-            <thead>
-              <tr><th>Situação atual</th><th>Módulo impulseup</th><th>Como fica</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>Falhas na plataforma geram disparos indevidos de e-mail e já causaram perda de metas do ciclo anterior</td><td class="feat-name">Metas e OKRs</td><td>Histórico de metas preservado entre ciclos, sem risco de perda de dados</td></tr>
-              <tr><td>Metas não podem ser lançadas com data retroativa, exigindo contornos manuais no meio do ciclo</td><td class="feat-name">Metas e OKRs</td><td>Ciclos de metas com formato e prazos flexíveis, sem trava de datas</td></tr>
-              <tr><td>Peso entre metas e competências no resultado final não é claro para o time de RH</td><td class="feat-name">Avaliação de Desempenho</td><td>Consenso configurável sobrepõe autoavaliação e avaliação do gestor, com pesos definidos por avaliador e por competência</td></tr>
-              <tr><td>Insegurança para evoluir para Nine Box e PDI por falta de estabilidade da ferramenta atual</td><td class="feat-name">Matriz n-Box</td><td>Cruzamento automático entre Avaliação e Metas alimenta a n-Box, com calibração de resultados</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="video-grid" id="tab3VideoGrid">
-          <!-- Preenchido pela skill a partir de "videos" (estrutura-abas.md, Aba 3), um .video-card por vídeo.
-               Ver scripts/gerar_video_embed.py::gerar_bloco_video() para a lógica de geração.
 
-               Caso 1 — url_video já veio do closer (link de Drive ou YouTube) e foi reconhecida:
-               <div class="video-card">
-                 <h4>{{titulo}}</h4><p>{{descricao}}</p>
-                 <div class="video-embed-wrap">
-                   <iframe src="{{embed_url}}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-                 </div>
-               </div>
+      <div style="overflow-x:auto;margin-bottom:40px;">
+        <table class="rfp-table">
+          <thead>
+            <tr><th>Situação atual</th><th>Módulo impulseup</th><th>Como fica</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Notas fechadas em número, sem espaço para conceito</td><td class="feat-name">Avaliação de Desempenho</td><td>Escala personalizável, com conceito no lugar da nota</td></tr>
+            <tr><td>Consenso não deixa claro qual resultado prevalece</td><td class="feat-name">Consenso</td><td>Resultado do consenso sempre sobrepõe autoavaliação e avaliação do gestor</td></tr>
+            <tr><td>Metas do ciclo anterior somem na virada de sistema</td><td class="feat-name">Metas</td><td>Histórico de metas preservado entre ciclos, com prazos flexíveis e retroativos</td></tr>
+            <tr><td>Notificações em excesso, sem controle de canal</td><td class="feat-name">Central de Notificações</td><td>Frequência e canal configuráveis (e-mail, WhatsApp, SMS)</td></tr>
+          </tbody>
+        </table>
+      </div>
 
-               Caso 2 — url_video veio mas não foi possível gerar embed (ex: link de pasta do Drive,
-               sem permissão de embed): mostrar card de link em vez de iframe.
-               <div class="video-card">
-                 <h4>{{titulo}}</h4><p>{{descricao}}</p>
-                 <div class="video-link-card">
-                   <i class="fa-brands fa-google-drive"></i>
-                   <p>Vídeo disponível para acesso externo</p>
-                   <a href="{{url_video}}" target="_blank" rel="noopener" class="video-link-btn">Assistir vídeo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                 </div>
-               </div>
-
-               Caso 3 — vídeo ainda sem url_video: slot de colagem manual, para o closer colar o link
-               direto no site (fica salvo no localStorage do navegador via saveImage/loadStore).
-               <div class="video-card">
-                 <h4>{{titulo}}</h4><p>{{descricao}}</p>
-                 <div class="video-embed-wrap video-embed-empty" data-video-idx="{{indice}}">
-                   <label class="video-paste-label">
-                     <i class="fa-regular fa-circle-play"></i>
-                     <span>Cole aqui o link do vídeo (YouTube ou Drive)</span>
-                   </label>
-                   <input type="text" class="video-url-input" data-video-idx="{{indice}}" placeholder="https://...">
-                 </div>
-               </div> -->
-        </div>
+      <div class="video-grid" id="tab3VideoGrid">
+        <!-- Vídeos serão anexados pelo closer diretamente no site após a reunião de Demo. -->
       </div>
     </section>
 
@@ -584,36 +546,16 @@
     <section class="tab-panel" id="tab-4">
       <h1 class="section-title">Diferenciais impulseup</h1>
       <p class="section-sub">Comparativo com base nos critérios mais importantes para este projeto</p>
-      <div class="empty-state" id="tab4EmptyState" style="display:none;">
+      <div class="empty-state" id="tab4EmptyState">
         <i class="fa-regular fa-list-check"></i>
         <h3>Aba liberada após a reunião de Diagnóstico</h3>
         <p>Assim que o closer finalizar o diagnóstico, esta aba mostra o comparativo entre a impulseup e os concorrentes identificados na conversa. Se nenhum concorrente específico for mencionado, o comparativo é feito contra "Outras soluções", com resultado mediano.</p>
       </div>
-      <div id="tab4TableWrap" style="margin-top:24px;overflow-x:auto;display:block;">
+      <div id="tab4TableWrap" style="margin-top:24px;overflow-x:auto;display:none;">
         <table class="rfp-table" id="tab4Table">
-          <thead>
-            <tr><th>Critério</th><th class="iup-col">impulseup</th><th>Outras soluções</th></tr>
-          </thead>
-          <tbody>
-              <tr><td><div class="feat-name">Avaliação de consenso</div><span class="feat-tag">Confiável</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
-              <tr><td><div class="feat-name">Avaliação de consenso pode ser aprovada, ao final, pelo colaborador</div><span class="feat-tag">Confiável</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
-              <tr><td><div class="feat-name">Personalização da escala de resposta (tamanho, valores, nomes), por competência ou grupo</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
-              <tr><td><div class="feat-name">Pesos diferentes por tipo de avaliador, por competência</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
-              <tr><td><div class="feat-name">Gestores podem acompanhar o status das respostas de suas equipes</div><span class="feat-tag">Liderança</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
-              <tr><td><div class="feat-name">Definição do formato do ciclo, por Metas e OKRs</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
-              <tr><td><div class="feat-name">Cálculo do resultado individual</div><span class="feat-tag">Confiável</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
-              <tr><td><div class="feat-name">Métricas de progresso diferenciadas</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
-              <tr><td><div class="feat-name">Remuneração variável, calculado através de metas, avaliação, fórmulas etc.</div><span class="feat-tag">Confiável</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
-              <tr><td><div class="feat-name">Conexão automática entre Metas, OKRs e Avaliação</div><span class="feat-tag">Inteligente</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
-              <tr><td><div class="feat-name">Cruzamento automático de Avaliação e Metas</div><span class="feat-tag">Inteligente</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
-              <tr><td><div class="feat-name">Permite construir qualquer formato de matriz (2x2, 3x3, 4x1 etc.)</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
-              <tr><td><div class="feat-name">Calibração de resultados (por quadrante, seção ou competência)</div><span class="feat-tag">Confiável</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
-              <tr><td><div class="feat-name">Fluxo de aprovação de PDIs</div><span class="feat-tag">Confiável</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
-              <tr><td><div class="feat-name">Biblioteca de ações de desenvolvimento personalizada</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
-              <tr><td><div class="feat-name">Comparação de performance e desenvolvimento ao longo do tempo</div><span class="feat-tag">Confiável</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
-              <tr><td><div class="feat-name">Atendimento e suporte para o usuário final</div><span class="feat-tag">Atendimento consultivo</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
-              <tr><td><div class="feat-name">Salvamento automático de informações</div><span class="feat-tag">Confiável</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
-          </tbody>
+          <!-- Preenchido pela skill site-cliente-impulseup a partir da transcrição da reunião de Diagnóstico e de references/rfp-criterios.json.
+               Cada critério exibe sua tag (campo "tags" do JSON) junto ao nome, ex:
+               <tr><td><div class="feat-name">Formatos de avaliação diferentes (90/180/360)</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td>...</tr> -->
         </table>
       </div>
     </section>
@@ -725,7 +667,7 @@
       <p class="section-sub">Jornada de compra da MCS Markup</p>
       <div class="timeline">
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">Semana de 04/08</span><div><span class="tl-desc">Reunião de Conexão</span><div class="tl-meta">Entender contexto e desafios · Luciana e coordenador(a) de T&amp;D</div></div></div>
-        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">07/08</span><div><span class="tl-desc">Demonstração personalizada</span><div class="tl-meta">Mostrar solução aplicada aos desafios mapeados</div></div></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">07 e 14/08</span><div><span class="tl-desc">Demonstração personalizada</span><div class="tl-meta">Mostrar solução aplicada aos desafios mapeados · continuação em 14/08 com a Luciana</div></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Construção de projeto e proposta</span><div class="tl-meta">Definir escopo e cenários de investimento</div></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Apresentação para diretoria</span><div class="tl-meta">Luciana apresenta o projeto ao sócio fundador</div></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Aprovação da proposta</span></div></div>
