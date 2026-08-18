@@ -530,15 +530,16 @@
     <section class="tab-panel" id="tab-3">
       <h1 class="section-title">Demonstração</h1>
       <p class="section-sub">Vídeos da plataforma, orientados aos desafios da Farmoterápica</p>
-      <div class="empty-state" id="tab3EmptyState">
+      <div class="empty-state" id="tab3EmptyState" style="display:none;">
         <i class="fa-regular fa-circle-play"></i>
         <h3>Aba liberada após a reunião de Demo</h3>
         <p>O closer vai incluir aqui vídeos curtos mostrando a solução aplicada aos desafios mapeados no Diagnóstico.</p>
       </div>
-      <div id="tab3Content" style="display:none;">
+      <div id="tab3Content">
         <div class="stat-grid" id="tab3ImpactoGrid">
-          <!-- Preenchido pela skill a partir de "impacto" (estrutura-abas.md, Aba 3). Ex:
-               <div class="stat-card"><div class="num">32%</div><div class="label">redução no tempo de ciclo de avaliação</div></div> -->
+          <div class="stat-card"><div class="num">83%</div><div class="label">de turnover ao ano, hoje sem dados suficientes para embasar a discussão com a diretoria</div></div>
+          <div class="stat-card"><div class="num">150</div><div class="label">colaboradores no primeiro ciclo, hoje sem histórico digital consolidado de avaliação</div></div>
+          <div class="stat-card"><div class="num">2</div><div class="label">modelos de avaliação testados nos últimos ciclos sem atender às expectativas da empresa</div></div>
         </div>
         <div style="overflow-x:auto;margin-bottom:40px;">
           <table class="rfp-table" id="tab3ComparativoTable">
@@ -546,8 +547,10 @@
               <tr><th>Situação atual</th><th>Módulo impulseup</th><th>Como fica</th></tr>
             </thead>
             <tbody>
-              <!-- Preenchido pela skill a partir de "comparativo" (máx. 4 linhas). Ex:
-                   <tr><td>Avaliação só em planilha</td><td class="feat-name">Ciclos de avaliação</td><td>Fluxo 100% digital com lembretes automáticos</td></tr> -->
+              <tr><td>Avaliação de desempenho feita em Excel e Google Forms, sem histórico estruturado</td><td class="feat-name">Avaliação de Desempenho</td><td>Ciclos configuráveis com relatórios automáticos e comparações históricas em segundos</td></tr>
+              <tr><td>Líderes entregam indicadores rasos, sem estratificação nem interpretação de dados</td><td class="feat-name">People Analytics</td><td>Dashboards com comparações por área, cargo e período, para uma leitura mais profunda</td></tr>
+              <tr><td>Nenhuma pesquisa estruturada para medir percepção de valores e comportamentos</td><td class="feat-name">Pesquisas (clima e pulso)</td><td>Pesquisas ilimitadas ao longo do ano, vinculadas aos valores e comportamentos da empresa</td></tr>
+              <tr><td>Competências genéricas, sem diferenciação para o perfil técnico da produção</td><td class="feat-name">Configuração de Competências</td><td>Competências base para toda a empresa + comportamentos específicos por área</td></tr>
             </tbody>
           </table>
         </div>
@@ -697,7 +700,7 @@
       <p class="section-sub">Jornada de compra da Farmoterápica</p>
       <div class="timeline">
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">11 ago</span><div><span class="tl-desc">Reunião de Conexão</span><div class="tl-meta">Entender contexto e estruturação do RH · Karen Monterlei</div></div></div>
-        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Demonstração personalizada</span><div class="tl-meta">Mostrar solução aplicada aos desafios mapeados</div></div></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">18 ago</span><div><span class="tl-desc">Demonstração personalizada</span><div class="tl-meta">Mostrar solução aplicada aos desafios mapeados · Karen, Ana e Leonardo</div></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Construção de projeto e proposta</span><div class="tl-meta">Definir escopo e cenários de investimento</div></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Apresentação para diretoria</span><div class="tl-meta">Karen apresenta o projeto internamente</div></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Aprovação da proposta</span></div></div>
@@ -758,8 +761,8 @@
   "investimento": null,
   "cronogramaMacro": [
     {
-      "data": "Agosto",
-      "titulo": "Diagnóstico, demonstração e aprovação interna"
+      "data": "18 ago",
+      "titulo": "Demonstração personalizada da plataforma"
     },
     {
       "data": "Setembro",
