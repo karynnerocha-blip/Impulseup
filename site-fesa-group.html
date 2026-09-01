@@ -421,10 +421,9 @@
       <button data-tab="2"><span class="num">02</span>Diagnóstico</button>
       <button data-tab="3"><span class="num">03</span>Demonstração</button>
       <button data-tab="4"><span class="num">04</span>Diferenciais impulseup</button>
-      <button data-tab="5"><span class="num">05</span>Aprovação e plano de ação</button>
-      <button data-tab="6"><span class="num">06</span>Processo de implementação</button>
-      <button data-tab="7"><span class="num">07</span>Proposta comercial</button>
-      <button data-tab="8"><span class="num">08</span>Próximos passos</button>
+      <button data-tab="6"><span class="num">05</span>Processo de implementação</button>
+      <button data-tab="7"><span class="num">06</span>Proposta comercial</button>
+      <button data-tab="8"><span class="num">07</span>Próximos passos</button>
       <button type="button" id="exportExecHtmlBtn" class="export-exec-btn">
         <i class="fa-regular fa-file-code"></i> Resumo executivo (HTML)
       </button>
@@ -551,15 +550,15 @@
     <section class="tab-panel" id="tab-3">
       <h1 class="section-title">Demonstração</h1>
       <p class="section-sub">Vídeos da plataforma, orientados aos desafios da FESA Group</p>
-      <div class="empty-state" id="tab3EmptyState">
+      <div class="empty-state" id="tab3EmptyState" style="display:none;">
         <i class="fa-regular fa-circle-play"></i>
         <h3>Aba liberada após a reunião de Demo</h3>
         <p>O closer vai incluir aqui vídeos curtos mostrando a solução aplicada aos desafios mapeados no Diagnóstico.</p>
       </div>
-      <div id="tab3Content" style="display:none;">
+      <div id="tab3Content" style="display:block;">
         <div class="stat-grid" id="tab3ImpactoGrid">
-          <!-- Preenchido pela skill a partir de "impacto" (estrutura-abas.md, Aba 3). Ex:
-               <div class="stat-card"><div class="num">32%</div><div class="label">redução no tempo de ciclo de avaliação</div></div> -->
+          <div class="stat-card"><div class="num">A confirmar</div><div class="label">redução no tempo de calibração com o Nine-Box (arrastar e soltar entre quadrantes)</div></div>
+          <div class="stat-card"><div class="num">A confirmar</div><div class="label">aumento de adesão a PDI e 101 com devolutiva e PDI na mesma tela da avaliação</div></div>
         </div>
         <div style="overflow-x:auto;margin-bottom:40px;">
           <table class="rfp-table" id="tab3ComparativoTable">
@@ -567,46 +566,27 @@
               <tr><th>Situação atual</th><th>Módulo impulseup</th><th>Como fica</th></tr>
             </thead>
             <tbody>
-              <!-- Preenchido pela skill a partir de "comparativo" (máx. 4 linhas). Ex:
-                   <tr><td>Avaliação só em planilha</td><td class="feat-name">Ciclos de avaliação</td><td>Fluxo 100% digital com lembretes automáticos</td></tr> -->
+              <tr><td>PDI cadastrado em tela separada, sem nota vinculada à avaliação</td><td class="feat-name">PDI integrado à avaliação</td><td>Gestor registra devolutiva e cria o PDI na mesma tela da avaliação, sem sair do fluxo</td></tr>
+              <tr><td>Baixa adesão a PDI e 101 por sistema pouco amigável</td><td class="feat-name">IA de apoio ao gestor</td><td>IA sugere pauta de devolutiva e indicações de PDI a partir do resultado da avaliação</td></tr>
+              <tr><td>Calibração feita nota a nota, sem visão rápida por quadrante</td><td class="feat-name">Nine-Box</td><td>Calibração macro arrastando pessoas entre quadrantes, com campo de justificativa</td></tr>
+              <tr><td>Back office e parceiros aparecem para todos, mas nem todos podem avaliar</td><td class="feat-name">Regra de visibilidade e escala "Não se aplica"</td><td>Torna essas avaliações efetivamente opcionais para quem não tem condição de avaliar</td></tr>
             </tbody>
           </table>
         </div>
         <div class="video-grid" id="tab3VideoGrid">
-          <!-- Preenchido pela skill a partir de "videos" (estrutura-abas.md, Aba 3), um .video-card por vídeo.
-               Ver scripts/gerar_video_embed.py::gerar_bloco_video() para a lógica de geração.
 
-               Caso 1 — url_video já veio do closer (link de Drive ou YouTube) e foi reconhecida:
-               <div class="video-card">
-                 <h4>{{titulo}}</h4><p>{{descricao}}</p>
-                 <div class="video-embed-wrap">
-                   <iframe src="{{embed_url}}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-                 </div>
-               </div>
-
-               Caso 2 — url_video veio mas não foi possível gerar embed (ex: link de pasta do Drive,
-               sem permissão de embed): mostrar card de link em vez de iframe.
-               <div class="video-card">
-                 <h4>{{titulo}}</h4><p>{{descricao}}</p>
-                 <div class="video-link-card">
-                   <i class="fa-brands fa-google-drive"></i>
-                   <p>Vídeo disponível para acesso externo</p>
-                   <a href="{{url_video}}" target="_blank" rel="noopener" class="video-link-btn">Assistir vídeo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                 </div>
-               </div>
-
-               Caso 3 — vídeo ainda sem url_video: slot de colagem manual, para o closer colar o link
-               direto no site (fica salvo no localStorage do navegador via saveImage/loadStore).
-               <div class="video-card">
-                 <h4>{{titulo}}</h4><p>{{descricao}}</p>
-                 <div class="video-embed-wrap video-embed-empty" data-video-idx="{{indice}}">
-                   <label class="video-paste-label">
-                     <i class="fa-regular fa-circle-play"></i>
-                     <span>Cole aqui o link do vídeo (YouTube ou Drive)</span>
-                   </label>
-                   <input type="text" class="video-url-input" data-video-idx="{{indice}}" placeholder="https://...">
-                 </div>
-               </div> -->
+          <div class="video-card">
+            <h4>Gravação da reunião de Conexão e Demo</h4>
+            <p>Cole aqui o link da gravação desta reunião, assim que estiver disponível no Drive.</p>
+            <div class="video-embed-wrap video-embed-empty" data-video-idx="0">
+              <label class="video-paste-label">
+                <i class="fa-regular fa-circle-play"></i>
+                <span>Cole aqui o link do vídeo (YouTube ou Drive)</span>
+              </label>
+              <input type="text" class="video-url-input" data-video-idx="0" placeholder="https://...">
+            </div>
+          </div>
+        
         </div>
       </div>
     </section>
@@ -626,20 +606,6 @@
                Cada critério exibe sua tag (campo "tags" do JSON) junto ao nome, ex:
                <tr><td><div class="feat-name">Formatos de avaliação diferentes (90/180/360)</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td>...</tr> -->
         </table>
-      </div>
-    </section>
-
-    <!-- ABA 5 — APROVAÇÃO E PLANO DE AÇÃO -->
-    <section class="tab-panel" id="tab-5">
-      <h1 class="section-title">Aprovação e plano de ação</h1>
-      <p class="section-sub">Objetivos de negócio da FESA Group, o caminho para chegar lá e o estado futuro com a impulseup</p>
-      <div class="empty-state" id="tab5EmptyState">
-        <i class="fa-regular fa-clipboard"></i>
-        <h3>Aba liberada após a reunião de Diagnóstico</h3>
-        <p>Assim que os desafios forem mapeados, esta aba mostra os objetivos de negócio e RH por trás do projeto, o plano de ação com cronograma para chegar lá, e o estado futuro do negócio com a impulseup — pronta para embasar a apresentação à diretoria.</p>
-      </div>
-      <div id="tab5PlanoWrap" style="display:none;">
-        <!--OBJETIVOS-->
       </div>
     </section>
 
@@ -669,46 +635,16 @@
       <h1 class="section-title">Proposta comercial</h1>
       <p class="section-sub">Investimento para a FESA Group</p>
 
-      <div class="empty-state" id="tab7EmptyState">
+      <div class="empty-state" id="tab7EmptyState" style="display:none;">
         <i class="fa-regular fa-file-invoice-dollar"></i>
         <h3>Aba liberada após o closer informar a proposta comercial</h3>
         <p>Assim que o closer passar os valores definidos na ferramenta de precificação da impulseup, esta aba mostra o investimento, os módulos e serviços incluídos e o detalhamento de valores.</p>
       </div>
 
-      <div id="tab7ProposalWrap" style="display:none;">
-        <div class="investment-hero">
-          <div class="label">Investimento mensal</div>
-          <div class="value">R$ 12.400/mês</div>
-        </div>
-        <p class="investment-hero-meta">Investimento total do contrato: R$ 148.800 · Validade da proposta: 15 dias · Duração do contrato: 12 meses</p>
-
-        <div class="block-title"><i class="fa-regular fa-layer-group"></i>Módulos e serviços incluídos</div>
-        <div class="module-list">
-          <div class="module-row">
-            <div class="module-row-main"><h4>Avaliação de Desempenho</h4><p>Ciclos completos com nine-box e PDI integrado.</p></div>
-            <div class="module-row-users">500 usuários</div>
-          </div>
-          <div class="module-row">
-            <div class="module-row-main"><h4>Plano de Serviço III</h4><p>Implementação assistida por especialista em DHO.</p></div>
-            <div class="module-row-users"></div>
-          </div>
-        </div>
-
-        <div class="block-title"><i class="fa-regular fa-table"></i>Detalhamento de valores</div>
-        <table class="rfp-table" id="proposalValuesTable">
-          <tr><th>Item</th><th>Usuários</th><th>Valor unitário</th><th>Valor mensal</th><th>Observação</th></tr>
-          <tr><td><div class="feat-name">Avaliação de Desempenho</div></td><td class="check-cell">500</td><td class="check-cell">R$ 22,00</td><td class="check-cell">R$ 11.000,00</td><td class="check-cell">—</td></tr>
-          <tr><td><div class="feat-name">Plano de Serviço III</div></td><td class="check-cell">—</td><td class="check-cell">R$ 16.800,00</td><td class="check-cell">—</td><td class="check-cell">Cobrança única</td></tr>
-          <tr><td colspan="4" style="text-align:right;font-weight:600;">Total do contrato (12 meses)</td><td class="check-cell" style="font-weight:700;color:var(--color-primary);">R$ 148.800</td></tr>
-        </table>
-
-        <label class="proposal-upload-slot" id="proposalSlot" style="margin-top:24px;">
-          <div id="proposalPlaceholder">
-            <i class="fa-regular fa-image" style="font-size:22px;color:var(--color-border);display:block;margin-bottom:10px;"></i>
-            <span style="font-size:13px;color:var(--color-fg-muted);">Clique para anexar</span>
-          </div>
-          <input type="file" accept="image/*" id="proposalInput">
-        </label>
+      <div id="tab7ProposalWrap" style="display:block;">
+        <p class="investment-hero-meta">Validade da proposta: 5 dias · Duração do contrato: 12 meses</p>
+<div class="cenarios-comparativo"><div class="cards"><div class="card"><div class="card-header"><div class="eyebrow-card">Cenário 1</div><div class="card-title">Avaliação de Desempenho</div></div><div class="card-body"><div class="price-line"><span class="price-value">R$ 1.676,70</span><span class="price-unit">/ mês (12x)</span></div><div class="price-base">Investimento total do contrato: R$ 20.120,40</div><hr class="divider"><div class="inclui-label">Inclui</div><ul class="check-list"><li><span class="tick">&#10003;</span>Avaliações: ciclos 90/180/360°, avaliação de experiência e feedback contínuo (110 usuários)</li><li><span class="tick">&#10003;</span>Desenvolvimento incluso: PDIs, feedbacks e reuniões 1:1 e ações e iniciativas, sem custo adicional</li></ul><details class="detalhamento"><summary>Ver detalhamento</summary><table class="detalhamento-table"><thead><tr><th>Item</th><th>Quantidade</th><th>Valor unitário</th><th>Valor total</th></tr></thead><tbody><tr><td>Avaliações</td><td>110 usuários</td><td>R$ 12,97/mês</td><td>R$ 1.426,70/mês</td></tr><tr><td>Desenvolvimento</td><td>110 usuários</td><td>Incluso</td><td>Incluso</td></tr><tr><td>Plano de Serviço I</td><td>—</td><td>Valor único</td><td>R$ 2.500,00</td></tr><tr><td>Treinamento (1 hora)</td><td>—</td><td>Valor único</td><td>R$ 500,00</td></tr></tbody></table></details></div></div><div class="card"><div class="card-header"><div class="eyebrow-card">Cenário 2</div><div class="card-title">Avaliação, Metas e Pesquisas</div></div><div class="card-body"><div class="price-line"><span class="price-value">R$ 2.932,63</span><span class="price-unit">/ mês (12x)</span></div><div class="price-base">Investimento total do contrato: R$ 35.191,60</div><hr class="divider"><div class="inclui-label">Inclui tudo do Cenário 1, mais</div><p class="module-desc"><b>Pesquisas</b> &mdash; Mensure o engajamento e satisfação do seu time.</p><ul class="check-list"><li><span class="tick">&#10003;</span>Metas e OKRs: indicadores e gestão estratégica (110 usuários)</li></ul><details class="detalhamento"><summary>Ver detalhamento</summary><table class="detalhamento-table"><thead><tr><th>Item</th><th>Quantidade</th><th>Valor unitário</th><th>Valor total</th></tr></thead><tbody><tr><td>Avaliações</td><td>110 usuários</td><td>R$ 12,97/mês</td><td>R$ 1.426,70/mês</td></tr><tr><td>Pesquisas</td><td>110 usuários</td><td>R$ 3,72/mês</td><td>R$ 409,20/mês</td></tr><tr><td>Metas e OKRs</td><td>110 usuários</td><td>R$ 6,94/mês</td><td>R$ 763,40/mês</td></tr><tr><td>Desenvolvimento</td><td>110 usuários</td><td>Incluso</td><td>Incluso</td></tr><tr><td>Plano de Serviço I</td><td>—</td><td>Valor único</td><td>R$ 3.500,00</td></tr><tr><td>Treinamento (1 hora)</td><td>—</td><td>Valor único</td><td>R$ 500,00</td></tr></tbody></table></details></div></div></div><div class="additional-title">Serviços adicionais</div><div class="additional-list"><div class="additional-row"><div class="additional-left"><div class="additional-name">Plano de Serviço I</div><div class="additional-desc">Ativação e configuração inicial do ambiente (cobrança única)</div></div><div class="additional-right"><div class="additional-value">Cenário 1</div><span class="additional-status">R$ 2.500,00</span></div></div><div class="additional-row"><div class="additional-left"><div class="additional-name">Plano de Serviço I</div><div class="additional-desc">Ativação e configuração inicial do ambiente (cobrança única)</div></div><div class="additional-right"><div class="additional-value">Cenário 2</div><span class="additional-status">R$ 3.500,00</span></div></div><div class="additional-row"><div class="additional-left"><div class="additional-name">Treinamento (1 hora)</div><div class="additional-desc">Treinamento inicial da equipe (cobrança única)</div></div><div class="additional-right"><div class="additional-value">Cenário 1</div><span class="additional-status">R$ 500,00</span></div></div><div class="additional-row"><div class="additional-left"><div class="additional-name">Treinamento (1 hora)</div><div class="additional-desc">Treinamento inicial da equipe (cobrança única)</div></div><div class="additional-right"><div class="additional-value">Cenário 2</div><span class="additional-status">R$ 500,00</span></div></div></div></div>
+        <label class="proposal-upload-slot"><span>Clique para anexar</span><input type="file" accept="image/*" style="display:none;"></label>
       </div>
     </section>
 
@@ -717,11 +653,10 @@
       <h1 class="section-title">Próximos passos</h1>
       <p class="section-sub">Jornada de compra da FESA Group</p>
       <div class="timeline">
-        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">27 ago</span><div><span class="tl-desc">Reunião de Diagnóstico</span><div class="tl-meta">Entender contexto, matriz comparativa e desafios · Lorena Souza</div></div></div>
-        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Demonstração personalizada</span><div class="tl-meta">Mostrar solução aplicada aos desafios mapeados</div></div></div>
-        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Construção de projeto e proposta</span><div class="tl-meta">Definir escopo e cenários de investimento</div></div></div>
-        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Apresentação para diretoria</span></div></div>
-        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Aprovação da proposta</span></div></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">27 ago</span><div><span class="tl-desc">Reunião de Conexão e Demo</span><div class="tl-meta">Diagnóstico, apresentação da plataforma e validação da matriz comparativa · Lorena Souza</div></div></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">Proposta enviada</span><div><span class="tl-desc">Dois cenários de investimento apresentados</span><div class="tl-meta">Avaliação isolada, ou Avaliação com Metas e Pesquisas</div></div></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Reunião com a diretoria de RH</span><div class="tl-meta">Lorena consolida a análise interna e leva a decisão para a diretora, com opção de já apresentarmos o sistema para ela</div></div></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Decisão do fornecedor</span></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Revisão jurídica</span></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Assinatura e kickoff</span></div></div>
       </div>
@@ -741,43 +676,68 @@
 {
   "nomeEmpresa": "FESA Group",
   "slugEmpresa": "fesa-group",
-  "contexto": "Iniciando processo de seleção de uma plataforma de gestão de desempenho para substituir a solução atual (Umanni), com decisão prevista até 7 de setembro.",
+  "contexto": "Processo de seleção de plataforma de gestão de desempenho para substituir a Umani. A FESA já validou a solução em reunião de Conexão e Demo e recebeu dois cenários de proposta.",
   "desafiosCentrais": [
     {
       "titulo": "Confiabilidade da solução",
       "numero": null
     },
     {
-      "titulo": "Migração de fornecedor especialista",
+      "titulo": "Baixa adesão a PDI e 101",
       "numero": null
     },
     {
-      "titulo": "Prazo de decisão apertado",
-      "numero": "até 7 de setembro"
-    },
-    {
-      "titulo": "Orçamento ainda em construção",
+      "titulo": "Falta de módulo de Metas e OKRs",
       "numero": null
     }
   ],
   "objetivos": [],
   "pilaresDestaque": [
     {
-      "titulo": "Decisão de desempenho mais defensável, porque não depende de um único avaliador",
+      "titulo": "PDI e devolutiva na mesma tela da avaliação",
       "tag": "Confiável"
     },
     {
-      "titulo": "A avaliação se adapta ao processo da FESA, não o contrário",
-      "tag": "Flexível"
+      "titulo": "IA de apoio ao gestor na devolutiva e no PDI",
+      "tag": "Inteligente"
     },
     {
-      "titulo": "Do resultado da avaliação direto para o plano de desenvolvimento",
-      "tag": "Inteligente"
+      "titulo": "Calibração macro pelo Nine-Box, arrastando entre quadrantes",
+      "tag": "Confiável"
     }
   ],
-  "comparativo": null,
-  "investimento": null,
-  "cronogramaMacro": []
+  "comparativo": {
+    "concorrente": "Qulture.Rocks",
+    "status": "pendente de confirmação com a closer"
+  },
+  "investimento": {
+    "cenario1": {
+      "titulo": "Avaliação de Desempenho",
+      "parcela": "R$ 1.676,70/mês (12x)",
+      "total": "R$ 20.120,40"
+    },
+    "cenario2": {
+      "titulo": "Avaliação, Metas e Pesquisas",
+      "parcela": "R$ 2.932,63/mês (12x)",
+      "total": "R$ 35.191,60"
+    },
+    "validade_proposta": "5 dias",
+    "duracao_contrato": "12 meses"
+  },
+  "cronogramaMacro": [
+    {
+      "periodo": "27 ago",
+      "descricao": "Reunião de Conexão e Demo realizada"
+    },
+    {
+      "periodo": "Atual",
+      "descricao": "Proposta com dois cenários enviada para análise da Lorena"
+    },
+    {
+      "periodo": "A definir",
+      "descricao": "Reunião com a diretoria de RH e decisão do fornecedor"
+    }
+  ]
 }
 </script>
 
