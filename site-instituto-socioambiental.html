@@ -664,13 +664,240 @@
     <section class="tab-panel" id="tab-5">
       <h1 class="section-title">Aprovação e plano de ação</h1>
       <p class="section-sub">Objetivos de negócio da Instituto Socioambiental (ISA), o caminho para chegar lá e o estado futuro com a impulseup</p>
-      <div class="empty-state" id="tab5EmptyState">
+      <div class="empty-state" id="tab5EmptyState" style="display:none;">
         <i class="fa-regular fa-clipboard"></i>
         <h3>Aba liberada após a reunião de Diagnóstico</h3>
         <p>Assim que os desafios forem mapeados, esta aba mostra os objetivos de negócio e RH por trás do projeto, o plano de ação com cronograma para chegar lá, e o estado futuro do negócio com a impulseup — pronta para embasar a apresentação à diretoria.</p>
       </div>
-      <div id="tab5PlanoWrap" style="display:none;">
-        <!--OBJETIVOS-->
+      <div id="tab5PlanoWrap" style="display:block;">
+        <div class="objetivo-card">
+          <div class="objetivo-header">
+            <div class="objetivo-num">01</div>
+            <div>
+              <h3>Centralizar histórico e liderança compartilhada em um único ciclo</h3>
+              <p>Reduzir o trabalho manual do RH e dar autonomia real aos gestores dentro do próprio ciclo de avaliação.</p>
+            </div>
+          </div>
+          <div class="objetivo-body">
+            <div class="objetivo-compare-col">
+              <div class="objetivo-compare-box atual">
+                <span class="objetivo-compare-label">Situação atual</span>
+                <p>Gestores perdem acesso às avaliações fechadas e o RH monta o histórico manualmente. Colaboradores com mais de um gestor (10 a 15% dos cerca de 200 colaboradores) exigem configuração manual a cada ciclo, e a avaliação de liderança roda separada, pelo módulo de pesquisas.</p>
+              </div>
+              <div class="objetivo-compare-box meta">
+                <span class="objetivo-compare-label">Meta</span>
+                <p>Um único ciclo, com histórico sempre acessível para RH e gestores, dupla liderança configurada uma vez só e avaliação de liderança no mesmo link de resposta.</p>
+              </div>
+              <div class="objetivo-indicador">
+                <i class="fa-solid fa-chart-line"></i>
+                <div>
+                  <span class="objetivo-indicador-label">Indicador de sucesso</span>
+                  <p>Zero configurações manuais de segundo gestor e de histórico no próximo ciclo, a partir de março ou abril de 2027.</p>
+                </div>
+              </div>
+            </div>
+            <div class="objetivo-plan-col">
+              <div class="objetivo-etapas-title">Plano de ação</div>
+              <div class="objetivo-etapas">
+              <div class="objetivo-etapa">
+                <div class="objetivo-etapa-dot">1</div>
+                <div class="objetivo-etapa-line"></div>
+                <div class="objetivo-etapa-content">
+                  <span class="objetivo-etapa-period">Mês 1</span>
+                  <h4>Parametrização de pessoas e liderança</h4>
+                  <p>Cadastro dos colaboradores com os dois gestores vinculados na ficha e configuração das competências de liderança no mesmo ciclo.</p>
+                  <span class="objetivo-etapa-resp">impulseup</span>
+                </div>
+              </div>
+              <div class="objetivo-etapa">
+                <div class="objetivo-etapa-dot">2</div>
+                <div class="objetivo-etapa-line"></div>
+                <div class="objetivo-etapa-content">
+                  <span class="objetivo-etapa-period">Mês 1</span>
+                  <h4>Migração do histórico das últimas avaliações</h4>
+                  <p>Últimas avaliações da Sólides importadas para o Perfil 360, sem perda de dado.</p>
+                  <span class="objetivo-etapa-resp">impulseup</span>
+                </div>
+              </div>
+              <div class="objetivo-etapa">
+                <div class="objetivo-etapa-dot">3</div>
+                <div class="objetivo-etapa-line"></div>
+                <div class="objetivo-etapa-content">
+                  <span class="objetivo-etapa-period">Mês 2</span>
+                  <h4>Piloto do primeiro ciclo</h4>
+                  <p>Ciclo roda com histórico e dupla liderança já configurados, para validação com um grupo piloto.</p>
+                  <span class="objetivo-etapa-resp">conjunta</span>
+                </div>
+              </div>
+              <div class="objetivo-etapa">
+                <div class="objetivo-etapa-dot">4</div>
+                <div class="objetivo-etapa-line"></div>
+                <div class="objetivo-etapa-content">
+                  <span class="objetivo-etapa-period">Mês 3 em diante</span>
+                  <h4>Rollout para os 200 colaboradores</h4>
+                  <p>Ciclo completo em produção, já sem os processos manuais mapeados no diagnóstico.</p>
+                  <span class="objetivo-etapa-resp">Instituto Socioambiental (ISA)</span>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="approval-outcome">
+            <div class="approval-outcome-title"><i class="fa-solid fa-flag-checkered"></i>Estado futuro</div>
+            <div class="approval-outcome-grid">
+              <div class="approval-stage futuro">
+                <span class="approval-stage-label">Para o RH/DHO</span>
+                <p>Fernanda deixa de remontar histórico manualmente e de configurar o segundo gestor a cada ciclo. Gestores acessam tudo direto no Perfil 360.</p>
+              </div>
+              <div class="approval-stage negocio">
+                <span class="approval-stage-label">Para o negócio</span>
+                <p>Menos tempo do RH em trabalho operacional de calibragem, com mais tempo disponível para a revisão estratégica de cargos e competências já em curso no ISA.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="objetivo-card">
+          <div class="objetivo-header">
+            <div class="objetivo-num">02</div>
+            <div>
+              <h3>Tornar os dados de diversidade e território analisáveis, não apenas registrados</h3>
+              <p>Transformar cadastro em inteligência: cruzar diversidade, geração e atuação territorial sem trabalho manual.</p>
+            </div>
+          </div>
+          <div class="objetivo-body">
+            <div class="objetivo-compare-col">
+              <div class="objetivo-compare-box atual">
+                <span class="objetivo-compare-label">Situação atual</span>
+                <p>183 colaboradores cadastrados sem cruzamento de dados raciais, de gênero, geracionais ou de tempo de casa. Comparar programas, como Rio Negro e Xingu, exige exportar e recortar os dados manualmente.</p>
+              </div>
+              <div class="objetivo-compare-box meta">
+                <span class="objetivo-compare-label">Meta</span>
+                <p>Até 23 campos próprios (raça, gênero, geração, tempo de casa, programa, unidade) funcionando como filtro automático em avaliação, pesquisa e Nine Box.</p>
+              </div>
+              <div class="objetivo-indicador">
+                <i class="fa-solid fa-chart-line"></i>
+                <div>
+                  <span class="objetivo-indicador-label">Indicador de sucesso</span>
+                  <p>Primeiro relatório comparativo entre programas gerado direto no Analytics, sem exportação manual.</p>
+                </div>
+              </div>
+            </div>
+            <div class="objetivo-plan-col">
+              <div class="objetivo-etapas-title">Plano de ação</div>
+              <div class="objetivo-etapas">
+              <div class="objetivo-etapa">
+                <div class="objetivo-etapa-dot">1</div>
+                <div class="objetivo-etapa-line"></div>
+                <div class="objetivo-etapa-content">
+                  <span class="objetivo-etapa-period">Mês 1</span>
+                  <h4>Configuração dos campos customizados</h4>
+                  <p>Definição dos campos de recorte (raça, gênero, geração, tempo de casa, programa, unidade) na área de Pessoas.</p>
+                  <span class="objetivo-etapa-resp">conjunta</span>
+                </div>
+              </div>
+              <div class="objetivo-etapa">
+                <div class="objetivo-etapa-dot">2</div>
+                <div class="objetivo-etapa-line"></div>
+                <div class="objetivo-etapa-content">
+                  <span class="objetivo-etapa-period">Mês 1</span>
+                  <h4>Importação em massa via planilha</h4>
+                  <p>Atualização dos 200 colaboradores de uma vez, sem cadastro individual.</p>
+                  <span class="objetivo-etapa-resp">Instituto Socioambiental (ISA)</span>
+                </div>
+              </div>
+              <div class="objetivo-etapa">
+                <div class="objetivo-etapa-dot">3</div>
+                <div class="objetivo-etapa-line"></div>
+                <div class="objetivo-etapa-content">
+                  <span class="objetivo-etapa-period">Mês 2 em diante</span>
+                  <h4>Uso do Analytics com filtros cruzados</h4>
+                  <p>Fernanda gera relatórios comparando programas e recortes de diversidade sem exportar dado.</p>
+                  <span class="objetivo-etapa-resp">Instituto Socioambiental (ISA)</span>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="approval-outcome">
+            <div class="approval-outcome-title"><i class="fa-solid fa-flag-checkered"></i>Estado futuro</div>
+            <div class="approval-outcome-grid">
+              <div class="approval-stage futuro">
+                <span class="approval-stage-label">Para o RH/DHO</span>
+                <p>Fernanda compara Rio Negro e Xingu, ou qualquer outro recorte, direto no Analytics, sem recortar planilha.</p>
+              </div>
+              <div class="approval-stage negocio">
+                <span class="approval-stage-label">Para o negócio</span>
+                <p>Dados de diversidade e atuação territorial viram insumo direto para decisão, em vez de trabalho manual que hoje tira a Fernanda da parte estratégica do RH.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="objetivo-card">
+          <div class="objetivo-header">
+            <div class="objetivo-num">03</div>
+            <div>
+              <h3>Levar a calibragem para dentro do Nine Box, sem custo adicional</h3>
+              <p>Estruturar a calibragem numa matriz visual, dentro do mesmo investimento já previsto no contrato.</p>
+            </div>
+          </div>
+          <div class="objetivo-body">
+            <div class="objetivo-compare-col">
+              <div class="objetivo-compare-box atual">
+                <span class="objetivo-compare-label">Situação atual</span>
+                <p>Calibragem feita fora de uma matriz estruturada, focada nos casos de maior dificuldade. Na Sólides, o Nine Box exigiria contratação de um módulo à parte.</p>
+              </div>
+              <div class="objetivo-compare-box meta">
+                <span class="objetivo-compare-label">Meta</span>
+                <p>Nine Box com quadrantes personalizáveis, filtro por área e calibração direto na matriz, incluído no mesmo contrato.</p>
+              </div>
+              <div class="objetivo-indicador">
+                <i class="fa-solid fa-chart-line"></i>
+                <div>
+                  <span class="objetivo-indicador-label">Indicador de sucesso</span>
+                  <p>Calibragem do próximo ciclo, em 2027, conduzida direto no Nine Box, sem planilha paralela.</p>
+                </div>
+              </div>
+            </div>
+            <div class="objetivo-plan-col">
+              <div class="objetivo-etapas-title">Plano de ação</div>
+              <div class="objetivo-etapas">
+              <div class="objetivo-etapa">
+                <div class="objetivo-etapa-dot">1</div>
+                <div class="objetivo-etapa-line"></div>
+                <div class="objetivo-etapa-content">
+                  <span class="objetivo-etapa-period">Mês 2</span>
+                  <h4>Configuração do Nine Box</h4>
+                  <p>Definição dos eixos e quadrantes de calibração, incluindo cores e rótulos.</p>
+                  <span class="objetivo-etapa-resp">impulseup</span>
+                </div>
+              </div>
+              <div class="objetivo-etapa">
+                <div class="objetivo-etapa-dot">2</div>
+                <div class="objetivo-etapa-line"></div>
+                <div class="objetivo-etapa-content">
+                  <span class="objetivo-etapa-period">Mês 2 a 3</span>
+                  <h4>Calibragem por área com filtros</h4>
+                  <p>Fernanda filtra por área ou programa e conduz a calibragem direto na matriz, com os gestores.</p>
+                  <span class="objetivo-etapa-resp">conjunta</span>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="approval-outcome">
+            <div class="approval-outcome-title"><i class="fa-solid fa-flag-checkered"></i>Estado futuro</div>
+            <div class="approval-outcome-grid">
+              <div class="approval-stage futuro">
+                <span class="approval-stage-label">Para o RH/DHO</span>
+                <p>Calibragem sai da planilha paralela e passa a acontecer dentro da mesma tela onde o ciclo é acompanhado.</p>
+              </div>
+              <div class="approval-stage negocio">
+                <span class="approval-stage-label">Para o negócio</span>
+                <p>Processo de sucessão e calibragem mais rápido e sem custo adicional de módulo, dentro do mesmo investimento já previsto.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -700,39 +927,15 @@
       <h1 class="section-title">Proposta comercial</h1>
       <p class="section-sub">Investimento para a Instituto Socioambiental (ISA)</p>
 
-      <div class="empty-state" id="tab7EmptyState">
+      <div class="empty-state" id="tab7EmptyState" style="display:none;">
         <i class="fa-regular fa-file-invoice-dollar"></i>
         <h3>Aba liberada após o closer informar a proposta comercial</h3>
         <p>Assim que o closer passar os valores definidos na ferramenta de precificação da impulseup, esta aba mostra o investimento, os módulos e serviços incluídos e o detalhamento de valores.</p>
       </div>
 
-      <div id="tab7ProposalWrap" style="display:none;">
-        <div class="investment-hero">
-          <div class="label">Investimento mensal</div>
-          <div class="value">R$ 12.400/mês</div>
-        </div>
-        <p class="investment-hero-meta">Investimento total do contrato: R$ 148.800 · Validade da proposta: 15 dias · Duração do contrato: 12 meses</p>
-
-        <div class="block-title"><i class="fa-regular fa-layer-group"></i>Módulos e serviços incluídos</div>
-        <div class="module-list">
-          <div class="module-row">
-            <div class="module-row-main"><h4>Avaliação de Desempenho</h4><p>Ciclos completos com nine-box e PDI integrado.</p></div>
-            <div class="module-row-users">500 usuários</div>
-          </div>
-          <div class="module-row">
-            <div class="module-row-main"><h4>Plano de Serviço III</h4><p>Implementação assistida por especialista em DHO.</p></div>
-            <div class="module-row-users"></div>
-          </div>
-        </div>
-
-        <div class="block-title"><i class="fa-regular fa-table"></i>Detalhamento de valores</div>
-        <table class="rfp-table" id="proposalValuesTable">
-          <tr><th>Item</th><th>Usuários</th><th>Valor unitário</th><th>Valor mensal</th><th>Observação</th></tr>
-          <tr><td><div class="feat-name">Avaliação de Desempenho</div></td><td class="check-cell">500</td><td class="check-cell">R$ 22,00</td><td class="check-cell">R$ 11.000,00</td><td class="check-cell">—</td></tr>
-          <tr><td><div class="feat-name">Plano de Serviço III</div></td><td class="check-cell">—</td><td class="check-cell">R$ 16.800,00</td><td class="check-cell">—</td><td class="check-cell">Cobrança única</td></tr>
-          <tr><td colspan="4" style="text-align:right;font-weight:600;">Total do contrato (12 meses)</td><td class="check-cell" style="font-weight:700;color:var(--color-primary);">R$ 148.800</td></tr>
-        </table>
-
+      <div id="tab7ProposalWrap" style="display:block;">
+        <p class="section-sub" style="margin-bottom:24px;">Validade da proposta: 5 dias · Duração do contrato: 12 meses</p>
+<div class="cenarios-comparativo"><div class="cards"><div class="card recommended"><div class="card-header"><span class="badge-recommended">Recomendado</span><div class="eyebrow-card">Cenário 1</div><div class="card-title">Modelo por Créditos</div></div><div class="card-body"><div class="price-line"><span class="price-value">R$ 2.728,67</span><span class="price-unit">/ mês (12x)</span></div><div class="price-base">Investimento total do contrato: R$ 32.744,00</div><hr class="divider"><div class="inclui-label">Inclui</div><ul class="check-list"><li><span class="tick">&#10003;</span>Avaliações cobradas por crédito (200 créditos, ciclo fechado)</li><li><span class="tick">&#10003;</span>Pesquisas de Clima, Pulso e Engajamento, R$ 4,40/usuário por mês</li><li><span class="tick">&#10003;</span>Desenvolvimento (PDIs, feedbacks, reuniões 1:1, ações e iniciativas) incluso</li><li><span class="tick">&#10003;</span>Menor investimento total do contrato frente ao modelo mensal</li></ul><details class="detalhamento"><summary>Ver detalhamento</summary><table class="detalhamento-table"><thead><tr><th>Item</th><th>Quantidade</th><th>Valor unitário</th><th>Valor total</th></tr></thead><tbody><tr><td>Avaliações</td><td>200 créditos</td><td>R$ 93,42</td><td>R$ 18.684,00</td></tr><tr><td>Pesquisas</td><td>200 usuários</td><td>R$ 4,40/mês</td><td>R$ 880,00/mês</td></tr><tr><td>Desenvolvimento</td><td>200 usuários</td><td>Incluso</td><td>Incluso</td></tr><tr><td>Plano de Serviço I</td><td>—</td><td>Valor único</td><td>R$ 3.000,00</td></tr><tr><td>Treinamento com os líderes (1h)</td><td>—</td><td>Valor único</td><td>R$ 500,00</td></tr></tbody></table></details></div></div><div class="card"><div class="card-header"><div class="eyebrow-card">Cenário 2</div><div class="card-title">Modelo Mensal</div></div><div class="card-body"><div class="price-line"><span class="price-value">R$ 3.765,67</span><span class="price-unit">/ mês (12x)</span></div><div class="price-base">Investimento total do contrato: R$ 45.188,00</div><hr class="divider"><div class="inclui-label">Mesmo escopo, com</div><ul class="check-list"><li><span class="tick">&#10003;</span>Avaliações cobradas por usuário ativo, R$ 12,97/mês, sem compra antecipada de créditos</li><li><span class="tick">&#10003;</span>Pesquisas de Clima, Pulso e Engajamento, R$ 4,40/usuário por mês</li><li><span class="tick">&#10003;</span>Desenvolvimento (PDIs, feedbacks, reuniões 1:1, ações e iniciativas) incluso</li><li><span class="tick">&#10003;</span>Mesmo escopo de módulos do modelo por créditos, com cobrança recorrente mês a mês</li></ul><details class="detalhamento"><summary>Ver detalhamento</summary><table class="detalhamento-table"><thead><tr><th>Item</th><th>Quantidade</th><th>Valor unitário</th><th>Valor total</th></tr></thead><tbody><tr><td>Avaliações</td><td>200 usuários</td><td>R$ 12,97/mês</td><td>R$ 2.594,00/mês</td></tr><tr><td>Pesquisas</td><td>200 usuários</td><td>R$ 4,40/mês</td><td>R$ 880,00/mês</td></tr><tr><td>Desenvolvimento</td><td>200 usuários</td><td>Incluso</td><td>Incluso</td></tr><tr><td>Plano de Serviço I</td><td>—</td><td>Valor único</td><td>R$ 3.000,00</td></tr><tr><td>Treinamento com os líderes (1h)</td><td>—</td><td>Valor único</td><td>R$ 500,00</td></tr></tbody></table></details></div></div></div><div class="additional-title">Serviços adicionais</div><div class="additional-list"><div class="additional-row"><div class="additional-left"><div class="additional-name">Plano de Serviço I</div><div class="additional-desc">Incluso: Avaliação de Desempenho, Pesquisas</div></div><div class="additional-right"><div class="additional-value">Cenário 1</div><span class="additional-status">R$ 3.000,00</span></div></div><div class="additional-row"><div class="additional-left"><div class="additional-name">Plano de Serviço I</div><div class="additional-desc">Incluso: Avaliação de Desempenho, Pesquisas</div></div><div class="additional-right"><div class="additional-value">Cenário 2</div><span class="additional-status">R$ 3.000,00</span></div></div><div class="additional-row"><div class="additional-left"><div class="additional-name">Treinamento com os líderes</div><div class="additional-desc">1 hora de treinamento</div></div><div class="additional-right"><div class="additional-value">Cenário 1</div><span class="additional-status">R$ 500,00</span></div></div><div class="additional-row"><div class="additional-left"><div class="additional-name">Treinamento com os líderes</div><div class="additional-desc">1 hora de treinamento</div></div><div class="additional-right"><div class="additional-value">Cenário 2</div><span class="additional-status">R$ 500,00</span></div></div></div></div>
         <label class="proposal-upload-slot" id="proposalSlot" style="margin-top:24px;">
           <div id="proposalPlaceholder">
             <i class="fa-regular fa-image" style="font-size:22px;color:var(--color-border);display:block;margin-bottom:10px;"></i>
@@ -780,13 +983,17 @@
     {"titulo": "Avaliação de liderança fragmentada"},
     {"titulo": "Analytics limitados para pesquisa de clima"}
   ],
-  "objetivos": [],
+  "objetivos": [
+    {"titulo": "Centralizar histórico e liderança compartilhada em um único ciclo"},
+    {"titulo": "Tornar os dados de diversidade e território analisáveis, não apenas registrados"},
+    {"titulo": "Levar a calibragem para dentro do Nine Box, sem custo adicional"}
+  ],
   "pilaresDestaque": [
     {"titulo": "Histórico de cada ciclo sempre à mão, sem trabalho manual de calibragem", "tag": "Confiável"},
     {"titulo": "Avaliação de liderança dentro do mesmo ciclo, sem processo paralelo", "tag": "Flexível"}
   ],
-  "comparativo": null,
-  "investimento": null,
+  "comparativo": "8 critérios da RFP em que a impulseup atende e a Sólides não atende ou cobra à parte (histórico, liderança, campos customizados, filtros, comparação por área e Nine Box).",
+  "investimento": "Cenário recomendado (créditos): R$ 2.728,67/mês, R$ 32.744,00 no contrato de 12 meses. Alternativa mensal: R$ 3.765,67/mês, R$ 45.188,00 no contrato. Atual na Sólides: R$ 3 a 4 mil/mês.",
   "cronogramaMacro": [
     {"data": "03 set", "titulo": "Reunião de Diagnóstico"},
     {"data": "15 set", "titulo": "Demonstração personalizada"},
