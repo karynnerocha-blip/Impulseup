@@ -568,15 +568,16 @@
     <section class="tab-panel" id="tab-3">
       <h1 class="section-title">Demonstração</h1>
       <p class="section-sub">Vídeos da plataforma, orientados aos desafios da Instituto Socioambiental (ISA)</p>
-      <div class="empty-state" id="tab3EmptyState">
+      <div class="empty-state" id="tab3EmptyState" style="display:none;">
         <i class="fa-regular fa-circle-play"></i>
         <h3>Aba liberada após a reunião de Demo</h3>
         <p>O closer vai incluir aqui vídeos curtos mostrando a solução aplicada aos desafios mapeados no Diagnóstico.</p>
       </div>
-      <div id="tab3Content" style="display:none;">
+      <div id="tab3Content" style="display:block;">
         <div class="stat-grid" id="tab3ImpactoGrid">
-          <!-- Preenchido pela skill a partir de "impacto" (estrutura-abas.md, Aba 3). Ex:
-               <div class="stat-card"><div class="num">32%</div><div class="label">redução no tempo de ciclo de avaliação</div></div> -->
+          <div class="stat-card"><div class="num">10 a 15%</div><div class="label">dos ~200 colaboradores têm dupla liderança, com ajuste manual em todo ciclo</div></div>
+          <div class="stat-card"><div class="num">183</div><div class="label">colaboradores sem cruzamento de dados raciais, geracionais e de gênero disponível hoje</div></div>
+          <div class="stat-card"><div class="num">0</div><div class="label">comparativos automáticos entre programas (ex: Rio Negro x Xingu), hoje feitos recortando dado manualmente</div></div>
         </div>
         <div style="overflow-x:auto;margin-bottom:40px;">
           <table class="rfp-table" id="tab3ComparativoTable">
@@ -584,12 +585,15 @@
               <tr><th>Situação atual</th><th>Módulo impulseup</th><th>Como fica</th></tr>
             </thead>
             <tbody>
-              <!-- Preenchido pela skill a partir de "comparativo" (máx. 4 linhas). Ex:
-                   <tr><td>Avaliação só em planilha</td><td class="feat-name">Ciclos de avaliação</td><td>Fluxo 100% digital com lembretes automáticos</td></tr> -->
+              <tr><td>Segundo gestor exige ajuste manual a cada ciclo, para 10 a 15% dos ~200 colaboradores</td><td class="feat-name">Cadastro de pessoas e avaliação 360</td><td>Dois gestores vinculados direto na ficha do colaborador, sem retrabalho em nenhum ciclo</td></tr>
+              <tr><td>Gestores perdem acesso ao histórico de avaliações fechadas; RH busca dado ficha por ficha</td><td class="feat-name">Perfil 360 e histórico de avaliação</td><td>Histórico das últimas avaliações visível direto na tela de resposta, para RH e gestores</td></tr>
+              <tr><td>Relatórios sem cruzamento de raça, gênero, geração e comparação entre programas</td><td class="feat-name">Analytics com campos customizados</td><td>Até 23 campos próprios viram filtro automático em avaliação, pesquisa e Nine Box</td></tr>
+              <tr><td>Avaliação de liderança roda separada, pelo módulo de pesquisas, com múltiplos links</td><td class="feat-name">Avaliação 360 unificada</td><td>Competências de colaborador e de líder respondidas em um único link, na mesma tela</td></tr>
             </tbody>
           </table>
         </div>
         <div class="video-grid" id="tab3VideoGrid">
+          <!-- Vídeos serão anexados pelo closer diretamente no site após a reunião de Demo real (15/09). -->
           <!-- Preenchido pela skill a partir de "videos" (estrutura-abas.md, Aba 3), um .video-card por vídeo.
                Ver scripts/gerar_video_embed.py::gerar_bloco_video() para a lógica de geração.
 
@@ -735,7 +739,7 @@
       <p class="section-sub">Jornada de compra da Instituto Socioambiental (ISA)</p>
       <div class="timeline">
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">03 set</span><div><span class="tl-desc">Reunião de Diagnóstico</span><div class="tl-meta">Entender contexto e desafios do ISA · Fernanda</div></div></div>
-        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Demonstração personalizada</span><div class="tl-meta">Mostrar solução aplicada aos desafios mapeados</div></div></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">15 set</span><div><span class="tl-desc">Demonstração personalizada</span><div class="tl-meta">Aprofundar configurações e estrutura de pesquisas · 11h</div></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Construção de projeto e proposta</span><div class="tl-meta">Definir escopo e cenários de investimento</div></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Apresentação para diretoria</span><div class="tl-meta">Fernanda apresenta o projeto à diretoria executiva</div></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Aprovação da proposta</span></div></div>
@@ -775,7 +779,7 @@
   "investimento": null,
   "cronogramaMacro": [
     {"data": "03 set", "titulo": "Reunião de Diagnóstico"},
-    {"data": "A definir", "titulo": "Demonstração personalizada"},
+    {"data": "15 set", "titulo": "Demonstração personalizada"},
     {"data": "A definir", "titulo": "Apresentação para diretoria"},
     {"data": "A definir", "titulo": "Assinatura e kickoff"}
   ]
