@@ -676,10 +676,10 @@
           </div>
         </div>
         <div class="person-card">
-          <label class="person-photo" data-initials="??"><span>??</span><input type="file" accept="image/*" class="personPhotoInput"></label>
+          <label class="person-photo" data-initials="J"><span>J</span><input type="file" accept="image/*" class="personPhotoInput"></label>
           <div>
-            <h4 contenteditable="true" class="person-name">Nome a preencher</h4>
-            <p contenteditable="true" class="person-role">Diretor(a) de RH</p>
+            <h4 contenteditable="true" class="person-name">Jorge</h4>
+            <p contenteditable="true" class="person-role">Diretor de RH</p>
           </div>
         </div>
       </div>
@@ -762,16 +762,20 @@
     <section class="tab-panel" id="tab-4">
       <h1 class="section-title">Diferenciais impulseup</h1>
       <p class="section-sub">Comparativo com base nos critérios mais importantes para este projeto</p>
-      <div class="empty-state" id="tab4EmptyState">
+      <div class="empty-state" id="tab4EmptyState" style="display:none;">
         <i class="fa-regular fa-list-check"></i>
         <h3>Aba liberada após a reunião de Diagnóstico</h3>
         <p>Assim que o closer finalizar o diagnóstico, esta aba mostra o comparativo entre a impulseup e os concorrentes identificados na conversa. Se nenhum concorrente específico for mencionado, o comparativo é feito contra "Outras soluções", com resultado mediano.</p>
       </div>
-      <div id="tab4TableWrap" style="margin-top:24px;overflow-x:auto;display:none;">
+      <div id="tab4TableWrap" style="margin-top:24px;overflow-x:auto;display:block;">
         <table class="rfp-table" id="tab4Table">
-          <!-- Preenchido pela skill site-cliente-impulseup a partir da transcrição da reunião de Diagnóstico e de references/rfp-criterios.json.
-               Cada critério exibe sua tag (campo "tags" do JSON) junto ao nome, ex:
-               <tr><td><div class="feat-name">Formatos de avaliação diferentes (90/180/360)</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td>...</tr> -->
+<tr><th>Critério</th><th class="iup-col">impulseup</th><th>Qulture.Rocks</th></tr>
+<tr><td><div class="feat-name">Definição do formato do ciclo, por Metas e OKRs</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
+<tr><td><div class="feat-name">Distribuição automática ou personalizada de pesos</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
+<tr><td><div class="feat-name">Metas compartilhadas</div><span class="feat-tag">Liderança</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
+<tr><td><div class="feat-name">Conexão automática entre Metas, OKRs e Avaliação</div><span class="feat-tag">Inteligente</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
+<tr><td><div class="feat-name">Cruzamento automático de Avaliação e Metas</div><span class="feat-tag">Inteligente</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
+<tr><td><div class="feat-name">Importação de dados externos (histórico)</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
         </table>
       </div>
     </section>
@@ -801,13 +805,84 @@
     <section class="tab-panel" id="tab-5">
       <h1 class="section-title">Aprovação e plano de ação</h1>
       <p class="section-sub">Objetivos de negócio da Rentcars.com, o caminho para chegar lá e o estado futuro com a impulseup</p>
-      <div class="empty-state" id="tab5EmptyState">
+      <div class="empty-state" id="tab5EmptyState" style="display:none;">
         <i class="fa-regular fa-clipboard"></i>
         <h3>Aba liberada após a reunião de Diagnóstico</h3>
         <p>Assim que os desafios forem mapeados, esta aba mostra os objetivos de negócio e RH por trás do projeto, o plano de ação com cronograma para chegar lá, e o estado futuro do negócio com a impulseup — pronta para embasar a apresentação à diretoria.</p>
       </div>
-      <div id="tab5PlanoWrap" style="display:none;">
-        <!--OBJETIVOS-->
+      <div id="tab5PlanoWrap" style="display:block;">
+        <div class="objetivo-card">
+  <div class="objetivo-num">01</div>
+  <h3>Levar a gestão de desempenho ao nível individual</h3>
+  <p class="feat-desc">Hoje o acompanhamento de metas e KPIs para por área. O objetivo é descer isso para cada pessoa, sustentando a reformulação de cultura prevista para 2027.</p>
+  <div class="objetivo-body">
+    <div class="objetivo-compare-col">
+      <div class="objetivo-compare-box atual"><strong>Situação atual</strong><p>Indicadores acompanhados só até o nível de coordenação ou área, sem leitura individual.</p></div>
+      <div class="objetivo-compare-box meta"><strong>Meta</strong><p>Indicador individual, sem cascateamento, com peso e cruzamento automático com a avaliação de desempenho.</p></div>
+      <div class="objetivo-indicador"><strong>Indicador de sucesso</strong><p>Ciclo de metas individuais rodando com resultado único, cruzado com a avaliação de desempenho.</p></div>
+    </div>
+    <div class="objetivo-plan-col">
+      <div class="objetivo-etapas">
+        <div class="objetivo-etapa"><div class="tl-dot"></div><div><strong>Mês 1</strong><span class="tl-desc">Parametrização do modelo de metas</span><p class="feat-desc">Configuração do ciclo individual, sem cascateamento, e dos pesos por pessoa.</p><span class="feat-desc" style="font-style:italic;">Responsável: impulseup</span></div></div><div class="objetivo-etapa"><div class="tl-dot"></div><div><strong>Mês 1 a 2</strong><span class="tl-desc">Piloto do ciclo de metas</span><p class="feat-desc">Um ciclo real rodando com um grupo reduzido, para validar o modelo antes do rollout.</p><span class="feat-desc" style="font-style:italic;">Responsável: conjunta</span></div></div><div class="objetivo-etapa"><div class="tl-dot"></div><div><strong>Mês 2 a 3</strong><span class="tl-desc">Cruzamento com avaliação de desempenho</span><p class="feat-desc">Resultado individual único, combinando atingimento de metas e avaliação.</p><span class="feat-desc" style="font-style:italic;">Responsável: impulseup</span></div></div><div class="objetivo-etapa"><div class="tl-dot"></div><div><strong>Mês 3 em diante</strong><span class="tl-desc">Rollout completo</span><p class="feat-desc">Extensão do ciclo de metas individuais para toda a base de 300 colaboradores.</p><span class="feat-desc" style="font-style:italic;">Responsável: Rentcars.com</span></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="approval-outcome">
+    <div class="approval-outcome-title">Estado futuro</div>
+    <div class="approval-outcome-grid">
+      <div class="approval-stage futuro"><strong>Para o RH</strong><p>O RH enxerga e decide sobre desempenho pessoa a pessoa, não mais só por área ou time.</p></div>
+      <div class="approval-stage negocio"><strong>Para o negócio</strong><p>Decisões de carreira, remuneração e desenvolvimento passam a ter base individual real, não estimativa por grupo.</p></div>
+    </div>
+  </div>
+</div>
+<div class="objetivo-card">
+  <div class="objetivo-num">02</div>
+  <h3>Reengajar o time nas pesquisas internas</h3>
+  <p class="feat-desc">A participação nas pesquisas de clima e no e-mail de sentimento vem caindo. O objetivo é recuperar adesão antes que isso comprometa a leitura da reformulação de cultura em curso.</p>
+  <div class="objetivo-body">
+    <div class="objetivo-compare-col">
+      <div class="objetivo-compare-box atual"><strong>Situação atual</strong><p>Participação na pesquisa de clima mensal e no e-mail semanal de sentimento em queda ao longo do último ano.</p></div>
+      <div class="objetivo-compare-box meta"><strong>Meta</strong><p>Recuperar adesão com formatos de pesquisa mais variados dentro do mesmo ciclo, como pulso, clima e NPS.</p></div>
+      <div class="objetivo-indicador"><strong>Indicador de sucesso</strong><p>Taxa de participação na pesquisa de clima recuperada frente à média dos últimos 12 meses.</p></div>
+    </div>
+    <div class="objetivo-plan-col">
+      <div class="objetivo-etapas">
+        <div class="objetivo-etapa"><div class="tl-dot"></div><div><strong>Mês 1</strong><span class="tl-desc">Configuração dos novos formatos de pesquisa</span><p class="feat-desc">Pulso, clima e NPS disponíveis dentro do mesmo ciclo de pesquisa.</p><span class="feat-desc" style="font-style:italic;">Responsável: impulseup</span></div></div><div class="objetivo-etapa"><div class="tl-dot"></div><div><strong>Mês 1 a 2</strong><span class="tl-desc">Piloto com pesquisa de pulso</span><p class="feat-desc">Teste do novo formato com uma área, para medir ganho real de participação.</p><span class="feat-desc" style="font-style:italic;">Responsável: conjunta</span></div></div><div class="objetivo-etapa"><div class="tl-dot"></div><div><strong>Mês 2 a 3</strong><span class="tl-desc">Ciclo completo de clima no novo formato</span><p class="feat-desc">Pesquisa de clima rodando já no modelo revisado, com envio multicanal.</p><span class="feat-desc" style="font-style:italic;">Responsável: Rentcars.com</span></div></div><div class="objetivo-etapa"><div class="tl-dot"></div><div><strong>Mês 3 em diante</strong><span class="tl-desc">Acompanhamento contínuo de adesão</span><p class="feat-desc">Monitoramento da taxa de participação ciclo a ciclo.</p><span class="feat-desc" style="font-style:italic;">Responsável: conjunta</span></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="approval-outcome">
+    <div class="approval-outcome-title">Estado futuro</div>
+    <div class="approval-outcome-grid">
+      <div class="approval-stage futuro"><strong>Para o RH</strong><p>O RH acompanha participação em tempo real e ajusta o formato antes que a queda se repita.</p></div>
+      <div class="approval-stage negocio"><strong>Para o negócio</strong><p>Leitura mais confiável do clima interno, logo no momento em que a empresa conduz a reformulação de cultura.</p></div>
+    </div>
+  </div>
+</div>
+<div class="objetivo-card">
+  <div class="objetivo-num">03</div>
+  <h3>Dar autonomia de dado para a liderança</h3>
+  <p class="feat-desc">Hoje a liderança depende do RH para acessar dado de desempenho do próprio time, principalmente quando há troca de gestor. O objetivo é devolver essa autonomia.</p>
+  <div class="objetivo-body">
+    <div class="objetivo-compare-col">
+      <div class="objetivo-compare-box atual"><strong>Situação atual</strong><p>Liderança com pouco dado e acesso independente; histórico de feedback não acompanha o colaborador na troca de gestor.</p></div>
+      <div class="objetivo-compare-box meta"><strong>Meta</strong><p>Histórico de feedback vinculado ao colaborador e relatórios liberados direto pelo gestor, sem depender do RH.</p></div>
+      <div class="objetivo-indicador"><strong>Indicador de sucesso</strong><p>Número de relatórios liberados diretamente pelos gestores, sem passar pelo RH.</p></div>
+    </div>
+    <div class="objetivo-plan-col">
+      <div class="objetivo-etapas">
+        <div class="objetivo-etapa"><div class="tl-dot"></div><div><strong>Mês 1</strong><span class="tl-desc">Organização do histórico de feedback</span><p class="feat-desc">Histórico vinculado ao colaborador, não mais ao gestor que o registrou.</p><span class="feat-desc" style="font-style:italic;">Responsável: impulseup</span></div></div><div class="objetivo-etapa"><div class="tl-dot"></div><div><strong>Mês 1 a 2</strong><span class="tl-desc">Liberação de acesso por gestor</span><p class="feat-desc">Cada liderança passa a acompanhar e liberar relatório direto para o seu time.</p><span class="feat-desc" style="font-style:italic;">Responsável: impulseup</span></div></div><div class="objetivo-etapa"><div class="tl-dot"></div><div><strong>Mês 2</strong><span class="tl-desc">Treinamento das lideranças</span><p class="feat-desc">Rotina de uso da nova autonomia de dado, sem depender do RH.</p><span class="feat-desc" style="font-style:italic;">Responsável: impulseup</span></div></div><div class="objetivo-etapa"><div class="tl-dot"></div><div><strong>Mês 3 em diante</strong><span class="tl-desc">Acompanhamento do uso</span><p class="feat-desc">Checagem de quanto as lideranças estão de fato usando a autonomia liberada.</p><span class="feat-desc" style="font-style:italic;">Responsável: conjunta</span></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="approval-outcome">
+    <div class="approval-outcome-title">Estado futuro</div>
+    <div class="approval-outcome-grid">
+      <div class="approval-stage futuro"><strong>Para o RH</strong><p>O RH deixa de ser o intermediário obrigatório entre a liderança e o dado de desempenho do time.</p></div>
+      <div class="approval-stage negocio"><strong>Para o negócio</strong><p>Decisões de gestão mais rápidas, com menos tempo perdido reconstruindo contexto a cada troca de gestor.</p></div>
+    </div>
+  </div>
+</div>
       </div>
     </section>
 
