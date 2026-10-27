@@ -725,16 +725,22 @@
     <section class="tab-panel" id="tab-4">
       <h1 class="section-title">Diferenciais impulseup</h1>
       <p class="section-sub">Comparativo com base nos critérios mais importantes para este projeto</p>
-      <div class="empty-state" id="tab4EmptyState">
+      <div class="empty-state" id="tab4EmptyState" style="display:none;">
         <i class="fa-regular fa-list-check"></i>
         <h3>Aba liberada após a reunião de Diagnóstico</h3>
         <p>Assim que o closer finalizar o diagnóstico, esta aba mostra o comparativo entre a impulseup e os concorrentes identificados na conversa. Se nenhum concorrente específico for mencionado, o comparativo é feito contra "Outras soluções", com resultado mediano.</p>
       </div>
-      <div id="tab4TableWrap" style="margin-top:24px;overflow-x:auto;display:none;">
+      <div id="tab4TableWrap" style="margin-top:24px;overflow-x:auto;display:block;">
         <table class="rfp-table" id="tab4Table">
-          <!-- Preenchido pela skill site-cliente-impulseup a partir da transcrição da reunião de Diagnóstico e de references/rfp-criterios.json.
-               Cada critério exibe sua tag (campo "tags" do JSON) junto ao nome, ex:
-               <tr><td><div class="feat-name">Formatos de avaliação diferentes (90/180/360)</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td>...</tr> -->
+          <tr><th>Critério</th><th class="iup-col">impulseup</th><th>Qulture.Rocks</th></tr>
+          <tr><td><div class="feat-name">Avaliação de consenso</div><span class="feat-tag">Confiável</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
+          <tr><td><div class="feat-name">Pesos diferentes por tipo de avaliador, por competência</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
+          <tr><td><div class="feat-name">Cruzamento automático de Avaliação e Metas</div><span class="feat-tag">Inteligente</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
+          <tr><td><div class="feat-name">Comparação de resultados por cargo, área, diretoria, etc.</div><span class="feat-tag">Inteligente</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
+          <tr><td><div class="feat-name">Biblioteca de ações de desenvolvimento personalizada</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
+          <tr><td><div class="feat-name">Permite compartilhar no mural da empresa e/ou LinkedIn</div><span class="feat-tag">Fácil</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
+          <tr><td><div class="feat-name">Emissão de certificado de conclusão de curso</div><span class="feat-tag">Fácil</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
+          <tr><td><div class="feat-name">Gamificação (desafios e rankings vinculados a processos de desenvolvimento)</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
         </table>
       </div>
     </section>
@@ -743,13 +749,16 @@
     <section class="tab-panel" id="tab-5">
       <h1 class="section-title">Aprovação e plano de ação</h1>
       <p class="section-sub">Objetivos de negócio da Webedia, o caminho para chegar lá e o estado futuro com a impulseup</p>
-      <div class="empty-state" id="tab5EmptyState">
+      <div class="empty-state" id="tab5EmptyState" style="display:none;">
         <i class="fa-regular fa-clipboard"></i>
         <h3>Aba liberada após a reunião de Diagnóstico</h3>
         <p>Assim que os desafios forem mapeados, esta aba mostra os objetivos de negócio e RH por trás do projeto, o plano de ação com cronograma para chegar lá, e o estado futuro do negócio com a impulseup — pronta para embasar a apresentação à diretoria.</p>
       </div>
-      <div id="tab5PlanoWrap" style="display:none;">
-        <!--OBJETIVOS-->
+      <div id="tab5PlanoWrap" style="display:block;">
+        <div class="objetivo-card"><div class="objetivo-header"><span class="objetivo-num">01</span><div><h3>Reduzir o esforço manual de relatório e análise de desempenho</h3><p>Hoje o RH monta comparativos entre áreas por fora do sistema e ainda precisa explicar cada resultado individual em reunião com a liderança.</p></div></div><div class="objetivo-body"><div class="objetivo-compare-col"><div class="objetivo-compare-box atual"><span class="objetivo-compare-label">Situação atual</span><p>Comparativos entre áreas são montados por fora, no Looker, e cada relatório individual ainda exige uma reunião explicativa com a liderança.</p></div><div class="objetivo-compare-box meta"><span class="objetivo-compare-label">Meta</span><p>Analytics comparativo nativo no sistema e relatórios individuais autodidatas, sem depender de reunião explicativa.</p></div><div class="objetivo-indicador"><i class="fa-solid fa-flag-checkered"></i><div><span class="objetivo-indicador-label">Indicador de sucesso</span><p>Relatórios de fechamento de ciclo gerados sem necessidade de reunião explicativa individual com cada liderança.</p></div></div></div><div class="objetivo-plan-col"><div class="objetivo-etapas-title">Plano de ação</div><div class="objetivo-etapas"><div class="objetivo-etapa"><div class="objetivo-etapa-dot">1</div><div class="objetivo-etapa-line"></div><div class="objetivo-etapa-content"><span class="objetivo-etapa-period">Mês 1</span><h4>Migração de histórico e parametrização de relatórios</h4><p>Importação dos ciclos de 2025 e 2026 da Qulture e configuração dos relatórios por área.</p><span class="objetivo-etapa-resp">Responsável: impulseup</span></div></div><div class="objetivo-etapa"><div class="objetivo-etapa-dot">2</div><div class="objetivo-etapa-line"></div><div class="objetivo-etapa-content"><span class="objetivo-etapa-period">Mês 1 a 2</span><h4>Validação dos relatórios com o time de RH</h4><p>Natália e Ana validam os formatos de relatório antes do primeiro ciclo na impulseup.</p><span class="objetivo-etapa-resp">Responsável: conjunta</span></div></div><div class="objetivo-etapa"><div class="objetivo-etapa-dot">3</div><div class="objetivo-etapa-line"></div><div class="objetivo-etapa-content"><span class="objetivo-etapa-period">Mês 3 em diante</span><h4>Operação assistida</h4><p>Acompanhamento do time de CS no primeiro ciclo completo rodado na plataforma.</p><span class="objetivo-etapa-resp">Responsável: impulseup</span></div></div></div></div></div><div class="approval-outcome"><div class="approval-outcome-title"><i class="fa-regular fa-lightbulb"></i>Estado futuro</div><div class="approval-outcome-grid"><div class="approval-stage futuro"><span class="approval-stage-label">Para o RH</span><p>O RH consegue abrir um comparativo entre áreas e gerar relatórios individuais sem montar nada por fora do sistema.</p></div><div class="approval-stage negocio"><span class="approval-stage-label">Para o negócio</span><p>Menos tempo do time de DHO, hoje só duas pessoas para 207 colaboradores, em trabalho manual de relatório, liberando capacidade para projetos estratégicos.</p></div></div></div></div>
+<div class="objetivo-card"><div class="objetivo-header"><span class="objetivo-num">02</span><div><h3>Fortalecer a cultura de PDI</h3><p>O feedback já roda bem, mas o PDI ainda depende de criação manual e não nasce automaticamente da avaliação.</p></div></div><div class="objetivo-body"><div class="objetivo-compare-col"><div class="objetivo-compare-box atual"><span class="objetivo-compare-label">Situação atual</span><p>PDI não nasce da avaliação, depende de criação manual pelo gestor.</p></div><div class="objetivo-compare-box meta"><span class="objetivo-compare-label">Meta</span><p>PDI sugerido automaticamente ao fechar o ciclo, com apoio de IA e vínculo direto a cursos do Learning.</p></div><div class="objetivo-indicador"><i class="fa-solid fa-flag-checkered"></i><div><span class="objetivo-indicador-label">Indicador de sucesso</span><p>Percentual de avaliações com PDI criado automaticamente ao final do ciclo.</p></div></div></div><div class="objetivo-plan-col"><div class="objetivo-etapas-title">Plano de ação</div><div class="objetivo-etapas"><div class="objetivo-etapa"><div class="objetivo-etapa-dot">1</div><div class="objetivo-etapa-line"></div><div class="objetivo-etapa-content"><span class="objetivo-etapa-period">Mês 1</span><h4>Configuração do fluxo de PDI</h4><p>Parametrização do vínculo entre avaliação, PDI e trilhas do Learning.</p><span class="objetivo-etapa-resp">Responsável: impulseup</span></div></div><div class="objetivo-etapa"><div class="objetivo-etapa-dot">2</div><div class="objetivo-etapa-line"></div><div class="objetivo-etapa-content"><span class="objetivo-etapa-period">Mês 2</span><h4>Piloto com uma área</h4><p>Testar o fluxo de PDI automático com uma área antes do rollout completo.</p><span class="objetivo-etapa-resp">Responsável: conjunta</span></div></div><div class="objetivo-etapa"><div class="objetivo-etapa-dot">3</div><div class="objetivo-etapa-line"></div><div class="objetivo-etapa-content"><span class="objetivo-etapa-period">Mês 3 em diante</span><h4>Rollout para toda a base</h4><p>PDI automático ativo para os 207 colaboradores no próximo ciclo.</p><span class="objetivo-etapa-resp">Responsável: Webedia</span></div></div></div></div></div><div class="approval-outcome"><div class="approval-outcome-title"><i class="fa-regular fa-lightbulb"></i>Estado futuro</div><div class="approval-outcome-grid"><div class="approval-stage futuro"><span class="approval-stage-label">Para o RH</span><p>O PDI deixa de ser opcional e passa a ser parte natural do fechamento de cada ciclo de avaliação.</p></div><div class="approval-stage negocio"><span class="approval-stage-label">Para o negócio</span><p>Desenvolvimento de pessoas mais consistente, apoiando o plano do RH de tornar o PDI mandatório a partir do próximo ciclo.</p></div></div></div></div>
+<div class="objetivo-card"><div class="objetivo-header"><span class="objetivo-num">03</span><div><h3>Aumentar o engajamento no Learning</h3><p>O acesso à plataforma de aprendizagem hoje se concentra quase só no onboarding obrigatório.</p></div></div><div class="objetivo-body"><div class="objetivo-compare-col"><div class="objetivo-compare-box atual"><span class="objetivo-compare-label">Situação atual</span><p>Colaboradores acessam o Learning cerca de 4 vezes por ano, fora dos cursos obrigatórios de onboarding.</p></div><div class="objetivo-compare-box meta"><span class="objetivo-compare-label">Meta</span><p>Engajamento recorrente no Learning, puxado por gamificação e pelo vínculo automático com o PDI.</p></div><div class="objetivo-indicador"><i class="fa-solid fa-flag-checkered"></i><div><span class="objetivo-indicador-label">Indicador de sucesso</span><p>Frequência média de acesso ao Learning por colaborador.</p></div></div></div><div class="objetivo-plan-col"><div class="objetivo-etapas-title">Plano de ação</div><div class="objetivo-etapas"><div class="objetivo-etapa"><div class="objetivo-etapa-dot">1</div><div class="objetivo-etapa-line"></div><div class="objetivo-etapa-content"><span class="objetivo-etapa-period">Mês 1 a 2</span><h4>Configuração de trilhas e gamificação</h4><p>Estruturação de trilhas por área e configuração de rankings e desafios.</p><span class="objetivo-etapa-resp">Responsável: impulseup</span></div></div><div class="objetivo-etapa"><div class="objetivo-etapa-dot">2</div><div class="objetivo-etapa-line"></div><div class="objetivo-etapa-content"><span class="objetivo-etapa-period">Mês 3</span><h4>Lançamento interno</h4><p>Comunicação interna do lançamento da nova plataforma de aprendizagem.</p><span class="objetivo-etapa-resp">Responsável: Webedia</span></div></div><div class="objetivo-etapa"><div class="objetivo-etapa-dot">3</div><div class="objetivo-etapa-line"></div><div class="objetivo-etapa-content"><span class="objetivo-etapa-period">Mês 3 em diante</span><h4>Acompanhamento de adesão</h4><p>Monitoramento mensal de acesso e conclusão de trilhas.</p><span class="objetivo-etapa-resp">Responsável: conjunta</span></div></div></div></div></div><div class="approval-outcome"><div class="approval-outcome-title"><i class="fa-regular fa-lightbulb"></i>Estado futuro</div><div class="approval-outcome-grid"><div class="approval-stage futuro"><span class="approval-stage-label">Para o RH</span><p>Visibilidade real de quem está se desenvolvendo e em quais trilhas, sem depender de lembrete manual.</p></div><div class="approval-stage negocio"><span class="approval-stage-label">Para o negócio</span><p>Aprendizagem contínua conectada à avaliação de desempenho, sustentando o crescimento da operação sem aumentar o time de DHO.</p></div></div></div></div>
+<div class="objetivo-card"><div class="objetivo-header"><span class="objetivo-num">04</span><div><h3>Reduzir o custo de IA aplicada à gestão de desempenho</h3><p>O fornecedor atual cobra separadamente pela funcionalidade de inteligência artificial.</p></div></div><div class="objetivo-body"><div class="objetivo-compare-col"><div class="objetivo-compare-box atual"><span class="objetivo-compare-label">Situação atual</span><p>O fornecedor atual cobra um acréscimo significativo pela funcionalidade de IA.</p></div><div class="objetivo-compare-box meta"><span class="objetivo-compare-label">Meta</span><p>IA incluída sem custo adicional, para gerar relatórios, resumos e sugestões de PDI.</p></div><div class="objetivo-indicador"><i class="fa-solid fa-flag-checkered"></i><div><span class="objetivo-indicador-label">Indicador de sucesso</span><p>Uso do agente de IA sem custo adicional no contrato.</p></div></div></div><div class="objetivo-plan-col"><div class="objetivo-etapas-title">Plano de ação</div><div class="objetivo-etapas"><div class="objetivo-etapa"><div class="objetivo-etapa-dot">1</div><div class="objetivo-etapa-line"></div><div class="objetivo-etapa-content"><span class="objetivo-etapa-period">Mês 1</span><h4>Ativação do agente de IA conversacional</h4><p>Configuração do agente de IA para geração de relatórios sob demanda.</p><span class="objetivo-etapa-resp">Responsável: impulseup</span></div></div><div class="objetivo-etapa"><div class="objetivo-etapa-dot">2</div><div class="objetivo-etapa-line"></div><div class="objetivo-etapa-content"><span class="objetivo-etapa-period">Mês 1 a 2</span><h4>Treinamento do time de RH no uso da IA</h4><p>Natália e Ana aprendem a usar o agente para montar relatórios e análises.</p><span class="objetivo-etapa-resp">Responsável: conjunta</span></div></div></div></div></div><div class="approval-outcome"><div class="approval-outcome-title"><i class="fa-regular fa-lightbulb"></i>Estado futuro</div><div class="approval-outcome-grid"><div class="approval-stage futuro"><span class="approval-stage-label">Para o RH</span><p>O RH ganha autonomia para gerar relatórios sob demanda, sem depender de um módulo pago à parte.</p></div><div class="approval-stage negocio"><span class="approval-stage-label">Para o negócio</span><p>Redução de custo recorrente com IA, um dos motivos que levaram a Webedia a abrir este processo de RFP.</p></div></div></div></div>
       </div>
     </section>
 
@@ -758,14 +767,14 @@
       <h1 class="section-title">Processo de implementação</h1>
       <p class="section-sub">Como será a jornada de implementação da Webedia com a impulseup</p>
 
-      <div class="empty-state" id="tab6EmptyState">
+      <div class="empty-state" id="tab6EmptyState" style="display:none;">
         <i class="fa-regular fa-map"></i>
         <h3>Aba liberada após o closer confirmar cluster, módulos e Weeklies (se Enterprise)</h3>
         <p>Assim que o cluster de implementação (Low/Mid, High ou Enterprise) e os módulos da proposta forem confirmados, esta aba mostra a cadeia de implementação de cada módulo: etapas e responsáveis do nosso lado.</p>
       </div>
 
-      <div id="tab6ProcessWrap" style="display:none;">
-        <!--IMPL_PROCESSO-->
+      <div id="tab6ProcessWrap" style="display:block;">
+        <div class="impl-processo" data-cluster="mid"><div class="impl-suporte-note"><b>Suporte técnico</b> acompanha toda a jornada de implementação, do início ao fim — seu papel é garantir que tudo funcione conforme previsto, por isso não aparece preso a uma etapa específica.</div><div class="impl-rows"><div class="impl-row"><div class="impl-row-label"><span class="impl-dot"></span>Jornada Inicial</div><div class="impl-chain"><div class="impl-step-unit"><div class="impl-box">Planejamento Inicial</div><span class="role-tag role-consultor">Consultor de implementação</span></div><div class="impl-arrow">&rarr;</div><div class="impl-step-unit"><div class="impl-box">Workshop Sistema</div><span class="role-tag role-consultor">Consultor de implementação</span></div><div class="impl-arrow">&rarr;</div><div class="impl-step-unit"><div class="impl-box">Estratégia 1º Acesso</div><span class="role-tag role-consultor">Consultor de implementação</span></div></div></div><div class="impl-row"><div class="impl-row-label"><span class="impl-dot"></span>Avaliação de Desempenho</div><div class="impl-chain"><div class="impl-step-unit"><div class="impl-box">Validação do Módulo</div><span class="role-tag role-consultor">Consultor de implementação</span></div><div class="impl-handoff-divider"></div><div class="impl-step-unit"><div class="impl-box">Analytics</div><span class="role-tag role-gerente">Gerente de contas</span></div></div></div><div class="impl-row"><div class="impl-row-label"><span class="impl-dot"></span>Gestão de Metas</div><div class="impl-chain"><div class="impl-step-unit"><div class="impl-box">Validação do Módulo</div><span class="role-tag role-consultor">Consultor de implementação</span></div></div></div><div class="impl-row"><div class="impl-row-label"><span class="impl-dot"></span>Learning</div><div class="impl-row-empty">Módulo não incluído no fluxo padrão deste cluster</div></div></div></div>
         <div class="impl-legend">
           <div class="impl-legend-item"><span class="impl-legend-dot" style="background:#CC0088;"></span>Consultor de implementação</div>
           <div class="impl-legend-item"><span class="impl-legend-dot" style="background:#4B4B8A;"></span>CSI</div>
@@ -779,38 +788,16 @@
       <h1 class="section-title">Proposta comercial</h1>
       <p class="section-sub">Investimento para a Webedia</p>
 
-      <div class="empty-state" id="tab7EmptyState">
+      <div class="empty-state" id="tab7EmptyState" style="display:none;">
         <i class="fa-regular fa-file-invoice-dollar"></i>
         <h3>Aba liberada após o closer informar a proposta comercial</h3>
         <p>Assim que o closer passar os valores definidos na ferramenta de precificação da impulseup, esta aba mostra o investimento, os módulos e serviços incluídos e o detalhamento de valores.</p>
       </div>
 
-      <div id="tab7ProposalWrap" style="display:none;">
-        <div class="investment-hero">
-          <div class="label">Investimento mensal</div>
-          <div class="value">R$ 12.400/mês</div>
-        </div>
-        <p class="investment-hero-meta">Investimento total do contrato: R$ 148.800 · Validade da proposta: 15 dias · Duração do contrato: 12 meses</p>
+      <div id="tab7ProposalWrap" style="display:block;">
+        <p class="investment-hero-meta">Duas formas de cobrar o módulo de Avaliações para a mesma proposta · Validade da proposta: 5 dias · Duração do contrato: 12 meses</p>
 
-        <div class="block-title"><i class="fa-regular fa-layer-group"></i>Módulos e serviços incluídos</div>
-        <div class="module-list">
-          <div class="module-row">
-            <div class="module-row-main"><h4>Avaliação de Desempenho</h4><p>Ciclos completos com nine-box e PDI integrado.</p></div>
-            <div class="module-row-users">500 usuários</div>
-          </div>
-          <div class="module-row">
-            <div class="module-row-main"><h4>Plano de Serviço III</h4><p>Implementação assistida por especialista em DHO.</p></div>
-            <div class="module-row-users"></div>
-          </div>
-        </div>
-
-        <div class="block-title"><i class="fa-regular fa-table"></i>Detalhamento de valores</div>
-        <table class="rfp-table" id="proposalValuesTable">
-          <tr><th>Item</th><th>Usuários</th><th>Valor unitário</th><th>Valor mensal</th><th>Observação</th></tr>
-          <tr><td><div class="feat-name">Avaliação de Desempenho</div></td><td class="check-cell">500</td><td class="check-cell">R$ 22,00</td><td class="check-cell">R$ 11.000,00</td><td class="check-cell">—</td></tr>
-          <tr><td><div class="feat-name">Plano de Serviço III</div></td><td class="check-cell">—</td><td class="check-cell">R$ 16.800,00</td><td class="check-cell">—</td><td class="check-cell">Cobrança única</td></tr>
-          <tr><td colspan="4" style="text-align:right;font-weight:600;">Total do contrato (12 meses)</td><td class="check-cell" style="font-weight:700;color:var(--color-primary);">R$ 148.800</td></tr>
-        </table>
+        <div class="cenarios-comparativo"><div class="cards"><div class="card"><div class="card-header"><div class="eyebrow-card">Cenário 1</div><div class="card-title">Avaliação por créditos</div></div><div class="card-body"><div class="price-line"><span class="price-value">R$ 4.384,54</span><span class="price-unit">/ mês (12x)</span></div><div class="price-base">Investimento total do contrato: R$ 52.614,50</div><hr class="divider"><div class="inclui-label">Inclui</div><ul class="check-list"><li><span class="tick">&#10003;</span>Avaliação de Desempenho cobrada por créditos anuais, alinhada ao ciclo único do ano</li><li><span class="tick">&#10003;</span>Metas e OKRs e Learning seguem por usuário, cobrança mensal</li><li><span class="tick">&#10003;</span>Desenvolvimento incluso, sem custo adicional</li></ul><details class="detalhamento"><summary>Ver detalhamento</summary><table class="detalhamento-table"><thead><tr><th>Item</th><th>Quantidade</th><th>Valor unitário</th><th>Valor total</th></tr></thead><tbody><tr><td>Avaliações</td><td>207 créditos</td><td>R$ 93,42</td><td>R$ 19.337,94</td></tr><tr><td>Metas e OKRs</td><td>207 usuários</td><td>R$ 6,94/mês</td><td>R$ 1.436,58/mês</td></tr><tr><td>Learning</td><td>207 usuários</td><td>R$ 3,90/mês</td><td>R$ 807,30/mês</td></tr><tr><td>Desenvolvimento</td><td>207 usuários</td><td>Incluso</td><td>Incluso</td></tr><tr><td>Plano de Serviço II (implantação)</td><td>—</td><td>Valor único</td><td>R$ 6.350,00</td></tr></tbody></table></details></div></div><div class="card"><div class="card-header"><div class="eyebrow-card">Cenário 2</div><div class="card-title">Avaliação por usuários</div></div><div class="card-body"><div class="price-line"><span class="price-value">R$ 5.457,84</span><span class="price-unit">/ mês (12x)</span></div><div class="price-base">Investimento total do contrato: R$ 65.494,04</div><hr class="divider"><div class="inclui-label">Inclui tudo do Cenário 1, mais</div><ul class="check-list"><li><span class="tick">&#10003;</span>Avaliação de Desempenho cobrada por usuário, cobrança mensal, mesmo modelo dos demais módulos</li><li><span class="tick">&#10003;</span>Metas e OKRs e Learning seguem iguais ao Cenário 1</li><li><span class="tick">&#10003;</span>Desenvolvimento incluso, sem custo adicional</li></ul><details class="detalhamento"><summary>Ver detalhamento</summary><table class="detalhamento-table"><thead><tr><th>Item</th><th>Quantidade</th><th>Valor unitário</th><th>Valor total</th></tr></thead><tbody><tr><td>Avaliações</td><td>207 usuários</td><td>R$ 12,97/mês</td><td>R$ 2.684,79/mês</td></tr><tr><td>Metas e OKRs</td><td>207 usuários</td><td>R$ 6,94/mês</td><td>R$ 1.436,58/mês</td></tr><tr><td>Learning</td><td>207 usuários</td><td>R$ 3,90/mês</td><td>R$ 807,30/mês</td></tr><tr><td>Desenvolvimento</td><td>207 usuários</td><td>Incluso</td><td>Incluso</td></tr><tr><td>Plano de Serviço II (implantação)</td><td>—</td><td>Valor único</td><td>R$ 6.350,00</td></tr></tbody></table></details></div></div></div></div>
 
         <label class="proposal-upload-slot" id="proposalSlot" style="margin-top:24px;">
           <div id="proposalPlaceholder">
@@ -829,7 +816,7 @@
       <div class="timeline">
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">16 out</span><div><span class="tl-desc">Reunião de Diagnóstico</span><div class="tl-meta">Conexão + demonstração · Cecilia Ribeiro e Natália Fernandes Itto</div></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">20 out</span><div><span class="tl-desc">Demonstração personalizada</span><div class="tl-meta">Mostrar solução aplicada aos desafios mapeados</div></div></div>
-        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Construção de projeto e proposta</span><div class="tl-meta">Definir escopo e cenários de investimento</div></div></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">27 out</span><div><span class="tl-desc">Construção de projeto e proposta</span><div class="tl-meta">Cenários de investimento (usuários e créditos) e plano de ação</div></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Apresentação para diretoria</span><div class="tl-meta">Natália apresenta o projeto para o Rafael</div></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Aprovação da proposta</span></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Revisão jurídica</span></div></div>
@@ -860,16 +847,26 @@
     {"titulo": "Estruturar T&D com compliance"},
     {"titulo": "Indicadores de treinamento"}
   ],
-  "objetivos": [],
+  "objetivos": [
+    {"titulo": "Reduzir o esforço manual de relatório e análise de desempenho"},
+    {"titulo": "Fortalecer a cultura de PDI"},
+    {"titulo": "Aumentar o engajamento no Learning"},
+    {"titulo": "Reduzir o custo de IA aplicada à gestão de desempenho"}
+  ],
   "pilaresDestaque": [
     {"titulo": "Decisão sobre desempenho sai mais justa e defensável", "tag": "Confiável"},
     {"titulo": "Metas corporativas, de área e individuais ficam no mesmo lugar", "tag": "Liderança"},
     {"titulo": "Avaliação e metas se cruzam automaticamente", "tag": "Inteligente"}
   ],
-  "comparativo": null,
-  "investimento": null,
+  "comparativo": {"concorrente": "Qulture.Rocks", "favoravel_impulseup": true},
+  "investimento": {
+    "cenario_creditos": {"parcela": "R$ 4.384,54", "total_contrato": "R$ 52.614,50"},
+    "cenario_usuarios": {"parcela": "R$ 5.457,84", "total_contrato": "R$ 65.494,04"}
+  },
   "cronogramaMacro": [
-    {"data": "16/10", "titulo": "Conexão + demonstração e envio da proposta"},
+    {"data": "16/10", "titulo": "Conexão + demonstração"},
+    {"data": "20/10", "titulo": "Demonstração personalizada"},
+    {"data": "27/10", "titulo": "Reunião de plano de projeto e proposta"},
     {"data": "10/11", "titulo": "Decisão final da Webedia"}
   ]
 }
