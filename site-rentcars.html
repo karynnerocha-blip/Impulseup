@@ -494,11 +494,10 @@
         <button data-tab="2" title="Diagnóstico"><span class="num">02</span><span class="label-text">Diagnóstico</span></button>
         <button data-tab="3" title="Demonstração"><span class="num">03</span><span class="label-text">Demonstração</span></button>
         <button data-tab="4" title="Diferenciais impulseup"><span class="num">04</span><span class="label-text">Diferenciais impulseup</span></button>
-        <button data-tab="9" title="Piloto"><span class="num">05</span><span class="label-text">Piloto</span></button>
-        <button data-tab="5" title="Aprovação e plano de ação"><span class="num">06</span><span class="label-text">Aprovação e plano de ação</span></button>
-        <button data-tab="6" title="Processo de implementação"><span class="num">07</span><span class="label-text">Processo de implementação</span></button>
-        <button data-tab="7" title="Proposta comercial"><span class="num">08</span><span class="label-text">Proposta comercial</span></button>
-        <button data-tab="8" title="Próximos passos"><span class="num">09</span><span class="label-text">Próximos passos</span></button>
+        <button data-tab="5" title="Aprovação e plano de ação"><span class="num">05</span><span class="label-text">Aprovação e plano de ação</span></button>
+        <button data-tab="6" title="Processo de implementação"><span class="num">06</span><span class="label-text">Processo de implementação</span></button>
+        <button data-tab="7" title="Proposta comercial"><span class="num">07</span><span class="label-text">Proposta comercial</span></button>
+        <button data-tab="8" title="Próximos passos"><span class="num">08</span><span class="label-text">Próximos passos</span></button>
         <button type="button" id="exportExecHtmlBtn" class="export-exec-btn" title="Resumo executivo (HTML)">
           <i class="fa-regular fa-file-code"></i> <span class="label-text">Resumo executivo (HTML)</span>
         </button>
@@ -698,12 +697,12 @@
     <section class="tab-panel" id="tab-3">
       <h1 class="section-title">Demonstração</h1>
       <p class="section-sub">Vídeos da plataforma, orientados aos desafios da Rentcars.com</p>
-      <div class="empty-state" id="tab3EmptyState">
+      <div class="empty-state" id="tab3EmptyState" style="display:none;">
         <i class="fa-regular fa-circle-play"></i>
         <h3>Aba liberada após a reunião de Demo</h3>
         <p>O closer vai incluir aqui vídeos curtos mostrando a solução aplicada aos desafios mapeados no Diagnóstico.</p>
       </div>
-      <div id="tab3Content" style="display:none;">
+      <div id="tab3Content" style="display:block;">
         <div class="stat-grid" id="tab3ImpactoGrid">
           <!-- Preenchido pela skill a partir de "impacto" (estrutura-abas.md, Aba 3). Ex:
                <div class="stat-card"><div class="num">32%</div><div class="label">redução no tempo de ciclo de avaliação</div></div> -->
@@ -714,8 +713,10 @@
               <tr><th>Situação atual</th><th>Módulo impulseup</th><th>Como fica</th></tr>
             </thead>
             <tbody>
-              <!-- Preenchido pela skill a partir de "comparativo" (máx. 4 linhas). Ex:
-                   <tr><td>Avaliação só em planilha</td><td class="feat-name">Ciclos de avaliação</td><td>Fluxo 100% digital com lembretes automáticos</td></tr> -->
+<tr><td>Metas e KPIs acompanhados só por área, sem indicador individual</td><td class="feat-name">Metas e OKRs</td><td>Indicador individual sem cascateamento, cruzado automaticamente com a avaliação de desempenho</td></tr>
+<tr><td>Avaliação e feedback em lugares separados, decisão sem dado consolidado</td><td class="feat-name">Matriz de cruzamento (N-Box)</td><td>Resultado único numa tela só, com IA gerando insights automáticos</td></tr>
+<tr><td>Histórico de feedback preso ao gestor anterior na troca de liderança</td><td class="feat-name">Feedback</td><td>Histórico vinculado ao colaborador, com relatório liberado direto pela liderança</td></tr>
+<tr><td>Participação em queda na pesquisa de clima e no e-mail de sentimento</td><td class="feat-name">Pesquisas</td><td>Formatos variados (pulso, clima, NPS) no mesmo ciclo, com envio multicanal</td></tr>
             </tbody>
           </table>
         </div>
@@ -778,27 +779,6 @@
 <tr><td><div class="feat-name">Importação de dados externos (histórico)</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
         </table>
       </div>
-    </section>
-
-    <!-- ABA PILOTO (id interno tab-9, exibida como 05 entre Diferenciais e Aprovação) -->
-    <section class="tab-panel" id="tab-9">
-      <h1 class="section-title">Piloto</h1>
-      <p class="section-sub">A Rentcars.com testa a impulseup na prática, a partir dos desafios do Diagnóstico</p>
-      <div class="empty-state" id="tab9EmptyState">
-        <i class="fa-solid fa-flask"></i>
-        <h3>Aba liberada quando o piloto for combinado</h3>
-        <p>Depois da Demonstração, esta aba recebe o roteiro do piloto: cada desafio mapeado no Diagnóstico vira uma tarefa prática na plataforma, com cronograma, participantes e o registro do resultado.</p>
-      </div>
-      <div id="tab9PilotoWrap" style="display:none;">
-        <div class="piloto-ponte" id="tab9Ponte">
-          <!--PONTE_PILOTO-->
-        </div>
-        <div class="piloto-frame-wrap">
-          <iframe id="pilotoFrame" title="Ferramenta de piloto" loading="lazy"></iframe>
-        </div>
-        <p class="piloto-nota">Os dados preenchidos no piloto ficam salvos neste navegador. Use o botão de exportar backup da própria ferramenta para guardar ou compartilhar o registro.</p>
-      </div>
-      <script type="text/plain" id="pilotoToolSrc"><!--PILOTO_B64--></script>
     </section>
 
     <!-- ABA 5 — APROVAÇÃO E PLANO DE AÇÃO -->
@@ -891,14 +871,14 @@
       <h1 class="section-title">Processo de implementação</h1>
       <p class="section-sub">Como será a jornada de implementação da Rentcars.com com a impulseup</p>
 
-      <div class="empty-state" id="tab6EmptyState">
+      <div class="empty-state" id="tab6EmptyState" style="display:none;">
         <i class="fa-regular fa-map"></i>
         <h3>Aba liberada após o closer confirmar cluster, módulos e Weeklies (se Enterprise)</h3>
         <p>Assim que o cluster de implementação (Low/Mid, High ou Enterprise) e os módulos da proposta forem confirmados, esta aba mostra a cadeia de implementação de cada módulo: etapas e responsáveis do nosso lado.</p>
       </div>
 
-      <div id="tab6ProcessWrap" style="display:none;">
-        <!--IMPL_PROCESSO-->
+      <div id="tab6ProcessWrap" style="display:block;">
+        <div class="impl-processo" data-cluster="mid"><div class="impl-suporte-note"><b>Suporte técnico</b> acompanha toda a jornada de implementação, do início ao fim — seu papel é garantir que tudo funcione conforme previsto, por isso não aparece preso a uma etapa específica.</div><div class="impl-rows"><div class="impl-row"><div class="impl-row-label"><span class="impl-dot"></span>Jornada Inicial</div><div class="impl-chain"><div class="impl-step-unit"><div class="impl-box">Planejamento Inicial</div><span class="role-tag role-consultor">Consultor de implementação</span></div><div class="impl-arrow">&rarr;</div><div class="impl-step-unit"><div class="impl-box">Workshop Sistema</div><span class="role-tag role-consultor">Consultor de implementação</span></div><div class="impl-arrow">&rarr;</div><div class="impl-step-unit"><div class="impl-box">Estratégia 1º Acesso</div><span class="role-tag role-consultor">Consultor de implementação</span></div></div></div><div class="impl-row"><div class="impl-row-label"><span class="impl-dot"></span>Avaliação de Desempenho</div><div class="impl-chain"><div class="impl-step-unit"><div class="impl-box">Validação do Módulo</div><span class="role-tag role-consultor">Consultor de implementação</span></div><div class="impl-handoff-divider"></div><div class="impl-step-unit"><div class="impl-box">Analytics</div><span class="role-tag role-gerente">Gerente de contas</span></div></div></div><div class="impl-row"><div class="impl-row-label"><span class="impl-dot"></span>Avaliação de Experiência</div><div class="impl-chain"><div class="impl-step-unit"><div class="impl-box">Validação do Módulo</div><span class="role-tag role-consultor">Consultor de implementação</span></div></div></div><div class="impl-row"><div class="impl-row-label"><span class="impl-dot"></span>Gestão de Metas</div><div class="impl-chain"><div class="impl-step-unit"><div class="impl-box">Validação do Módulo</div><span class="role-tag role-consultor">Consultor de implementação</span></div></div></div><div class="impl-row"><div class="impl-row-label"><span class="impl-dot"></span>Pesquisa</div><div class="impl-chain"><div class="impl-step-unit"><div class="impl-box">Validação do Módulo</div><span class="role-tag role-consultor">Consultor de implementação</span></div><div class="impl-handoff-divider"></div><div class="impl-step-unit"><div class="impl-box">Analytics</div><span class="role-tag role-gerente">Gerente de contas</span></div></div></div><div class="impl-row"><div class="impl-row-label"><span class="impl-dot"></span>Learning</div><div class="impl-row-empty">Módulo não incluído no fluxo padrão deste cluster</div></div></div></div>
         <div class="impl-legend">
           <div class="impl-legend-item"><span class="impl-legend-dot" style="background:#CC0088;"></span>Consultor de implementação</div>
           <div class="impl-legend-item"><span class="impl-legend-dot" style="background:#4B4B8A;"></span>CSI</div>
@@ -1046,35 +1026,6 @@
       document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
     });
   });
-
-  // ---------- ABA PILOTO (iframe autônomo, carregado sob demanda) ----------
-  (function initPiloto(){
-    const src = document.getElementById('pilotoToolSrc');
-    const frame = document.getElementById('pilotoFrame');
-    if (!src || !frame) return;
-    const b64 = (src.textContent || '').replace(/<!--.*?-->/g, '').trim();
-    if (!b64) return;
-    let carregado = false;
-    function ajustarAltura(){
-      try {
-        const d = frame.contentDocument;
-        if (d && d.documentElement) frame.style.height = (d.documentElement.scrollHeight + 8) + 'px';
-      } catch (e) {}
-    }
-    function carregar(){
-      if (carregado) return; carregado = true;
-      const bytes = Uint8Array.from(atob(b64), c => c.charCodeAt(0));
-      frame.addEventListener('load', () => {
-        ajustarAltura();
-        try { new ResizeObserver(ajustarAltura).observe(frame.contentDocument.documentElement); } catch (e) {}
-        try { frame.contentDocument.addEventListener('click', () => setTimeout(ajustarAltura, 60)); } catch (e) {}
-      });
-      frame.srcdoc = new TextDecoder('utf-8').decode(bytes);
-    }
-    const btn = document.querySelector('#tabNav button[data-tab="9"]');
-    if (btn) btn.addEventListener('click', carregar);
-    if (document.getElementById('tab-9').classList.contains('active')) carregar();
-  })();
 
   // ---------- RESUMO EXECUTIVO (HTML) ----------
   function hexVar(name, fallback){
