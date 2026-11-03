@@ -494,11 +494,9 @@
         <button data-tab="2" title="Diagnóstico"><span class="num">02</span><span class="label-text">Diagnóstico</span></button>
         <button data-tab="3" title="Demonstração"><span class="num">03</span><span class="label-text">Demonstração</span></button>
         <button data-tab="4" title="Diferenciais impulseup"><span class="num">04</span><span class="label-text">Diferenciais impulseup</span></button>
-        <button data-tab="9" title="Piloto"><span class="num">05</span><span class="label-text">Piloto</span></button>
-        <button data-tab="5" title="Aprovação e plano de ação"><span class="num">06</span><span class="label-text">Aprovação e plano de ação</span></button>
-        <button data-tab="6" title="Processo de implementação"><span class="num">07</span><span class="label-text">Processo de implementação</span></button>
-        <button data-tab="7" title="Proposta comercial"><span class="num">08</span><span class="label-text">Proposta comercial</span></button>
-        <button data-tab="8" title="Próximos passos"><span class="num">09</span><span class="label-text">Próximos passos</span></button>
+        <button data-tab="6" title="Processo de implementação"><span class="num">05</span><span class="label-text">Processo de implementação</span></button>
+        <button data-tab="7" title="Proposta comercial"><span class="num">06</span><span class="label-text">Proposta comercial</span></button>
+        <button data-tab="8" title="Próximos passos"><span class="num">07</span><span class="label-text">Próximos passos</span></button>
         <button type="button" id="exportExecHtmlBtn" class="export-exec-btn" title="Resumo executivo (HTML)">
           <i class="fa-regular fa-file-code"></i> <span class="label-text">Resumo executivo (HTML)</span>
         </button>
@@ -736,52 +734,21 @@
     <section class="tab-panel" id="tab-4">
       <h1 class="section-title">Diferenciais impulseup</h1>
       <p class="section-sub">Comparativo com base nos critérios mais importantes para este projeto</p>
-      <div class="empty-state" id="tab4EmptyState">
+      <div class="empty-state" id="tab4EmptyState" style="display:none;">
         <i class="fa-regular fa-list-check"></i>
         <h3>Aba liberada após a reunião de Diagnóstico</h3>
         <p>Assim que o closer finalizar o diagnóstico, esta aba mostra o comparativo entre a impulseup e os concorrentes identificados na conversa. Se nenhum concorrente específico for mencionado, o comparativo é feito contra "Outras soluções", com resultado mediano.</p>
       </div>
-      <div id="tab4TableWrap" style="margin-top:24px;overflow-x:auto;display:none;">
+      <div id="tab4TableWrap" style="margin-top:24px;overflow-x:auto;">
         <table class="rfp-table" id="tab4Table">
-          <!-- Preenchido pela skill site-cliente-impulseup a partir da transcrição da reunião de Diagnóstico e de references/rfp-criterios.json.
-               Cada critério exibe sua tag (campo "tags" do JSON) junto ao nome, ex:
-               <tr><td><div class="feat-name">Formatos de avaliação diferentes (90/180/360)</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td>...</tr> -->
+          <tr><th>Critério</th><th class="iup-col check-cell">impulseup</th><th class="check-cell">Outras soluções</th></tr>
+          <tr><td><div class="feat-name">Envio de avaliação por WhatsApp</div><span class="feat-tag">Fácil</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
+          <tr><td><div class="feat-name">Avaliação de consenso entre gestor e colaborador</div><span class="feat-tag">Confiável</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+          <tr><td><div class="feat-name">Nine Box automático, com cruzamento de notas</div><span class="feat-tag">Inteligente</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
+          <tr><td><div class="feat-name">Inteligência Artificial para insights automáticos</div><span class="feat-tag">Inteligente</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+          <tr><td><div class="feat-name">Controle de visibilidade e privilégios administrativos</div><span class="feat-tag">Confiável</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+          <tr><td><div class="feat-name">Comparação de performance entre ciclos</div><span class="feat-tag">Confiável</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
         </table>
-      </div>
-    </section>
-
-    <!-- ABA PILOTO (id interno tab-9, exibida como 05 entre Diferenciais e Aprovação) -->
-    <section class="tab-panel" id="tab-9">
-      <h1 class="section-title">Piloto</h1>
-      <p class="section-sub">A BBOSCH testa a impulseup na prática, a partir dos desafios do Diagnóstico</p>
-      <div class="empty-state" id="tab9EmptyState">
-        <i class="fa-solid fa-flask"></i>
-        <h3>Aba liberada quando o piloto for combinado</h3>
-        <p>Depois da Demonstração, esta aba recebe o roteiro do piloto: cada desafio mapeado no Diagnóstico vira uma tarefa prática na plataforma, com cronograma, participantes e o registro do resultado.</p>
-      </div>
-      <div id="tab9PilotoWrap" style="display:none;">
-        <div class="piloto-ponte" id="tab9Ponte">
-          <!--PONTE_PILOTO-->
-        </div>
-        <div class="piloto-frame-wrap">
-          <iframe id="pilotoFrame" title="Ferramenta de piloto" loading="lazy"></iframe>
-        </div>
-        <p class="piloto-nota">Os dados preenchidos no piloto ficam salvos neste navegador. Use o botão de exportar backup da própria ferramenta para guardar ou compartilhar o registro.</p>
-      </div>
-      <script type="text/plain" id="pilotoToolSrc"><!--PILOTO_B64--></script>
-    </section>
-
-    <!-- ABA 5 — APROVAÇÃO E PLANO DE AÇÃO -->
-    <section class="tab-panel" id="tab-5">
-      <h1 class="section-title">Aprovação e plano de ação</h1>
-      <p class="section-sub">Objetivos de negócio da BBOSCH, o caminho para chegar lá e o estado futuro com a impulseup</p>
-      <div class="empty-state" id="tab5EmptyState">
-        <i class="fa-regular fa-clipboard"></i>
-        <h3>Aba liberada após a reunião de Diagnóstico</h3>
-        <p>Assim que os desafios forem mapeados, esta aba mostra os objetivos de negócio e RH por trás do projeto, o plano de ação com cronograma para chegar lá, e o estado futuro do negócio com a impulseup — pronta para embasar a apresentação à diretoria.</p>
-      </div>
-      <div id="tab5PlanoWrap" style="display:none;">
-        <!--OBJETIVOS-->
       </div>
     </section>
 
@@ -893,7 +860,61 @@
       "tag": "Inteligente"
     }
   ],
-  "comparativo": null,
+  "comparativo": {
+    "concorrentes": [
+      "Outras soluções"
+    ],
+    "criterios": [
+      {
+        "nome": "Envio por WhatsApp",
+        "tag": "Fácil",
+        "impulseup": true,
+        "porConcorrente": [
+          false
+        ]
+      },
+      {
+        "nome": "Avaliação de consenso",
+        "tag": "Confiável",
+        "impulseup": true,
+        "porConcorrente": [
+          true
+        ]
+      },
+      {
+        "nome": "Nine Box automático",
+        "tag": "Inteligente",
+        "impulseup": true,
+        "porConcorrente": [
+          false
+        ]
+      },
+      {
+        "nome": "IA para insights automáticos",
+        "tag": "Inteligente",
+        "impulseup": true,
+        "porConcorrente": [
+          true
+        ]
+      },
+      {
+        "nome": "Controle de visibilidade e permissões",
+        "tag": "Confiável",
+        "impulseup": true,
+        "porConcorrente": [
+          true
+        ]
+      },
+      {
+        "nome": "Comparação de performance entre ciclos",
+        "tag": "Confiável",
+        "impulseup": true,
+        "porConcorrente": [
+          false
+        ]
+      }
+    ]
+  },
   "investimento": {
     "parcelaValor": "R$ 2.195,50 a R$ 2.928,67",
     "duracaoContrato": "12 meses"
@@ -960,35 +981,6 @@
       document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
     });
   });
-
-  // ---------- ABA PILOTO (iframe autônomo, carregado sob demanda) ----------
-  (function initPiloto(){
-    const src = document.getElementById('pilotoToolSrc');
-    const frame = document.getElementById('pilotoFrame');
-    if (!src || !frame) return;
-    const b64 = (src.textContent || '').replace(/<!--.*?-->/g, '').trim();
-    if (!b64) return;
-    let carregado = false;
-    function ajustarAltura(){
-      try {
-        const d = frame.contentDocument;
-        if (d && d.documentElement) frame.style.height = (d.documentElement.scrollHeight + 8) + 'px';
-      } catch (e) {}
-    }
-    function carregar(){
-      if (carregado) return; carregado = true;
-      const bytes = Uint8Array.from(atob(b64), c => c.charCodeAt(0));
-      frame.addEventListener('load', () => {
-        ajustarAltura();
-        try { new ResizeObserver(ajustarAltura).observe(frame.contentDocument.documentElement); } catch (e) {}
-        try { frame.contentDocument.addEventListener('click', () => setTimeout(ajustarAltura, 60)); } catch (e) {}
-      });
-      frame.srcdoc = new TextDecoder('utf-8').decode(bytes);
-    }
-    const btn = document.querySelector('#tabNav button[data-tab="9"]');
-    if (btn) btn.addEventListener('click', carregar);
-    if (document.getElementById('tab-9').classList.contains('active')) carregar();
-  })();
 
   // ---------- RESUMO EXECUTIVO (HTML) ----------
   function hexVar(name, fallback){
