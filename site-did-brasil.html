@@ -718,15 +718,16 @@
     <section class="tab-panel" id="tab-3">
       <h1 class="section-title">Demonstração</h1>
       <p class="section-sub">Vídeos da plataforma, orientados aos desafios da DID® Brasil</p>
-      <div class="empty-state" id="tab3EmptyState">
+      <div class="empty-state" id="tab3EmptyState" style="display:none;">
         <i class="fa-regular fa-circle-play"></i>
         <h3>Aba liberada após a reunião de Demo</h3>
         <p>O closer vai incluir aqui vídeos curtos mostrando a solução aplicada aos desafios mapeados no Diagnóstico.</p>
       </div>
-      <div id="tab3Content" style="display:none;">
+      <div id="tab3Content" style="display:block;">
         <div class="stat-grid" id="tab3ImpactoGrid">
-          <!-- Preenchido pela skill a partir de "impacto" (estrutura-abas.md, Aba 3). Ex:
-               <div class="stat-card"><div class="num">32%</div><div class="label">redução no tempo de ciclo de avaliação</div></div> -->
+          <div class="stat-card"><div class="num">190</div><div class="label">colaboradores avaliados hoje 100% em planilha</div></div>
+          <div class="stat-card"><div class="num">30</div><div class="label">gestores mapeados manualmente no Nine Box</div></div>
+          <div class="stat-card"><div class="num">2023</div><div class="label">ano da última pesquisa de clima aplicada</div></div>
         </div>
         <div style="overflow-x:auto;margin-bottom:40px;">
           <table class="rfp-table" id="tab3ComparativoTable">
@@ -734,47 +735,18 @@
               <tr><th>Situação atual</th><th>Módulo impulseup</th><th>Como fica</th></tr>
             </thead>
             <tbody>
-              <!-- Preenchido pela skill a partir de "comparativo" (máx. 4 linhas). Ex:
-                   <tr><td>Avaliação só em planilha</td><td class="feat-name">Ciclos de avaliação</td><td>Fluxo 100% digital com lembretes automáticos</td></tr> -->
+              <tr><td>Avaliação de desempenho só em planilha, com tabulação manual</td><td class="feat-name">Avaliação de Desempenho</td><td>Fluxo 100% digital, com o mesmo modelo de pontuação já configurado e espaço para evoluir do 90 para o 180 no ritmo da Daido</td></tr>
+              <tr><td>Pesquisa de clima parada desde 2023 por causa do trabalho manual de tabulação</td><td class="feat-name">Pesquisas</td><td>Envio e resposta direto pelo WhatsApp, com tabulação automática e pronta</td></tr>
+              <tr><td>Nine Box e sucessão só no Excel, cobrindo 30 gestores</td><td class="feat-name">Nine Box e Sucessão</td><td>Distribuição automática nas caixas e registro do sucessor direto na mesma tela</td></tr>
+              <tr><td>Insegurança se as regras de cálculo da planilha migram corretamente</td><td class="feat-name">Avaliação de Desempenho</td><td>Configuração e teste da planilha real da Daido dentro do sistema antes de qualquer decisão</td></tr>
             </tbody>
           </table>
         </div>
         <div class="video-grid" id="tab3VideoGrid">
-          <!-- Preenchido pela skill a partir de "videos" (estrutura-abas.md, Aba 3), um .video-card por vídeo.
-               Ver scripts/gerar_video_embed.py::gerar_bloco_video() para a lógica de geração.
-
-               Caso 1 — url_video já veio do closer (link de Drive ou YouTube) e foi reconhecida:
-               <div class="video-card">
-                 <h4>{{titulo}}</h4><p>{{descricao}}</p>
-                 <div class="video-embed-wrap">
-                   <iframe src="{{embed_url}}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-                 </div>
-               </div>
-
-               Caso 2 — url_video veio mas não foi possível gerar embed (ex: link de pasta do Drive,
-               sem permissão de embed): mostrar card de link em vez de iframe.
-               <div class="video-card">
-                 <h4>{{titulo}}</h4><p>{{descricao}}</p>
-                 <div class="video-link-card">
-                   <i class="fa-brands fa-google-drive"></i>
-                   <p>Vídeo disponível para acesso externo</p>
-                   <a href="{{url_video}}" target="_blank" rel="noopener" class="video-link-btn">Assistir vídeo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                 </div>
-               </div>
-
-               Caso 3 — vídeo ainda sem url_video: slot de colagem manual, para o closer colar o link
-               direto no site (fica salvo no localStorage do navegador via saveImage/loadStore).
-               <div class="video-card">
-                 <h4>{{titulo}}</h4><p>{{descricao}}</p>
-                 <div class="video-embed-wrap video-embed-empty" data-video-idx="{{indice}}">
-                   <label class="video-paste-label">
-                     <i class="fa-regular fa-circle-play"></i>
-                     <span>Cole aqui o link do vídeo (YouTube ou Drive)</span>
-                   </label>
-                   <input type="text" class="video-url-input" data-video-idx="{{indice}}" placeholder="https://...">
-                 </div>
-               </div> -->
-        </div>
+<div class="video-card"><h4>Avaliação de desempenho na prática</h4><p>Como fica o ciclo que hoje roda em planilha</p><div class="video-embed-wrap video-embed-empty" data-video-idx="0"><label class="video-paste-label"><i class="fa-regular fa-circle-play"></i><span>Cole aqui o link do vídeo (YouTube ou Drive)</span></label><input type="text" class="video-url-input" data-video-idx="0" placeholder="https://..."></div></div>
+<div class="video-card"><h4>Pesquisa de clima pelo WhatsApp</h4><p>Envio, resposta e tabulação automática</p><div class="video-embed-wrap video-embed-empty" data-video-idx="1"><label class="video-paste-label"><i class="fa-regular fa-circle-play"></i><span>Cole aqui o link do vídeo (YouTube ou Drive)</span></label><input type="text" class="video-url-input" data-video-idx="1" placeholder="https://..."></div></div>
+<div class="video-card"><h4>Nine Box e sucessão na mesma tela</h4><p>Distribuição automática e registro de sucessores</p><div class="video-embed-wrap video-embed-empty" data-video-idx="2"><label class="video-paste-label"><i class="fa-regular fa-circle-play"></i><span>Cole aqui o link do vídeo (YouTube ou Drive)</span></label><input type="text" class="video-url-input" data-video-idx="2" placeholder="https://..."></div></div>
+      </div>
       </div>
     </section>
 
@@ -907,7 +879,7 @@
       <p class="section-sub">Jornada de compra da DID® Brasil</p>
       <div class="timeline">
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">04 nov</span><div><span class="tl-desc">Reunião de Diagnóstico e Demonstração</span><div class="tl-meta">Entender contexto e desafios · Lana Ferreira</div></div></div>
-        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Demonstração personalizada</span><div class="tl-meta">Mostrar solução aplicada aos desafios mapeados</div></div></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">16 nov</span><div><span class="tl-desc">Demonstração personalizada</span><div class="tl-meta">Mostrar solução aplicada aos desafios mapeados</div></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Construção de projeto e proposta</span><div class="tl-meta">Definir escopo e cenários de investimento</div></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Apresentação para diretoria</span><div class="tl-meta">Lana apresenta o projeto internamente</div></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Aprovação da proposta</span></div></div>
