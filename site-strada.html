@@ -739,15 +739,16 @@
     <section class="tab-panel" id="tab-3">
       <h1 class="section-title">Demonstração</h1>
       <p class="section-sub">Vídeos da plataforma, orientados aos desafios da Strada</p>
-      <div class="empty-state" id="tab3EmptyState">
+      <div class="empty-state" id="tab3EmptyState" style="display:none;">
         <i class="fa-regular fa-circle-play"></i>
         <h3>Aba liberada após a reunião de Demo</h3>
         <p>O closer vai incluir aqui vídeos curtos mostrando a solução aplicada aos desafios mapeados no Diagnóstico.</p>
       </div>
-      <div id="tab3Content" style="display:none;">
+      <div id="tab3Content">
         <div class="stat-grid" id="tab3ImpactoGrid">
-          <!-- Preenchido pela skill a partir de "impacto" (estrutura-abas.md, Aba 3). Ex:
-               <div class="stat-card"><div class="num">32%</div><div class="label">redução no tempo de ciclo de avaliação</div></div> -->
+          <div class="stat-card"><div class="num">70%</div><div class="label">do público interno relata que a ferramenta atual não é intuitiva</div></div>
+          <div class="stat-card"><div class="num">3 em 1</div><div class="label">relatórios que o RH precisa juntar manualmente para fechar um único relatório de avaliação</div></div>
+          <div class="stat-card"><div class="num">A confirmar</div><div class="label">horas por ciclo gastas em conferência manual de dados</div></div>
         </div>
         <div style="overflow-x:auto;margin-bottom:40px;">
           <table class="rfp-table" id="tab3ComparativoTable">
@@ -755,8 +756,10 @@
               <tr><th>Situação atual</th><th>Módulo impulseup</th><th>Como fica</th></tr>
             </thead>
             <tbody>
-              <!-- Preenchido pela skill a partir de "comparativo" (máx. 4 linhas). Ex:
-                   <tr><td>Avaliação só em planilha</td><td class="feat-name">Ciclos de avaliação</td><td>Fluxo 100% digital com lembretes automáticos</td></tr> -->
+              <tr><td>Precisa juntar cerca de três relatórios manualmente para fechar um único relatório de avaliação, e a nota final sai como imagem</td><td class="feat-name">Análises e Relatórios</td><td>Relatório pronto e exportável, sem montagem manual, com nota final e histórico em formato de dados</td></tr>
+              <tr><td>Cerca de 70% do público interno relata que a ferramenta atual não é intuitiva, em praticamente todas as etapas do processo</td><td class="feat-name">Plataforma especialista em DHO</td><td>Interface pensada só para gestão de desempenho, com curva de aprendizado menor e menos reforço de comunicação necessário</td></tr>
+              <tr><td>Integração com o ADP já gerou desgaste, com dados que às vezes não atualizam ou vêm incorretos</td><td class="feat-name">API aberta nativa</td><td>Integração direta com o sistema de departamento pessoal, sem depender de ajuste manual contínuo</td></tr>
+              <tr><td>Quase todo o RH mantém controles paralelos no SharePoint por falta de confiança no sistema atual</td><td class="feat-name">Relatórios confiáveis por padrão</td><td>Dado nativo da plataforma, sem necessidade de conferência dupla ou planilha espelho</td></tr>
             </tbody>
           </table>
         </div>
@@ -927,7 +930,7 @@
       <p class="section-sub">Jornada de compra da Strada</p>
       <div class="timeline">
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">10 nov</span><div><span class="tl-desc">Reunião de Diagnóstico</span><div class="tl-meta">Entender contexto e desafios · Adriana Tedeschi</div></div></div>
-        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Demonstração personalizada</span><div class="tl-meta">Mostrar solução aplicada aos desafios mapeados</div></div></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">17 nov</span><div><span class="tl-desc">Demonstração personalizada</span><div class="tl-meta">Validação dos testes e tira-dúvidas · Adriana e Beatriz · 14h30</div></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Construção de projeto e proposta</span><div class="tl-meta">Definir escopo e cenários de investimento</div></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Apresentação para diretoria</span><div class="tl-meta">Adriana apresenta o projeto internamente</div></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Aprovação da proposta</span></div></div>
