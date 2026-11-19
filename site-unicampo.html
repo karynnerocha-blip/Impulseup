@@ -688,11 +688,11 @@
       <div class="top-grid">
         <div class="card">
           <div class="card-label">Perfil</div>
-          <p>Cooperativa de Trabalho dos Profissionais de Agronomia (Unicampo), fundada em 1992/93 em Maringá (PR). Reúne agrônomos, veterinários e técnicos agrícolas que prestam assistência técnica e projetos para produtores rurais e empresas do agronegócio. Cerca de 400 cooperados e colaboradores passam pelo ciclo de avaliação de desempenho.</p>
+          <p>Cooperativa de Trabalho dos Profissionais de Agronomia (Unicampo), fundada em 1992/93 em Maringá (PR). Reúne agrônomos, veterinários e técnicos agrícolas que prestam assistência técnica e projetos para produtores rurais e empresas do agronegócio. São cerca de 90 colaboradores na sede e por volta de 500 cooperados espalhados pelo Brasil, somando até 600 pessoas no ciclo de avaliação.</p>
         </div>
         <div class="card dark">
           <div class="card-label">Momento atual</div>
-          <p>Decisão interna já tomada de trocar a plataforma de gestão de desempenho atual a partir do próximo ciclo, com implantação prevista para janeiro de 2027. A ferramenta é usada hoje pela área de Aquisição e Desenvolvimento de Talentos e pela de Desenvolvimento de Colaboradores.</p>
+          <p>Decisão interna já tomada de trocar a plataforma de gestão de desempenho atual a partir do próximo ciclo, com implantação prevista para janeiro de 2027. Hoje usam a Sólides há cerca de 4 anos, só para avaliação de desempenho. O contrato renova no início de dezembro.</p>
         </div>
       </div>
 
@@ -745,15 +745,14 @@
     <section class="tab-panel" id="tab-3">
       <h1 class="section-title">Demonstração</h1>
       <p class="section-sub">Vídeos da plataforma, orientados aos desafios da Unicampo</p>
-      <div class="empty-state" id="tab3EmptyState">
+      <div class="empty-state" id="tab3EmptyState" style="display:none;">
         <i class="fa-regular fa-circle-play"></i>
         <h3>Aba liberada após a reunião de Demo</h3>
         <p>O closer vai incluir aqui vídeos curtos mostrando a solução aplicada aos desafios mapeados no Diagnóstico.</p>
       </div>
-      <div id="tab3Content" style="display:none;">
+      <div id="tab3Content" style="display:block;">
         <div class="stat-grid" id="tab3ImpactoGrid">
-          <!-- Preenchido pela skill a partir de "impacto" (estrutura-abas.md, Aba 3). Ex:
-               <div class="stat-card"><div class="num">32%</div><div class="label">redução no tempo de ciclo de avaliação</div></div> -->
+          <div class="stat-card"><div class="num">A confirmar</div><div class="label">impacto quantitativo ainda não informado pela Unicampo</div></div>
         </div>
         <div style="overflow-x:auto;margin-bottom:40px;">
           <table class="rfp-table" id="tab3ComparativoTable">
@@ -761,46 +760,17 @@
               <tr><th>Situação atual</th><th>Módulo impulseup</th><th>Como fica</th></tr>
             </thead>
             <tbody>
-              <!-- Preenchido pela skill a partir de "comparativo" (máx. 4 linhas). Ex:
-                   <tr><td>Avaliação só em planilha</td><td class="feat-name">Ciclos de avaliação</td><td>Fluxo 100% digital com lembretes automáticos</td></tr> -->
+              <tr><td>PDI roda fora do sistema: arquivo por e-mail, cooperado só recebe link, sem login</td><td class="feat-name">PDI</td><td>PDI nativo, com login próprio do cooperado para registrar e atualizar ações</td></tr>
+<tr><td>Ranking por grupo de clientes montado à mão, recortado e colado em apresentação</td><td class="feat-name">Analytics</td><td>Filtros cruzados na tela, sem exportar nem recortar planilha</td></tr>
+<tr><td>Suporte da Sólides visto como lento, chamado pode fechar antes da resposta</td><td class="feat-name">Atendimento consultivo</td><td>Time de CS próximo acompanhando a implantação, não só abertura de ticket</td></tr>
+<tr><td>Teste comportamental (Profiler) é usado e bem avaliado por elas</td><td class="feat-name">Mapeamento comportamental</td><td>A confirmar: a impulseup não tem módulo equivalente hoje</td></tr>
             </tbody>
           </table>
         </div>
         <div class="video-grid" id="tab3VideoGrid">
-          <!-- Preenchido pela skill a partir de "videos" (estrutura-abas.md, Aba 3), um .video-card por vídeo.
-               Ver scripts/gerar_video_embed.py::gerar_bloco_video() para a lógica de geração.
-
-               Caso 1 — url_video já veio do closer (link de Drive ou YouTube) e foi reconhecida:
-               <div class="video-card">
-                 <h4>{{titulo}}</h4><p>{{descricao}}</p>
-                 <div class="video-embed-wrap">
-                   <iframe src="{{embed_url}}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-                 </div>
-               </div>
-
-               Caso 2 — url_video veio mas não foi possível gerar embed (ex: link de pasta do Drive,
-               sem permissão de embed): mostrar card de link em vez de iframe.
-               <div class="video-card">
-                 <h4>{{titulo}}</h4><p>{{descricao}}</p>
-                 <div class="video-link-card">
-                   <i class="fa-brands fa-google-drive"></i>
-                   <p>Vídeo disponível para acesso externo</p>
-                   <a href="{{url_video}}" target="_blank" rel="noopener" class="video-link-btn">Assistir vídeo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                 </div>
-               </div>
-
-               Caso 3 — vídeo ainda sem url_video: slot de colagem manual, para o closer colar o link
-               direto no site (fica salvo no localStorage do navegador via saveImage/loadStore).
-               <div class="video-card">
-                 <h4>{{titulo}}</h4><p>{{descricao}}</p>
-                 <div class="video-embed-wrap video-embed-empty" data-video-idx="{{indice}}">
-                   <label class="video-paste-label">
-                     <i class="fa-regular fa-circle-play"></i>
-                     <span>Cole aqui o link do vídeo (YouTube ou Drive)</span>
-                   </label>
-                   <input type="text" class="video-url-input" data-video-idx="{{indice}}" placeholder="https://...">
-                 </div>
-               </div> -->
+<div class="video-card"><h4>PDI com login do cooperado</h4><p>Como o cooperado acessa, registra e atualiza sozinho as ações do próprio PDI</p><div class="video-embed-wrap video-embed-empty" data-video-idx="0"><label class="video-paste-label"><i class="fa-regular fa-circle-play"></i><span>Cole aqui o link do vídeo (YouTube ou Drive)</span></label><input type="text" class="video-url-input" data-video-idx="0" placeholder="https://..."></div></div>
+<div class="video-card"><h4>Analytics com filtro por grupo de clientes</h4><p>Comparar e ranquear o desempenho dos profissionais por grupo de clientes atendidos, direto na tela</p><div class="video-embed-wrap video-embed-empty" data-video-idx="1"><label class="video-paste-label"><i class="fa-regular fa-circle-play"></i><span>Cole aqui o link do vídeo (YouTube ou Drive)</span></label><input type="text" class="video-url-input" data-video-idx="1" placeholder="https://..."></div></div>
+<div class="video-card"><h4>Configuração da avaliação e relatório em PDF</h4><p>Regras de visibilidade por público e o relatório individual compartilhado com o colaborador</p><div class="video-embed-wrap video-embed-empty" data-video-idx="2"><label class="video-paste-label"><i class="fa-regular fa-circle-play"></i><span>Cole aqui o link do vídeo (YouTube ou Drive)</span></label><input type="text" class="video-url-input" data-video-idx="2" placeholder="https://..."></div></div>
         </div>
       </div>
     </section>
@@ -933,7 +903,7 @@
       <p class="section-sub">Jornada de compra da Unicampo</p>
       <div class="timeline">
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">17 nov</span><div><span class="tl-desc">Reunião de Diagnóstico</span><div class="tl-meta">Entender contexto e desafios · Jackeline Zampar</div></div></div>
-        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Demonstração personalizada</span><div class="tl-meta">Mostrar solução aplicada aos desafios mapeados</div></div></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">19 nov</span><div><span class="tl-desc">Demonstração personalizada</span><div class="tl-meta">Mostrar solução aplicada aos desafios mapeados</div></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Construção de projeto e proposta</span><div class="tl-meta">Definir escopo e cenários de investimento</div></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Apresentação para a Diretoria da Unicampo</span><div class="tl-meta">Jackeline apresenta o projeto internamente</div></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Aprovação da proposta</span></div></div>
